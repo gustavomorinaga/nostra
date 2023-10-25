@@ -27,7 +27,7 @@
 		}
 	},
 	"scripts": {
-		"ui:add": "bunx shadcn-svelte@latest add",
+		"ui:add": "pnpm dlx shadcn-svelte@latest add",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write ."
 	},

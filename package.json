@@ -6,8 +6,8 @@
   "description": "WIP",
   "license": "MIT",
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "dev": "turbo run dev --parallel",
@@ -17,7 +17,7 @@
     "test": "turbo run test",
     "check": "turbo run check",
     "format": "turbo run format",
-    "clean": "del-cli ./**/dist/ ./**/.svelte-kit/ ./**/node_modules/ ./**/.turbo/"
+    "clean": "del-cli ./**/.svelte-kit/ ./**/node_modules/ ./**/.turbo/"
   },
   "devDependencies": {
     "del-cli": "5.1.0",

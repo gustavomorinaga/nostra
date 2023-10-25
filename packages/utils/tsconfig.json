@@ -4,7 +4,7 @@
 		"module": "ES2022",
 		"moduleResolution": "node",
 		"baseUrl": "./",
-		"types": ["bun-types"],
+		"types": ["node"],
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
