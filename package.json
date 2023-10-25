@@ -1,0 +1,26 @@
+{
+  "name": "novelty",
+  "private": true,
+  "type": "module",
+  "author": "Gustavo Morinaga <me@gustavomorinaga.dev>",
+  "description": "WIP",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "serve": "turbo run serve --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "check": "turbo run check",
+    "format": "turbo run format",
+    "clean": "del-cli ./**/dist/ ./**/.svelte-kit/ ./**/node_modules/ ./**/.turbo/"
+  },
+  "devDependencies": {
+    "del-cli": "5.1.0",
+    "turbo": "latest"
+  }
+}

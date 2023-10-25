@@ -1,0 +1,23 @@
+{
+	"name": "@nostra/utils",
+	"version": "0.0.1",
+	"private": true,
+	"license": "MIT",
+	"type": "module",
+	"exports": {
+		".": {
+			"default": "./index.ts"
+		}
+	},
+	"scripts": {
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write ."
+	},
+	"dependencies": {
+		"zod": "3.22.4",
+		"zod-validation-error": "2.0.0"
+	},
+	"devDependencies": {
+		"@nostra/eslint-config-custom": "workspace:^"
+	}
+}

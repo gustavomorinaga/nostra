@@ -1,0 +1,37 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"globalDotEnv": [".env"],
+	"pipeline": {
+		"dev": {
+			"cache": false,
+			"persistent": true,
+			"dotEnv": [
+				".env.development.local",
+				".env.development",
+				".env.local",
+				".env"
+			]
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": ["dist/**", ".svelte-kit/**"],
+			"dotEnv": [
+				".env.production.local",
+				".env.production",
+				".env.local",
+				".env"
+			]
+		},
+		"lint": {},
+		"format": {},
+		"serve": {
+			"dependsOn": ["build"]
+		},
+		"test": {
+			"dotEnv": [".env.test.local", ".env.test", ".env.local", ".env"]
+		},
+		"deploy": {
+			"dependsOn": ["build", "test", "lint"]
+		}
+	}
+}
