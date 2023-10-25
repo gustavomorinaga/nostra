@@ -18,6 +18,6 @@
 		"zod-validation-error": "2.0.0"
 	},
 	"devDependencies": {
-		"@nostra/eslint-config-custom": "workspace:^"
+		"@nostra/eslint-config-custom": "workspace:*"
 	}
 }

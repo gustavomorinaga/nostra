@@ -1,3 +1,3 @@
-# Novelty
+# Nostra
 
 > 🚧 WIP
