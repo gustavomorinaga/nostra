@@ -3572,7 +3572,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/types@npm:^1.10.3, @medusajs/types@npm:^1.11.4":
+"@medusajs/types@npm:1.11.4, @medusajs/types@npm:^1.10.3, @medusajs/types@npm:^1.11.4":
   version: 1.11.4
   resolution: "@medusajs/types@npm:1.11.4"
   checksum: 89059bcc16fa0b15c2b9984f9929bbd32dd3d1eabe01bdd3353cf65a6970ddb61aac1ca58412061332667990bca6a43b8d64ff8d63e1bc4f4987a68f85a3f300
@@ -3999,6 +3999,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nostra/web@workspace:apps/web"
   dependencies:
+    "@medusajs/types": "npm:1.11.4"
     "@nostra/eslint-config-custom": "workspace:*"
     "@nostra/prettier-config-custom": "workspace:*"
     "@nostra/ui": "workspace:*"

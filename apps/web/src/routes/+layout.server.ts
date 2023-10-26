@@ -1,3 +1,5 @@
-export const load = async () => {
-	return {};
+export const load = async ({ locals }) => {
+	const { user, cart } = locals;
+
+	return { user, cart };
 };

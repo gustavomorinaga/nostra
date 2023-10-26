@@ -4,7 +4,10 @@ declare global {
 	namespace App {
 		// interface Error {}
 		interface Locals {
-			isNew: boolean;
+			sid: string;
+			cartid: string;
+			user: object;
+			cart: object;
 		}
 		// interface PageData {}
 		// interface Platform {}

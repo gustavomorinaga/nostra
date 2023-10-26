@@ -21,6 +21,7 @@
 		"sveltekit-medusa-client": "3.1.2"
 	},
 	"devDependencies": {
+		"@medusajs/types": "1.11.4",
 		"@nostra/eslint-config-custom": "workspace:*",
 		"@nostra/prettier-config-custom": "workspace:*",
 		"@playwright/test": "1.39.0",
