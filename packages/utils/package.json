@@ -19,6 +19,9 @@
 	},
 	"devDependencies": {
 		"@nostra/eslint-config-custom": "workspace:*",
-		"@types/node": "20.8.8"
+		"@types/node": "20.8.8",
+		"eslint": "8.52.0",
+		"prettier": "3.0.3",
+		"typescript": "5.2.2"
 	}
 }

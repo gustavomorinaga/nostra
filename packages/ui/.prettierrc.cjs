@@ -1,3 +1,3 @@
 module.exports = {
-	...require('@nostra/eslint-config-custom/.prettierrc.js')
+	...require('@nostra/eslint-config-custom/prettier-svelte')
 };

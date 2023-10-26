@@ -1,4 +1,3 @@
 module.exports = {
-	root: true,
-	extends: ['@nostra/eslint-config-custom']
+	extends: ['@nostra/eslint-config-custom/eslint-svelte']
 };

@@ -1,6 +1,5 @@
 module.exports = {
-	root: true,
-	extends: ['@nostra/eslint-config-custom'],
+	extends: ['@nostra/eslint-config-custom/eslint-node'],
 	rules: {
 		'@typescript-eslint/no-explicit-any': 'off'
 	}

@@ -1,4 +1,5 @@
 module.exports = {
+	root: true,
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
@@ -25,5 +26,6 @@ module.exports = {
 				parser: '@typescript-eslint/parser'
 			}
 		}
-	]
+	],
+	ignorePatterns: ["node_modules/", ".sveltekit/"],
 };

@@ -1,1 +1,1 @@
-module.exports = require('@nostra/eslint-config-custom/.prettierrc');
+module.exports = require('@nostra/eslint-config-custom/prettier-svelte');
