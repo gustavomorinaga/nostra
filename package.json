@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@nostra/eslint-config-custom": "workspace:*",
+    "@nostra/prettier-config-custom": "workspace:*",
     "del-cli": "5.1.0",
     "dotenv-cli": "latest",
     "eslint": "8.52.0",

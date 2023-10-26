@@ -1,1 +1,1 @@
-module.exports = require('@nostra/eslint-config-custom/prettier-node');
+module.exports = require('@nostra/prettier-config-custom/node');

@@ -3930,12 +3930,22 @@ __metadata:
   dependencies:
     "@typescript-eslint/eslint-plugin": "npm:6.9.0"
     "@typescript-eslint/parser": "npm:6.9.0"
+    eslint: "npm:8.52.0"
     eslint-config-prettier: "npm:9.0.0"
     eslint-plugin-svelte: "npm:2.34.0"
+    svelte: "npm:4.2.2"
+    typescript: "npm:5.2.2"
+  languageName: unknown
+  linkType: soft
+
+"@nostra/prettier-config-custom@workspace:*, @nostra/prettier-config-custom@workspace:packages/prettier-config-custom":
+  version: 0.0.0-use.local
+  resolution: "@nostra/prettier-config-custom@workspace:packages/prettier-config-custom"
+  dependencies:
+    prettier: "npm:3.0.3"
     prettier-plugin-svelte: "npm:3.0.3"
     prettier-plugin-tailwindcss: "npm:0.5.6"
     svelte: "npm:4.2.2"
-    typescript: "npm:5.2.2"
   languageName: unknown
   linkType: soft
 
@@ -3945,6 +3955,7 @@ __metadata:
   dependencies:
     "@fontsource-variable/inter": "npm:5.0.15"
     "@nostra/eslint-config-custom": "workspace:*"
+    "@nostra/prettier-config-custom": "workspace:*"
     "@tsconfig/svelte": "npm:5.0.2"
     "@typescript-eslint/eslint-plugin": "npm:6.9.0"
     "@typescript-eslint/parser": "npm:6.9.0"
@@ -3974,6 +3985,7 @@ __metadata:
   resolution: "@nostra/utils@workspace:packages/utils"
   dependencies:
     "@nostra/eslint-config-custom": "workspace:*"
+    "@nostra/prettier-config-custom": "workspace:*"
     "@types/node": "npm:20.8.8"
     eslint: "npm:8.52.0"
     prettier: "npm:3.0.3"
@@ -3988,6 +4000,7 @@ __metadata:
   resolution: "@nostra/web@workspace:apps/web"
   dependencies:
     "@nostra/eslint-config-custom": "workspace:*"
+    "@nostra/prettier-config-custom": "workspace:*"
     "@nostra/ui": "workspace:*"
     "@nostra/utils": "workspace:*"
     "@playwright/test": "npm:1.39.0"
@@ -16545,6 +16558,7 @@ __metadata:
   resolution: "nostra@workspace:."
   dependencies:
     "@nostra/eslint-config-custom": "workspace:*"
+    "@nostra/prettier-config-custom": "workspace:*"
     del-cli: "npm:5.1.0"
     dotenv-cli: "npm:latest"
     eslint: "npm:8.52.0"

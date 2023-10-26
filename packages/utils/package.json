@@ -19,6 +19,7 @@
 	},
 	"devDependencies": {
 		"@nostra/eslint-config-custom": "workspace:*",
+		"@nostra/prettier-config-custom": "workspace:*",
 		"@types/node": "20.8.8",
 		"eslint": "8.52.0",
 		"prettier": "3.0.3",
