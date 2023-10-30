@@ -1,3 +1,5 @@
+# See https://prettier.io/docs/en/ignore for more about ignoring files.
+
 # dependencies
 **/node_modules
 **/.pnp
