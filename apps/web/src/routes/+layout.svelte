@@ -4,23 +4,17 @@
 	import { invalidate } from '$app/navigation';
 
 	export let data;
-
-	$: ({ supabase, session } = data)
+	let { supabase, session } = data;
+	$: ({ supabase, session } = data);
 
 	onMount(() => {
 		const { data } = supabase.auth.onAuthStateChange((event, _session) => {
-			if (session?.expires_at !== session?.expires_at)
-				invalidate("supabase:auth");
+			if (session?.expires_at !== session?.expires_at) invalidate('supabase:auth');
 		});
 
 		return () => data.subscription.unsubscribe();
 	});
 </script>
-
-<svelte:head>
-	<title>Nostra</title>
-	<meta name="description" content="Nostra Store" />
-</svelte:head>
 
 <main>
 	<slot />
