@@ -18,6 +18,8 @@
 	"dependencies": {
 		"@nostra/ui": "workspace:*",
 		"@nostra/utils": "workspace:*",
+		"@supabase/auth-helpers-sveltekit": "0.10.4",
+		"@supabase/supabase-js": "2.38.4",
 		"sveltekit-medusa-client": "3.1.2"
 	},
 	"devDependencies": {

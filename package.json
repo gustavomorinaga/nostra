@@ -1,33 +1,33 @@
 {
-  "name": "nostra",
-  "private": true,
-  "type": "module",
-  "author": "Gustavo Morinaga <me@gustavomorinaga.dev>",
-  "description": "WIP",
-  "license": "MIT",
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
-  "scripts": {
-    "dev": "dotenv -- turbo run dev --parallel",
-    "build": "turbo run build",
-    "serve": "turbo run serve --parallel",
-    "lint": "turbo run lint",
-    "test": "turbo run test",
-    "check": "turbo run check",
-    "format": "turbo run format",
-    "clean": "del-cli ./**/node_modules/ ./**/.turbo/ ./**/.svelte-kit/ ./**/.cache ./**/build ./**/dist"
-  },
-  "devDependencies": {
-    "@nostra/eslint-config-custom": "workspace:*",
-    "@nostra/prettier-config-custom": "workspace:*",
-    "del-cli": "5.1.0",
-    "dotenv-cli": "latest",
-    "eslint": "8.52.0",
-    "eslint-config-turbo": "latest",
-    "prettier": "3.0.3",
-    "turbo": "latest"
-  },
-  "packageManager": "yarn@4.0.0"
+	"name": "nostra",
+	"private": true,
+	"type": "module",
+	"author": "Gustavo Morinaga <me@gustavomorinaga.dev>",
+	"description": "WIP",
+	"license": "MIT",
+	"workspaces": [
+		"packages/*",
+		"apps/*"
+	],
+	"scripts": {
+		"dev": "dotenv -- turbo run dev --parallel",
+		"build": "turbo run build",
+		"serve": "turbo run serve --parallel",
+		"lint": "turbo run lint",
+		"test": "turbo run test",
+		"check": "turbo run check",
+		"format": "turbo run format",
+		"clean": "del-cli ./**/node_modules/ ./**/.turbo/ ./**/.svelte-kit/ ./**/.cache ./**/build ./**/dist"
+	},
+	"devDependencies": {
+		"@nostra/eslint-config-custom": "workspace:*",
+		"@nostra/prettier-config-custom": "workspace:*",
+		"del-cli": "5.1.0",
+		"dotenv-cli": "latest",
+		"eslint": "8.52.0",
+		"eslint-config-turbo": "latest",
+		"prettier": "3.0.3",
+		"turbo": "latest"
+	},
+	"packageManager": "yarn@4.0.1"
 }

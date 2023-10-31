@@ -1,5 +1,5 @@
 export const load = async ({ locals }) => {
 	const { user, cart } = locals;
 
-	return { user, cart };
+	return { user, cart, session: await locals.getSession() };
 };
