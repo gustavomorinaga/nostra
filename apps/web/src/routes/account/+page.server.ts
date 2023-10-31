@@ -5,7 +5,7 @@ type TProfile = {
 	full_name: string;
 	website: string;
 	avatar_url?: string;
-}
+};
 
 export const load = async ({ locals: { supabase, getSession } }) => {
 	const session = await getSession();
