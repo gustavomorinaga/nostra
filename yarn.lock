@@ -3956,14 +3956,16 @@ __metadata:
     "@fontsource-variable/inter": "npm:5.0.15"
     "@nostra/eslint-config-custom": "workspace:*"
     "@nostra/prettier-config-custom": "workspace:*"
+    "@sveltejs/kit": "npm:1.27.2"
     "@tsconfig/svelte": "npm:5.0.2"
     "@typescript-eslint/eslint-plugin": "npm:6.9.1"
     "@typescript-eslint/parser": "npm:6.9.1"
     autoprefixer: "npm:10.4.16"
-    bits-ui: "npm:0.9.0"
+    bits-ui: "npm:^0.9.0"
     clsx: "npm:2.0.0"
     cssnano: "npm:6.0.1"
     eslint: "npm:8.52.0"
+    formsnap: "npm:^0.3.1"
     iconify-icon: "npm:1.0.8"
     lucide-svelte: "npm:0.291.0"
     postcss: "npm:8.4.31"
@@ -3972,11 +3974,14 @@ __metadata:
     prettier-plugin-svelte: "npm:3.0.3"
     prettier-plugin-tailwindcss: "npm:0.5.6"
     svelte: "npm:4.2.2"
+    sveltekit-superforms: "npm:1.9.0"
     swiper: "npm:11.0.3"
     tailwind-merge: "npm:2.0.0"
     tailwind-variants: "npm:0.1.18"
     tailwindcss: "npm:3.3.5"
     typescript: "npm:5.2.2"
+    vite: "npm:4.5.0"
+    zod: "npm:3.22.4"
   languageName: unknown
   linkType: soft
 
@@ -9233,7 +9238,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bits-ui@npm:0.9.0":
+"bits-ui@npm:^0.9.0":
   version: 0.9.0
   resolution: "bits-ui@npm:0.9.0"
   dependencies:
@@ -12829,6 +12834,17 @@ __metadata:
     combined-stream: "npm:^1.0.8"
     mime-types: "npm:^2.1.12"
   checksum: 1ccc3ae064a080a799923f754d49fcebdd90515a8924f0f54de557540b50e7f1fe48ba5f2bd0435a5664aa2d49729107e6aaf2155a9abf52339474c5638b4485
+  languageName: node
+  linkType: hard
+
+"formsnap@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "formsnap@npm:0.3.1"
+  peerDependencies:
+    svelte: ^4.0.0
+    sveltekit-superforms: ^1.7.1
+    zod: ^3.22.2
+  checksum: 240b21a40c3d2d61e1cf2ad6634461d7269ee46ca38831994e56922cd87d85397697fff383d8f60b97e3d5c8a04be279e435d83c663ec8ea0e97e3d19c879da6
   languageName: node
   linkType: hard
 
@@ -21239,6 +21255,17 @@ __metadata:
   peerDependencies:
     svelte: ^4.0.0
   checksum: a04b0eb9b983a28f47c1ee0a0c944869009d815069d41506ac6962687398f61583a1b9d1ef3c39a1792ee80fdc4cdc3912bc19f92ccb269e0aafb443645431b0
+  languageName: node
+  linkType: hard
+
+"sveltekit-superforms@npm:1.9.0":
+  version: 1.9.0
+  resolution: "sveltekit-superforms@npm:1.9.0"
+  peerDependencies:
+    "@sveltejs/kit": 1.x
+    svelte: 3.x || 4.x
+    zod: 3.x
+  checksum: cd27e8a3768e92221ca4075bf82e9c2e2301b4b9749a3e6ee6ef4823b50ac6ee8858af154f4f775e1788adde61e86285ec8a0e5e93173a497b874c353f976b70
   languageName: node
   linkType: hard
 
