@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { Card } from '@nostra/ui/components';
-	import type { ActionData, PageData } from '$routes/account/$types';
+	import type { SuperValidated } from 'sveltekit-superforms';
+	import type { TPaymentMethodsValidationSchema } from '$lib/validations';
 
-	export let data: PageData;
-	export let form: ActionData;
+	export let form: SuperValidated<TPaymentMethodsValidationSchema>;
+	$: console.log(form);
 </script>
 
 <Card.Root>

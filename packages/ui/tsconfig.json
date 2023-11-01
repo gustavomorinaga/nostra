@@ -17,7 +17,7 @@
 			"$ui/components": ["./components"],
 			"$ui/components/*": ["./components/*"],
 			"$ui/utils": ["./utils"],
-			"$ui/utils/*": ["./utils/*"],
+			"$ui/utils/*": ["./utils/*"]
 		}
 	}
 }

@@ -3965,7 +3965,7 @@ __metadata:
     clsx: "npm:2.0.0"
     cssnano: "npm:6.0.1"
     eslint: "npm:8.52.0"
-    formsnap: "npm:^0.3.1"
+    formsnap: "npm:0.3.1"
     iconify-icon: "npm:1.0.8"
     lucide-svelte: "npm:0.291.0"
     postcss: "npm:8.4.31"
@@ -4031,12 +4031,14 @@ __metadata:
     svelte: "npm:4.2.2"
     svelte-check: "npm:3.5.2"
     sveltekit-medusa-client: "npm:3.1.2"
+    sveltekit-superforms: "npm:1.9.0"
     tailwindcss: "npm:3.3.5"
     tslib: "npm:2.6.2"
     typescript: "npm:5.2.2"
     vite: "npm:4.5.0"
     vite-tsconfig-paths: "npm:4.2.1"
     vitest: "npm:0.34.6"
+    zod: "npm:3.22.4"
   languageName: unknown
   linkType: soft
 
@@ -12837,7 +12839,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"formsnap@npm:^0.3.1":
+"formsnap@npm:0.3.1":
   version: 0.3.1
   resolution: "formsnap@npm:0.3.1"
   peerDependencies:

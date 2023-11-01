@@ -22,7 +22,9 @@
 		"@supabase/auth-ui-shared": "0.1.8",
 		"@supabase/auth-ui-svelte": "0.2.7",
 		"@supabase/supabase-js": "2.38.4",
-		"sveltekit-medusa-client": "3.1.2"
+		"sveltekit-medusa-client": "3.1.2",
+		"sveltekit-superforms": "1.9.0",
+		"zod": "3.22.4"
 	},
 	"devDependencies": {
 		"@medusajs/types": "1.11.4",

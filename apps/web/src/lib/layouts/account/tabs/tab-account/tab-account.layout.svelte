@@ -1,38 +1,13 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
-	import { Button, Card, Input, Label } from '@nostra/ui/components';
-	import type { SubmitFunction } from '@sveltejs/kit';
-	import type { ActionData, PageData } from '$routes/account/$types';
+	import { Card, Form } from '@nostra/ui/components';
+	import {
+		accountValidationSchema as schema,
+		type TAccountValidationSchema
+	} from '$lib/validations';
+	import type { SuperValidated } from 'sveltekit-superforms';
 
-	export let data: PageData;
-	export let form: ActionData;
-
-	let { session, profile } = data;
-	$: ({ session, profile } = data);
-
-	let profileForm: HTMLFormElement;
-	let loading = false;
-	let fullName: string = profile?.full_name ?? '';
-	let username: string = profile?.username ?? '';
-	let website: string = profile?.website ?? '';
-	let avatarUrl: string = profile?.avatar_url ?? '';
-
-	const handleSubmit: SubmitFunction = () => {
-		loading = true;
-
-		return async () => {
-			loading = false;
-		};
-	};
-
-	const handleSignOut: SubmitFunction = () => {
-		loading = true;
-
-		return async ({ update }) => {
-			loading = false;
-			update();
-		};
-	};
+	export let form: SuperValidated<TAccountValidationSchema>;
+	$: console.log(form);
 </script>
 
 <Card.Root>
@@ -42,50 +17,46 @@
 	</Card.Header>
 
 	<Card.Content>
-		<form
-			id="accountForm"
-			method="post"
-			action="?/update"
-			use:enhance={handleSubmit}
-			bind:this={profileForm}
-		>
-			<div>
-				<Label for="email">Email</Label>
-				<Input id="email" type="text" value={session.user.email} disabled />
-			</div>
+		<Form.Root id="accountForm" method="POST" action="?/account-update" {form} {schema} let:config>
+			<Form.Field {config} name="email">
+				<Form.Item>
+					<Form.Label>Email</Form.Label>
+					<Form.Input type="email" readonly />
+					<Form.Validation />
+				</Form.Item>
+			</Form.Field>
 
-			<div>
-				<Label for="fullName">Full Name</Label>
-				<Input id="fullName" name="fullName" type="text" value={form?.fullName ?? fullName} />
-			</div>
+			<Form.Field {config} name="fullName">
+				<Form.Item>
+					<Form.Label>Full Name</Form.Label>
+					<Form.Input type="text" />
+					<Form.Validation />
+				</Form.Item>
+			</Form.Field>
 
-			<div>
-				<Label for="username">Username</Label>
-				<Input id="username" name="username" type="text" value={form?.username ?? username} />
-			</div>
+			<Form.Field {config} name="username">
+				<Form.Item>
+					<Form.Label>Username</Form.Label>
+					<Form.Input type="text" />
+					<Form.Validation />
+				</Form.Item>
+			</Form.Field>
 
-			<div>
-				<Label for="website">Website</Label>
-				<Input id="website" name="website" type="url" value={form?.website ?? website} />
-			</div>
-		</form>
+			<Form.Field {config} name="website">
+				<Form.Item>
+					<Form.Label>Website</Form.Label>
+					<Form.Input type="text" />
+					<Form.Validation />
+				</Form.Item>
+			</Form.Field>
+		</Form.Root>
 	</Card.Content>
 
-	<Card.Footer>
-		<Button form="accountForm" type="submit" disabled={loading}>
-			{loading ? 'Loading...' : 'Update profile'}
-		</Button>
+	<Card.Footer class="justify-end gap-2">
+		<form method="POST" action="?/account-signout">
+			<Form.Button variant="destructive">Sign Out</Form.Button>
+		</form>
+
+		<Form.Button form="accountForm">Update profile</Form.Button>
 	</Card.Footer>
 </Card.Root>
-
-<!-- <div class="form-widget">
-	<form method="post" action="?/signout" use:enhance={handleSignOut}>
-		<div>
-			<Button variant="ghost" type="submit" disabled={loading}>
-				{loading ? 'Loading...' : 'Sign Out'}
-			</Button>
-		</div>
-	</form>
-
-	<Button variant="link" href="/">Go Home</Button>
-</div> -->

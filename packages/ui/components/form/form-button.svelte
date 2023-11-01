@@ -4,6 +4,6 @@
 	type $$Events = Button.Events;
 </script>
 
-<Button.Root type="submit" {...$$restProps} on:click on:keydown>
+<Button type="submit" {...$$restProps} on:click on:keydown>
 	<slot />
-</Button.Root>
+</Button>
