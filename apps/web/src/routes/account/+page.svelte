@@ -65,7 +65,7 @@
 <Tabs.Root value="account">
 	<Tabs.List class="flex h-fit justify-start overflow-x-auto overflow-y-hidden">
 		{#each tabs as { name, value }}
-			<Tabs.Trigger class="flex-auto" {value}>{name}</Tabs.Trigger>
+			<Tabs.Trigger {value}>{name}</Tabs.Trigger>
 		{/each}
 	</Tabs.List>
 

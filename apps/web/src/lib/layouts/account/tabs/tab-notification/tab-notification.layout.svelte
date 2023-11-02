@@ -1,10 +1,12 @@
 <script lang="ts">
-	import { Card } from '@nostra/ui/components';
+	import { Card, Form } from '@nostra/ui/components';
+	import {
+		notificationValidationSchema as schema,
+		type TNotificationValidationSchema
+	} from '$lib/validations';
 	import type { SuperValidated } from 'sveltekit-superforms';
-	import type { TNotificationValidationSchema } from '$lib/validations';
 
 	export let form: SuperValidated<TNotificationValidationSchema>;
-	$: console.log(form);
 </script>
 
 <Card.Root>
@@ -12,4 +14,15 @@
 		<Card.Title>Notification</Card.Title>
 		<Card.Description>Here you can manage your notification settings</Card.Description>
 	</Card.Header>
+
+	<Card.Content>
+		<Form.Root
+			id="notificationForm"
+			method="POST"
+			action="?/notification-update"
+			{form}
+			{schema}
+			let:config
+		/>
+	</Card.Content>
 </Card.Root>

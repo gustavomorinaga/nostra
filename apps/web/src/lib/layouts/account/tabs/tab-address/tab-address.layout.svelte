@@ -1,10 +1,12 @@
 <script lang="ts">
-	import { Card } from '@nostra/ui/components';
+	import { Card, Form } from '@nostra/ui/components';
+	import {
+		addressValidationSchema as schema,
+		type TAddressValidationSchema
+	} from '$lib/validations';
 	import type { SuperValidated } from 'sveltekit-superforms';
-	import type { TAddressValidationSchema } from '$lib/validations';
 
 	export let form: SuperValidated<TAddressValidationSchema>;
-	$: console.log(form);
 </script>
 
 <Card.Root>
@@ -12,4 +14,15 @@
 		<Card.Title>Address</Card.Title>
 		<Card.Description>Here you can manage your addresses</Card.Description>
 	</Card.Header>
+
+	<Card.Content>
+		<Form.Root
+			id="addressForm"
+			method="POST"
+			action="?/address-update"
+			{form}
+			{schema}
+			let:config
+		/>
+	</Card.Content>
 </Card.Root>

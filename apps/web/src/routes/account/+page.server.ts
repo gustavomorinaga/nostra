@@ -16,7 +16,6 @@ import {
 
 export const load = async ({ locals: { supabase, getSession } }) => {
 	const session = await getSession();
-
 	if (!session) throw redirect(303, '/');
 
 	const { data: profile } = await accountRepository.getProfile({ id: session.user.id, supabase });
@@ -36,12 +35,21 @@ export const load = async ({ locals: { supabase, getSession } }) => {
 	};
 
 	const forms = {
-		accountForm: superValidate(initialData.account, accountValidationSchema),
-		addressForm: superValidate(initialData.address, addressValidationSchema),
-		managePasswordForm: superValidate(initialData.managePassword, managePasswordValidationSchema),
-		notificationForm: superValidate(initialData.notification, notificationValidationSchema),
-		orderHistoryForm: superValidate(initialData.orderHistory, orderHistoryValidationSchema),
-		paymentMethodsForm: superValidate(initialData.paymentMethods, paymentMethodsValidationSchema)
+		accountForm: superValidate(initialData.account, accountValidationSchema, { id: 'accountForm' }),
+		addressForm: superValidate(initialData.address, addressValidationSchema, { id: 'addressForm' }),
+		managePasswordForm: superValidate(initialData.managePassword, managePasswordValidationSchema, {
+			id: 'managePasswordForm',
+			errors: false
+		}),
+		notificationForm: superValidate(initialData.notification, notificationValidationSchema, {
+			id: 'notificationForm'
+		}),
+		orderHistoryForm: superValidate(initialData.orderHistory, orderHistoryValidationSchema, {
+			id: 'orderHistoryForm'
+		}),
+		paymentMethodsForm: superValidate(initialData.paymentMethods, paymentMethodsValidationSchema, {
+			id: 'paymentMethodsForm'
+		})
 	};
 
 	return { session, profile, forms };
@@ -49,7 +57,9 @@ export const load = async ({ locals: { supabase, getSession } }) => {
 
 export const actions = {
 	'account-update': async (event) => {
-		const { locals: { supabase, getSession } } = event;
+		const {
+			locals: { supabase, getSession }
+		} = event;
 		const session = await getSession();
 
 		const form = await superValidate(event, accountValidationSchema);
@@ -60,7 +70,7 @@ export const actions = {
 			full_name: form.data.fullName,
 			username: form.data.username,
 			website: form.data.website,
-			avatar_url: '',
+			avatar_url: ''
 		};
 
 		const { error } = await accountRepository.updateProfile({ data, supabase });
@@ -70,10 +80,44 @@ export const actions = {
 	},
 	'account-signout': async ({ locals: { supabase, getSession } }) => {
 		const session = await getSession();
-
 		if (!session) return;
 
 		await supabase.auth.signOut();
 		throw redirect(303, '/');
+	},
+
+	'manage-password-update': async (event) => {
+		const form = await superValidate(event, managePasswordValidationSchema);
+		if (!form.valid) return fail(400, { form });
+
+		return { form };
+	},
+
+	'order-history-update': async (event) => {
+		const form = await superValidate(event, orderHistoryValidationSchema);
+		if (!form.valid) return fail(400, { form });
+
+		return { form };
+	},
+
+	'payment-methods-update': async (event) => {
+		const form = await superValidate(event, paymentMethodsValidationSchema);
+		if (!form.valid) return fail(400, { form });
+
+		return { form };
+	},
+
+	'address-update': async (event) => {
+		const form = await superValidate(event, addressValidationSchema);
+		if (!form.valid) return fail(400, { form });
+
+		return { form };
+	},
+
+	'notification-update': async (event) => {
+		const form = await superValidate(event, notificationValidationSchema);
+		if (!form.valid) return fail(400, { form });
+
+		return { form };
 	}
 };

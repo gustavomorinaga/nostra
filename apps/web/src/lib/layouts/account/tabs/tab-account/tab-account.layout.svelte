@@ -7,7 +7,6 @@
 	import type { SuperValidated } from 'sveltekit-superforms';
 
 	export let form: SuperValidated<TAccountValidationSchema>;
-	$: console.log(form);
 </script>
 
 <Card.Root>
