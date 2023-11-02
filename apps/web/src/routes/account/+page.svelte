@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { Button, Tabs } from '@nostra/ui/components';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+	import { Button, Skeleton, Tabs } from '@nostra/ui/components';
 	import type { ComponentType } from 'svelte';
 	import type { SuperValidated } from 'sveltekit-superforms';
 
@@ -50,6 +52,10 @@
 			form: data.forms.notificationForm
 		}
 	] as Array<TAccountTabs>;
+
+	let currentTab = $page.url.searchParams.get('tab') ?? 'account';
+
+	const handleTabChange = (tab: TAccountTabs['value']) => goto(`?tab=${tab}`);
 </script>
 
 <svelte:head>
@@ -62,16 +68,18 @@
 
 <Button variant="link" href="/">Go Home</Button>
 
-<Tabs.Root value="account">
+<Tabs.Root value={currentTab}>
 	<Tabs.List class="flex h-fit justify-start overflow-x-auto overflow-y-hidden">
 		{#each tabs as { name, value }}
-			<Tabs.Trigger {value}>{name}</Tabs.Trigger>
+			<Tabs.Trigger {value} on:click={() => handleTabChange(value)}>{name}</Tabs.Trigger>
 		{/each}
 	</Tabs.List>
 
 	{#each tabs as { value, content, form }}
 		<Tabs.Content {value}>
-			{#await Promise.all([content, form]) then [tab, form]}
+			{#await Promise.all([content, form])}
+				<Skeleton class="h-56 w-full rounded" />
+			{:then [tab, form]}
 				<svelte:component this={tab} {form} />
 			{/await}
 		</Tabs.Content>
