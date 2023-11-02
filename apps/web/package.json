@@ -27,7 +27,7 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@medusajs/types": "1.11.4",
+		"@medusajs/types": "1.11.5",
 		"@nostra/eslint-config-custom": "workspace:*",
 		"@nostra/prettier-config-custom": "workspace:*",
 		"@playwright/test": "1.39.0",
