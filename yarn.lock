@@ -2704,6 +2704,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource-variable/jetbrains-mono@npm:5.0.18":
+  version: 5.0.18
+  resolution: "@fontsource-variable/jetbrains-mono@npm:5.0.18"
+  checksum: c11926a1c55c1f9983a4d94cedad0b5d9b718cd58050c95e2cd14dab165bfba939e3cbecda8dd4652198e7f681e720490914f42b3dfabd1e11796002ba5a2e01
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/roboto-slab@npm:5.0.17":
+  version: 5.0.17
+  resolution: "@fontsource-variable/roboto-slab@npm:5.0.17"
+  checksum: 276cd27665e0b884fae2620e78b7aedb51a9dfa1cf48fa5704a84f5a568cfb42a9e0da174551f4ab3b02f3c13c945e6baa706f0b85ba66c0402f99440ca33b51
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/sora@npm:5.0.15":
+  version: 5.0.15
+  resolution: "@fontsource-variable/sora@npm:5.0.15"
+  checksum: 67b8678313d3597389bf1dac40252feba3c49f615e4bdf810fda7ece97a0cee7ddc38a1555b9bb3551a2af9ab0a6b20d1ebd830275bd6f4e146c1f46ba17dd99
+  languageName: node
+  linkType: hard
+
 "@formatjs/ecma402-abstract@npm:1.17.2":
   version: 1.17.2
   resolution: "@formatjs/ecma402-abstract@npm:1.17.2"
@@ -3953,7 +3974,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nostra/ui@workspace:packages/ui"
   dependencies:
-    "@fontsource-variable/inter": "npm:5.0.15"
     "@nostra/eslint-config-custom": "workspace:*"
     "@nostra/prettier-config-custom": "workspace:*"
     "@sveltejs/kit": "npm:1.27.2"
@@ -4005,6 +4025,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nostra/web@workspace:apps/web"
   dependencies:
+    "@fontsource-variable/inter": "npm:5.0.15"
+    "@fontsource-variable/jetbrains-mono": "npm:5.0.18"
+    "@fontsource-variable/roboto-slab": "npm:5.0.17"
+    "@fontsource-variable/sora": "npm:5.0.15"
     "@medusajs/types": "npm:1.11.5"
     "@nostra/eslint-config-custom": "workspace:*"
     "@nostra/prettier-config-custom": "workspace:*"

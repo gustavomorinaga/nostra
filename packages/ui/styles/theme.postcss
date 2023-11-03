@@ -50,8 +50,6 @@
 }
 
 @layer base {
-	@import '@fontsource-variable/inter';
-
 	* {
 		@apply border-border;
 	}
@@ -63,20 +61,24 @@
 			'calt' 1;
 	}
 
+	:is(h1, h2, h3, h4) {
+		@apply font-heading scroll-m-20 tracking-normal;
+	}
+
 	h1 {
-		@apply scroll-m-20 text-4xl font-bold tracking-normal lg:text-5xl;
+		@apply text-4xl font-bold lg:text-5xl;
 	}
 
 	h2 {
-		@apply scroll-m-20 pb-2 text-3xl font-semibold tracking-normal transition-colors first:mt-0;
+		@apply pb-2 text-3xl font-semibold transition-colors first:mt-0;
 	}
 
 	h3 {
-		@apply scroll-m-20 text-2xl font-semibold tracking-normal;
+		@apply text-2xl font-semibold;
 	}
 
 	h4 {
-		@apply scroll-m-20 text-xl font-semibold tracking-normal;
+		@apply text-xl font-semibold;
 	}
 
 	p {

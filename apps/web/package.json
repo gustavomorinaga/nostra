@@ -16,6 +16,10 @@
 		"test:unit": "vitest"
 	},
 	"dependencies": {
+		"@fontsource-variable/inter": "5.0.15",
+		"@fontsource-variable/jetbrains-mono": "5.0.18",
+		"@fontsource-variable/roboto-slab": "5.0.17",
+		"@fontsource-variable/sora": "5.0.15",
 		"@nostra/ui": "workspace:*",
 		"@nostra/utils": "workspace:*",
 		"@supabase/auth-helpers-sveltekit": "0.10.5",
