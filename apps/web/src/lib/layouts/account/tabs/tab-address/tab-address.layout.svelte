@@ -1,5 +1,8 @@
-<script lang="ts">
+<script lang="ts" context="module">
 	import { Card, Form } from '@nostra/ui/components';
+</script>
+
+<script lang="ts">
 	import {
 		addressValidationSchema as schema,
 		type TAddressValidationSchema

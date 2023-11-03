@@ -1,8 +1,11 @@
+<script lang="ts" context="module">
+	import { Skeleton, Tabs } from '@nostra/ui/components';
+	import type { ComponentType } from 'svelte';
+</script>
+
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { Skeleton, Tabs } from '@nostra/ui/components';
-	import type { ComponentType } from 'svelte';
 
 	export let data;
 
