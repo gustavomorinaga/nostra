@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { Button, Skeleton, Tabs } from '@nostra/ui/components';
+	import { Skeleton, Tabs } from '@nostra/ui/components';
 	import type { ComponentType } from 'svelte';
 
 	export let data;
@@ -64,8 +64,6 @@
 		content="Manage your account settings, change your password, view your order history, add or remove payment methods, update your address, and customize your notification settings with Nostra's account management options."
 	/>
 </svelte:head>
-
-<Button variant="link" href="/">Go Home</Button>
 
 <Tabs.Root value={currentTab}>
 	<Tabs.List class="flex h-fit justify-start overflow-x-auto overflow-y-hidden">

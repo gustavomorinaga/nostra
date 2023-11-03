@@ -32,7 +32,7 @@
 	};
 </script>
 
-<Card.Root>
+<Card.Root class="mb-2">
 	<AspectRatio ratio={COVER_RATIO} class="m-2 overflow-hidden rounded">
 		<figure class="flex h-full w-full items-center justify-center">
 			<img src={profile.cover} alt="{profile.name}'s cover" />
