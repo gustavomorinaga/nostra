@@ -1,5 +1,9 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 
+type TServerClient =  {
+	supabase: SupabaseClient;
+};
+
 type TProfile = {
 	id?: string;
 	username: string;
@@ -8,15 +12,9 @@ type TProfile = {
 	avatar_url?: string;
 };
 
-export type TGetProfile = {
-	id: string;
-	supabase: SupabaseClient;
-};
+export type TGetProfile = TServerClient & { id: string };
 
-export type TUpdateProfile = {
-	data: TProfile;
-	supabase: SupabaseClient;
-};
+export type TUpdateProfile = TServerClient & { data: TProfile };
 
 export const accountRepository = {
 	async getProfile({ id, supabase }: TGetProfile) {
@@ -29,5 +27,9 @@ export const accountRepository = {
 
 	async updateProfile({ data, supabase }: TUpdateProfile) {
 		return await supabase.from('profiles').upsert({ ...data, updated_at: new Date() });
+	},
+
+	async signOut({ supabase }: TServerClient) {
+		return await supabase.auth.signOut();
 	}
 };

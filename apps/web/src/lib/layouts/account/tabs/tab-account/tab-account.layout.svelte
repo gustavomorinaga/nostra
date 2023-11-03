@@ -52,10 +52,6 @@
 	</Card.Content>
 
 	<Card.Footer class="justify-end gap-2">
-		<form method="POST" action="?/account-signout">
-			<Form.Button variant="destructive">Sign Out</Form.Button>
-		</form>
-
 		<Form.Button form="accountForm">Update profile</Form.Button>
 	</Card.Footer>
 </Card.Root>

@@ -85,7 +85,7 @@ export const actions = {
 		const session = await getSession();
 		if (!session) return;
 
-		await supabase.auth.signOut();
+		await accountRepository.signOut({ supabase });
 		throw redirect(303, '/');
 	},
 
