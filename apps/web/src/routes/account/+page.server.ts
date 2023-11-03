@@ -34,22 +34,25 @@ export const load = async ({ locals: { supabase, getSession } }) => {
 		paymentMethods: {}
 	};
 
-	const forms = {
-		accountForm: superValidate(initialData.account, accountValidationSchema, { id: 'accountForm' }),
-		addressForm: superValidate(initialData.address, addressValidationSchema, { id: 'addressForm' }),
-		managePasswordForm: superValidate(initialData.managePassword, managePasswordValidationSchema, {
+	const [accountForm, addressForm, managePasswordForm, notificationForm, orderHistoryForm, paymentMethodsForm] = await Promise.all([
+		superValidate(initialData.account, accountValidationSchema, { id: 'accountForm' }),
+		superValidate(initialData.address, addressValidationSchema, { id: 'addressForm' }),
+		superValidate(initialData.managePassword, managePasswordValidationSchema, {
 			id: 'managePasswordForm',
 			errors: false
 		}),
-		notificationForm: superValidate(initialData.notification, notificationValidationSchema, {
-			id: 'notificationForm'
-		}),
-		orderHistoryForm: superValidate(initialData.orderHistory, orderHistoryValidationSchema, {
-			id: 'orderHistoryForm'
-		}),
-		paymentMethodsForm: superValidate(initialData.paymentMethods, paymentMethodsValidationSchema, {
-			id: 'paymentMethodsForm'
-		})
+		superValidate(initialData.notification, notificationValidationSchema, { id: 'notificationForm' }),
+		superValidate(initialData.orderHistory, orderHistoryValidationSchema, { id: 'orderHistoryForm' }),
+		superValidate(initialData.paymentMethods, paymentMethodsValidationSchema, { id: 'paymentMethodsForm' })
+	]);
+
+	const forms = {
+		accountForm,
+		addressForm,
+		managePasswordForm,
+		notificationForm,
+		orderHistoryForm,
+		paymentMethodsForm
 	};
 
 	return { session, profile, forms };

@@ -3,7 +3,6 @@
 	import { page } from '$app/stores';
 	import { Button, Skeleton, Tabs } from '@nostra/ui/components';
 	import type { ComponentType } from 'svelte';
-	import type { SuperValidated } from 'sveltekit-superforms';
 
 	export let data;
 
@@ -11,10 +10,10 @@
 		name: string;
 		value: string;
 		content: Promise<ComponentType>;
-		form: Promise<SuperValidated<any>>;
+		form: (typeof data.forms)[keyof typeof data.forms];
 	};
 
-	const tabs = [
+	const accountTabs = [
 		{
 			name: 'Account settings',
 			value: 'account',
@@ -70,17 +69,17 @@
 
 <Tabs.Root value={currentTab}>
 	<Tabs.List class="flex h-fit justify-start overflow-x-auto overflow-y-hidden">
-		{#each tabs as { name, value }}
+		{#each accountTabs as { name, value }}
 			<Tabs.Trigger {value} on:click={() => handleTabChange(value)}>{name}</Tabs.Trigger>
 		{/each}
 	</Tabs.List>
 
-	{#each tabs as { value, content, form }}
-		<Tabs.Content {value}>
-			{#await Promise.all([content, form])}
+	{#each accountTabs as accountTab}
+		<Tabs.Content value={accountTab.value}>
+			{#await Promise.all([accountTab.content])}
 				<Skeleton class="h-56 w-full rounded" />
-			{:then [tab, form]}
-				<svelte:component this={tab} {form} />
+			{:then [tab]}
+				<svelte:component this={tab} form={accountTab.form} />
 			{/await}
 		</Tabs.Content>
 	{/each}

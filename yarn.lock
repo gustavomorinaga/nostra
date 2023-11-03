@@ -3985,7 +3985,7 @@ __metadata:
     clsx: "npm:2.0.0"
     cssnano: "npm:6.0.1"
     eslint: "npm:8.52.0"
-    formsnap: "npm:0.3.1"
+    formsnap: "npm:0.4.0"
     iconify-icon: "npm:1.0.8"
     lucide-svelte: "npm:0.291.0"
     postcss: "npm:8.4.31"
@@ -12846,14 +12846,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"formsnap@npm:0.3.1":
-  version: 0.3.1
-  resolution: "formsnap@npm:0.3.1"
+"formsnap@npm:0.4.0":
+  version: 0.4.0
+  resolution: "formsnap@npm:0.4.0"
   peerDependencies:
     svelte: ^4.0.0
     sveltekit-superforms: ^1.7.1
     zod: ^3.22.2
-  checksum: 240b21a40c3d2d61e1cf2ad6634461d7269ee46ca38831994e56922cd87d85397697fff383d8f60b97e3d5c8a04be279e435d83c663ec8ea0e97e3d19c879da6
+  checksum: fa427a9602f1209b65008d0963895e20c538cad72ada31ed56fb20f86fcfd6f878a7dc225d95738558e166be130bca040c51aba76fd8fc75ec02458dfd836a1b
   languageName: node
   linkType: hard
 

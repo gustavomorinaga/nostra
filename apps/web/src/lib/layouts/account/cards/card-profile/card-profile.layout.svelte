@@ -11,7 +11,7 @@
 		name: 'Gustavo Morinaga',
 		email,
 		phone,
-		avatar: 'https://github.com/gustavomorinaga.png',
+		avatar: 'https://avatars.githubusercontent.com/u/47375774?v=4',
 		cover: 'images/jpgs/cover.jpg'
 	};
 
