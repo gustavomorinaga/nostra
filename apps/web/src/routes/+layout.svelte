@@ -1,5 +1,9 @@
-<script>
+<script lang="ts" context="module">
 	import '$lib/styles/app.style.postcss';
+	import { Navbar, Wrapper } from '$lib/layouts';
+</script>
+
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { invalidate } from '$app/navigation';
 
@@ -16,12 +20,8 @@
 	});
 </script>
 
-<main>
-	<slot />
-</main>
+<Navbar />
 
-<style lang="postcss">
-	main {
-		@apply mx-auto flex min-h-screen max-w-6xl flex-col p-4;
-	}
-</style>
+<Wrapper>
+	<slot />
+</Wrapper>

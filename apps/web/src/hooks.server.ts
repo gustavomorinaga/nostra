@@ -1,8 +1,8 @@
-import { medusa, supabase } from '$lib/servers';
+import { medusa, supabaseServer } from '$lib/servers';
 
 export const handle = async ({ event, resolve }) => {
 	event = await medusa.handleRequest(event);
-	event.locals.supabase = supabase(event);
+	event.locals.supabase = supabaseServer({ event });
 	event.locals.getSession = async () => {
 		const {
 			data: { session }

@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { Button } from '@nostra/ui/components';
-
 	export let data;
-	const { session, products } = data;
+	const { products } = data;
 </script>
 
 <svelte:head>
@@ -24,10 +22,3 @@
 		</li>
 	{/each}
 </ul>
-
-{#if session}
-	<p>Logged in as <strong>{session.user.email}</strong></p>
-	<Button href="/account">Account</Button>
-{:else}
-	<Button href="/auth">Sign In</Button>
-{/if}
