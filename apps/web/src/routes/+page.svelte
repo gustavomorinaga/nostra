@@ -1,3 +1,7 @@
+<script lang="ts" context="module">
+	import { USP } from '$lib/layouts';
+</script>
+
 <script lang="ts">
 	export let data;
 	const { products } = data;
@@ -22,3 +26,5 @@
 		</li>
 	{/each}
 </ul>
+
+<USP />
