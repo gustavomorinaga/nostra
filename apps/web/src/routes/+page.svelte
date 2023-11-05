@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	import { USP } from '$lib/layouts';
+	import { Newsletter, USP } from '$lib/layouts';
 </script>
 
 <script lang="ts">
@@ -28,3 +28,4 @@
 </ul>
 
 <USP />
+<Newsletter />
