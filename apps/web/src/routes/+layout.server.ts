@@ -1,5 +1,6 @@
-export const load = async ({ locals }) => {
-	const { user, cart } = locals;
+import { medusa } from '$lib/servers';
+import type { CartDTO } from '@medusajs/types';
 
-	return { user, cart, session: await locals.getSession() };
+export const load = async ({ locals, cookies }) => {
+	return { session: locals.getSession(), cart: medusa.getCart(locals, cookies) as CartDTO };
 };

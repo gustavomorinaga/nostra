@@ -1,0 +1,1 @@
+<p>Browse products</p>

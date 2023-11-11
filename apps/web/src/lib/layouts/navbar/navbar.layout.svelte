@@ -5,37 +5,43 @@
 		logo: 'images/svgs/logo-min.svg'
 	};
 
-	const routes = [
-		{
-			name: 'Shop',
-			paths: [
-				{
-					name: 'Men',
-					link: '/shop/men'
-				},
-				{
-					name: 'Women',
-					link: '/shop/women'
-				},
-				{
-					name: 'Casual',
-					link: '/shop/casual'
-				}
-			]
-		},
-		{
-			name: 'Most wanted',
-			link: '/most-wanted'
-		},
-		{
-			name: 'New arrival',
-			link: '/new-arrival'
-		},
-		{
-			name: 'Brands',
-			link: '/brands'
-		}
-	];
+	// const routes = [
+	// 	{
+	// 		name: 'Shop',
+	// 		paths: [
+	// 			{
+	// 				name: 'Men',
+	// 				link: '/shop/men'
+	// 			},
+	// 			{
+	// 				name: 'Women',
+	// 				link: '/shop/women'
+	// 			},
+	// 			{
+	// 				name: 'Casual',
+	// 				link: '/shop/casual'
+	// 			}
+	// 		]
+	// 	},
+	// 	{
+	// 		name: 'Most wanted',
+	// 		link: '/most-wanted'
+	// 	},
+	// 	{
+	// 		name: 'New arrival',
+	// 		link: '/new-arrival'
+	// 	},
+	// 	{
+	// 		name: 'Brands',
+	// 		link: '/brands'
+	// 	}
+	// ];
+</script>
+
+<script lang="ts">
+	import { page } from '$app/stores';
+
+	const { session } = $page.data;
 </script>
 
 <header class="navbar-container">
@@ -80,9 +86,16 @@
 			<Button size="icon" variant="outline" class="px-4" href="/cart" title="Cart">
 				<Icon icon="ph:shopping-cart" />
 			</Button>
-			<Button size="icon" variant="outline" class="px-4" href="/account" title="Account">
-				<Icon icon="ph:user" />
-			</Button>
+
+			{#if session}
+				<Button size="icon" variant="outline" class="px-4" href="/account" title="Account">
+					<Icon icon="ph:user" />
+				</Button>
+			{:else}
+				<Button size="icon" variant="outline" class="px-4" href="/auth" title="Sign In">
+					<Icon icon="ph:sign-in" />
+				</Button>
+			{/if}
 		</div>
 	</nav>
 </header>

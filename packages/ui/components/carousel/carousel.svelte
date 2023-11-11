@@ -3,10 +3,10 @@
 	import { register, type SwiperContainer } from 'swiper/element/bundle';
 	import { cn } from '$ui/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
-	import type { SwiperEvents, SwiperOptions } from 'swiper/types';
+	import type { CarouselOptions, CarouselEvents } from '.';
 
-	type $$Props = HTMLAttributes<SwiperContainer> & { options: SwiperOptions };
-	type $$Events = SwiperEvents;
+	type $$Props = HTMLAttributes<SwiperContainer> & { options: CarouselOptions };
+	type $$Events = CarouselEvents;
 
 	let ref: SwiperContainer;
 	let className: $$Props['class'] = undefined;

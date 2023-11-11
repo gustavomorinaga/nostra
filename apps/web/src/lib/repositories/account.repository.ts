@@ -1,6 +1,6 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 
-type TServerClient =  {
+type TServerClient = {
 	supabase: SupabaseClient;
 };
 

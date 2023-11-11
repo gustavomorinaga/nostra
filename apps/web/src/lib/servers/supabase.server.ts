@@ -6,8 +6,9 @@ type TSupabaseServerProps = {
 	event: RequestEvent;
 };
 
-export const supabaseServer = ({ event }: TSupabaseServerProps) => createSupabaseServerClient({
-	supabaseUrl: PUBLIC_SUPABASE_URL,
-	supabaseKey: PUBLIC_SUPABASE_ANON_KEY,
-	event
-});
+export const supabaseServer = ({ event }: TSupabaseServerProps) =>
+	createSupabaseServerClient({
+		supabaseUrl: PUBLIC_SUPABASE_URL,
+		supabaseKey: PUBLIC_SUPABASE_ANON_KEY,
+		event
+	});

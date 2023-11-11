@@ -1,6 +1,6 @@
 {
 	"$schema": "https://turbo.build/schema.json",
-	"globalDotEnv": [".env"],
+	"globalDotEnv": [".env.production", ".env.test", ".env"],
 	"pipeline": {
 		"dev": {
 			"cache": false,

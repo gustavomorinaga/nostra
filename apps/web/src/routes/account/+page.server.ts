@@ -34,16 +34,29 @@ export const load = async ({ locals: { supabase, getSession } }) => {
 		paymentMethods: {}
 	};
 
-	const [accountForm, addressForm, managePasswordForm, notificationForm, orderHistoryForm, paymentMethodsForm] = await Promise.all([
+	const [
+		accountForm,
+		addressForm,
+		managePasswordForm,
+		notificationForm,
+		orderHistoryForm,
+		paymentMethodsForm
+	] = await Promise.all([
 		superValidate(initialData.account, accountValidationSchema, { id: 'accountForm' }),
 		superValidate(initialData.address, addressValidationSchema, { id: 'addressForm' }),
 		superValidate(initialData.managePassword, managePasswordValidationSchema, {
 			id: 'managePasswordForm',
 			errors: false
 		}),
-		superValidate(initialData.notification, notificationValidationSchema, { id: 'notificationForm' }),
-		superValidate(initialData.orderHistory, orderHistoryValidationSchema, { id: 'orderHistoryForm' }),
-		superValidate(initialData.paymentMethods, paymentMethodsValidationSchema, { id: 'paymentMethodsForm' })
+		superValidate(initialData.notification, notificationValidationSchema, {
+			id: 'notificationForm'
+		}),
+		superValidate(initialData.orderHistory, orderHistoryValidationSchema, {
+			id: 'orderHistoryForm'
+		}),
+		superValidate(initialData.paymentMethods, paymentMethodsValidationSchema, {
+			id: 'paymentMethodsForm'
+		})
 	]);
 
 	const forms = {
