@@ -23,7 +23,7 @@
 
 			.swiper-button-prev {
 				right: 3.6rem;
-				border: solid hsl(var(--muted) / 1);
+				border: solid hsl(var(--secondary-foreground) / 0.1);
 				border-width: 0 2px 0 0;
 				border-radius: 0.5rem 0 0 0.5rem;
 			}
@@ -33,8 +33,8 @@
 				border-radius: 0 0.5rem 0.5rem 0;
 			}`,
 			`.swiper-pagination {
-				--swiper-pagination-color: hsl(var(--primary) / 1);
-				--swiper-pagination-bullet-inactive-color: hsl(var(--muted-foreground) / 1);
+				--swiper-pagination-color: hsl(var(--primary-foreground) / 1);
+				--swiper-pagination-bullet-inactive-color: hsl(var(--muted) / 1);
 				--swiper-pagination-bullet-inactive-opacity: 0.5;
 			}`
 		]
