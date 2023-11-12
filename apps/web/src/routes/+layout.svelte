@@ -6,6 +6,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { invalidate } from '$app/navigation';
+	import { Footer } from '$lib/layouts';
 
 	export let data;
 	let { supabase, session } = data;
@@ -25,3 +26,5 @@
 <Wrapper>
 	<slot />
 </Wrapper>
+
+<Footer />
