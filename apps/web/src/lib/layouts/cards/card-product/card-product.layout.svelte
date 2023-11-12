@@ -17,7 +17,11 @@
 		ratio={1 / 1}
 		class="relative flex items-center justify-center overflow-hidden rounded-sm"
 	>
-		<img class="transition-transform group-hover:scale-105" src={thumbnail} alt={handle} />
+		<img
+			class="transition-transform duration-300 ease-in-out group-hover:scale-105"
+			src={thumbnail}
+			alt={handle}
+		/>
 
 		{#if discountable}
 			<Badge class="pointer-events-none absolute left-4 top-4 rounded-sm" variant="destructive">
