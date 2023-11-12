@@ -1,11 +1,7 @@
-<script lang="ts">
+<script lang="ts" context="module">
 	import { Carousel, type CarouselOptions } from '@nostra/ui/components';
 	import { CardProduct } from '$lib/layouts';
 	import type { ProductDTO } from '@medusajs/types';
-
-	export let products: ProductDTO[] = [];
-
-	const hasProducts = Boolean(products.length);
 
 	const options: CarouselOptions = {
 		centeredSlides: false,
@@ -48,8 +44,12 @@
 			}`
 		]
 	};
+</script>
 
-	$: console.log(products);
+<script lang="ts">
+	export let products: ProductDTO[] = [];
+
+	const hasProducts = Boolean(products.length);
 </script>
 
 {#if hasProducts}
