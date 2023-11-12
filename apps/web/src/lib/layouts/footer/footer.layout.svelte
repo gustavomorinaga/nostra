@@ -1,4 +1,6 @@
 <script lang="ts" context="module">
+	import { Separator } from '@nostra/ui/components';
+
 	const images = {
 		logo: 'images/svgs/logo-min.svg'
 	};
@@ -114,7 +116,7 @@
 			</div>
 		</div>
 
-		<hr />
+		<Separator class="my-8" />
 
 		<small>Copyright &copy; 2023 Nostra, All right reserved</small>
 	</div>
@@ -165,10 +167,6 @@
 						}
 					}
 				}
-			}
-
-			& > hr {
-				@apply my-8 border;
 			}
 
 			& > small {

@@ -1,4 +1,5 @@
 <script lang="ts" context="module">
+	import { Separator } from '@nostra/ui/components';
 	import { currencyFormat, currencyTemplates } from '@nostra/utils';
 	import { CarouselGallery } from '$lib/layouts';
 	import type { MoneyAmountDTO, ProductDTO, ProductVariantDTO } from '@medusajs/types';
@@ -10,7 +11,6 @@
 	const [variant] = variants as (ProductVariantDTO & { prices: MoneyAmountDTO[] })[];
 	const [{ currency_code, amount }] = variant.prices;
 	const currencyCode = (currency_code as string).toUpperCase() as keyof typeof currencyTemplates;
-	const hasVariants = Boolean(variants.length);
 	const hasPrice = currencyCode && amount;
 </script>
 
@@ -26,21 +26,7 @@
 			</span>
 		{/if}
 
-		<!-- {#if !hasVariants}
-			<span class="price unavailable">Unavailable</span>
-		{:else if currentVariant.status === 'out-of-stock'}
-			<span class="price out-of-stock">Out of stock</span>
-		{:else}
-			<span class="price">
-				{currencyFormatter({ value: currentVariant.price })}
-			</span>
-
-			{#if hasDiscount}
-				<span class="original-price">
-					{currencyFormatter({ value: currentVariant.originalPrice || 0 })}
-				</span>
-			{/if}
-		{/if} -->
+		<Separator class="my-4" />
 	</article>
 </article>
 
@@ -57,17 +43,13 @@
 				@apply mb-4 text-3xl;
 			}
 
-			& > fieldset.rating {
-				@apply mb-6;
-			}
-
 			& > span.price {
 				@apply font-heading text-primary block text-3xl font-bold tabular-nums;
 			}
 
-			& > span.original-price {
+			/* & > span.original-price {
 				@apply font-heading align-top text-sm font-semibold text-gray-500 line-through;
-			}
+			} */
 		}
 	}
 </style>
