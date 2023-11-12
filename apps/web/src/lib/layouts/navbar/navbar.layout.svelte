@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	import { Button, Icon } from '@nostra/ui/components';
+	import { Button, Icon, Tooltip } from '@nostra/ui/components';
 	import { InputWithIcon } from '$lib/components';
 
 	const images = {
@@ -86,19 +86,32 @@
 				placeholder="Search..."
 			/>
 
-			<Button size="icon" variant="outline" class="px-4" href="/cart" title="Cart">
-				<Icon icon="ph:shopping-cart" />
-			</Button>
+			<Tooltip.Root>
+				<Tooltip.Trigger asChild let:builder>
+					<Button builders={[builder]} size="icon" variant="outline" href="/cart">
+						<Icon icon="ph:shopping-cart" />
+					</Button>
+				</Tooltip.Trigger>
+				<Tooltip.Content>
+					<span>Cart</span>
+				</Tooltip.Content>
+			</Tooltip.Root>
 
-			{#if session}
-				<Button size="icon" variant="outline" class="px-4" href="/account" title="Account">
-					<Icon icon="ph:user" />
-				</Button>
-			{:else}
-				<Button size="icon" variant="outline" class="px-4" href="/auth" title="Sign In">
-					<Icon icon="ph:sign-in" />
-				</Button>
-			{/if}
+			<Tooltip.Root>
+				<Tooltip.Trigger asChild let:builder>
+					<Button
+						builders={[builder]}
+						size="icon"
+						variant="outline"
+						href={session ? '/account' : '/auth'}
+					>
+						<Icon icon={session ? 'ph:user' : 'ph:sign-in'} />
+					</Button>
+				</Tooltip.Trigger>
+				<Tooltip.Content>
+					<span>{session ? 'Account' : 'Sign In'}</span>
+				</Tooltip.Content>
+			</Tooltip.Root>
 		</div>
 	</nav>
 </header>

@@ -1,5 +1,13 @@
 <script lang="ts" context="module">
-	import { AspectRatio, Badge, Button, Card, Icon, type ButtonEvents } from '@nostra/ui/components';
+	import {
+		AspectRatio,
+		Badge,
+		Button,
+		Card,
+		Icon,
+		Tooltip,
+		type ButtonEvents
+	} from '@nostra/ui/components';
 	import { currencyFormat, currencyTemplates } from '@nostra/utils';
 	import type { ProductDTO, MoneyAmountDTO, ProductVariantDTO } from '@medusajs/types';
 
@@ -49,8 +57,15 @@
 			</Card.Description>
 		</Card.Header>
 
-		<Button size="icon" title="Add to cart" on:click={handleAddToCart}>
-			<Icon icon="ph:shopping-cart" />
-		</Button>
+		<Tooltip.Root positioning={{ placement: 'bottom' }}>
+			<Tooltip.Trigger asChild let:builder>
+				<Button builders={[builder]} size="icon" on:click={handleAddToCart}>
+					<Icon icon="ph:shopping-cart" />
+				</Button>
+			</Tooltip.Trigger>
+			<Tooltip.Content>
+				<span>Add to cart</span>
+			</Tooltip.Content>
+		</Tooltip.Root>
 	</Card.Content>
 </Card.Root>
