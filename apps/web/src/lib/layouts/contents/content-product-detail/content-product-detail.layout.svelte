@@ -14,11 +14,17 @@
 	const hasPrice = currencyCode && amount;
 </script>
 
-<section class="product-detail">
+<article class="product-detail">
 	<CarouselGallery {images} />
 
 	<article>
 		<h1>{title}</h1>
+
+		{#if hasPrice}
+			<span class="price">
+				{currencyFormat({ value: amount, preset: currencyCode })}
+			</span>
+		{/if}
 
 		<!-- {#if !hasVariants}
 			<span class="price unavailable">Unavailable</span>
@@ -36,11 +42,11 @@
 			{/if}
 		{/if} -->
 	</article>
-</section>
+</article>
 
 <style lang="postcss">
-	section.product-detail {
-		@apply mb-8 grid grid-cols-2 gap-4;
+	article.product-detail {
+		@apply mb-8 grid grid-cols-2 gap-8;
 
 		& > * {
 			@apply col-span-1;
@@ -48,7 +54,7 @@
 
 		& > article {
 			& > h1 {
-				@apply mb-4 text-2xl font-bold;
+				@apply mb-4 text-3xl;
 			}
 
 			& > fieldset.rating {
