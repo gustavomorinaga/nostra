@@ -7,7 +7,7 @@
 	const { title, image, link } = banner;
 </script>
 
-<Card.Root class="relative h-full w-full rounded-none border-none">
+<Card.Root class="relative flex h-full w-full items-center justify-center rounded-none border-none">
 	<AspectRatio
 		ratio={16 / 9}
 		class="after:bg-secondary-foreground relative flex items-center justify-center overflow-hidden rounded-sm after:absolute after:inset-0 after:block after:opacity-50"

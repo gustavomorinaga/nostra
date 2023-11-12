@@ -57,7 +57,7 @@
 			}
 
 			& > blockquote {
-				@apply border-primary my-auto block border-l-2 p-4;
+				@apply border-primary my-auto block w-72 border-l-2 p-4 lg:w-fit;
 			}
 		}
 
@@ -65,7 +65,7 @@
 			@apply m-0 flex list-none flex-row flex-wrap gap-8;
 
 			& > li {
-				@apply flex-1;
+				@apply min-w-[18rem] flex-1;
 
 				& > h3 {
 					@apply my-2 text-xl font-bold;

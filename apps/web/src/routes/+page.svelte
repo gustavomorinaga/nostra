@@ -34,6 +34,6 @@
 </svelte:head>
 
 <CarouselBanner {banners} />
-<CarouselFeaturedProducts {products} />
 <USP />
+<CarouselFeaturedProducts {products} />
 <Newsletter />
