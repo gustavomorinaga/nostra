@@ -1,8 +1,15 @@
-<script lang="ts">
-	import { AspectRatio, Badge, Button, Card, Icon } from '@nostra/ui/components';
+<script lang="ts" context="module">
+	import { AspectRatio, Badge, Button, Card, Icon, type ButtonEvents } from '@nostra/ui/components';
 	import { currencyFormat, currencyTemplates } from '@nostra/utils';
 	import type { ProductDTO, MoneyAmountDTO, ProductVariantDTO } from '@medusajs/types';
 
+	const handleAddToCart = (event: ButtonEvents['click']) => {
+		event.preventDefault();
+		event.stopPropagation();
+	};
+</script>
+
+<script lang="ts">
 	export let product: ProductDTO;
 	const { handle, title, thumbnail, variants, discountable } = product;
 	const [variant] = variants as (ProductVariantDTO & { prices: MoneyAmountDTO[] })[];
@@ -42,7 +49,7 @@
 			</Card.Description>
 		</Card.Header>
 
-		<Button size="icon" title="Add to cart" on:click>
+		<Button size="icon" title="Add to cart" on:click={handleAddToCart}>
 			<Icon icon="ph:shopping-cart" />
 		</Button>
 		<!-- <div>
