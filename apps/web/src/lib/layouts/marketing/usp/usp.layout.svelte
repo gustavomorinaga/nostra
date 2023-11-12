@@ -62,10 +62,10 @@
 		}
 
 		& > ul {
-			@apply m-0 grid list-none grid-flow-col gap-x-8;
+			@apply m-0 flex list-none flex-row flex-wrap gap-8;
 
 			& > li {
-				@apply col-span-1;
+				@apply flex-1;
 
 				& > h3 {
 					@apply my-2 text-xl font-bold;

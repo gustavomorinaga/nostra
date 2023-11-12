@@ -20,7 +20,9 @@
 		<img class="transition-transform group-hover:scale-105" src={thumbnail} alt={handle} />
 
 		{#if discountable}
-			<Badge class="absolute left-4 top-4 rounded-sm" variant="destructive">SALE</Badge>
+			<Badge class="pointer-events-none absolute left-4 top-4 rounded-sm" variant="destructive">
+				SALE
+			</Badge>
 		{/if}
 	</AspectRatio>
 

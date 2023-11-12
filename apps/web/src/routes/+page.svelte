@@ -1,5 +1,23 @@
 <script lang="ts" context="module">
-	import { CarouselFeaturedProducts, Newsletter, USP } from '$lib/layouts';
+	import { CarouselBanner, CarouselFeaturedProducts, Newsletter, USP } from '$lib/layouts';
+
+	const images = {
+		couple: 'images/jpgs/banner-couple.jpg',
+		winter: 'images/jpgs/banner-winter.jpg'
+	};
+
+	const banners = [
+		{
+			title: 'Level up your style with our winter collections',
+			image: images.winter,
+			link: '/shop/winter-edition'
+		},
+		{
+			title: 'Check out our new casual collections',
+			image: images.couple,
+			link: '/shop/casual'
+		}
+	];
 </script>
 
 <script lang="ts">
@@ -15,6 +33,7 @@
 	/>
 </svelte:head>
 
+<CarouselBanner {banners} />
 <CarouselFeaturedProducts {products} />
 <USP />
 <Newsletter />
