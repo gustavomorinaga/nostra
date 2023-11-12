@@ -2628,9 +2628,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "@eslint/eslintrc@npm:2.1.2"
+"@eslint/eslintrc@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "@eslint/eslintrc@npm:2.1.3"
   dependencies:
     ajv: "npm:^6.12.4"
     debug: "npm:^4.3.2"
@@ -2641,14 +2641,14 @@ __metadata:
     js-yaml: "npm:^4.1.0"
     minimatch: "npm:^3.1.2"
     strip-json-comments: "npm:^3.1.1"
-  checksum: 00efdc3797e6f05518060522b7788e5f5aff02f13facbd0c83b176c3dee86554023283a5f68542df379c5137685d2d29745c87f62bf2406a1d38d95471f44ce6
+  checksum: f4103f4346126292eb15581c5a1d12bef03410fd3719dedbdb92e1f7031d46a5a2d60de8566790445d5d4b70b75ba050876799a11f5fff8265a91ee3fa77dab0
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:8.52.0":
-  version: 8.52.0
-  resolution: "@eslint/js@npm:8.52.0"
-  checksum: cdcf8f9b54994fe1a5dc086c714a75dca5fe5899f9b362986abd12b3b5bec9c9755f7608e663ce072edd3fa3910cc752afef8d149fda0288a477652b65865a1c
+"@eslint/js@npm:8.53.0":
+  version: 8.53.0
+  resolution: "@eslint/js@npm:8.53.0"
+  checksum: d29f6c207b2f6dc4ef174d16a3c07b0d3a17ca3d805680496ff267edd773e3bac41db4e7dcab622ca1970d892535bd19671e2a756d4eac75e96fd8c8dcdb619b
   languageName: node
   linkType: hard
 
@@ -3252,17 +3252,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/admin-ui@npm:^2.1.5":
-  version: 2.1.6
-  resolution: "@medusajs/admin-ui@npm:2.1.6"
+"@medusajs/admin-ui@npm:^2.1.7":
+  version: 2.1.7
+  resolution: "@medusajs/admin-ui@npm:2.1.7"
   dependencies:
     "@babel/parser": "npm:7.22.5"
     "@babel/traverse": "npm:7.22.5"
     "@hookform/error-message": "npm:^2.0.1"
     "@hookform/resolvers": "npm:^3.3.1"
-    "@medusajs/icons": "npm:1.1.0"
-    "@medusajs/ui": "npm:^2.2.0"
-    "@medusajs/ui-preset": "npm:1.0.2"
+    "@medusajs/icons": "npm:^1.1.0"
+    "@medusajs/ui": "npm:^2.2.1"
+    "@medusajs/ui-preset": "npm:^1.0.2"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.10"
     "@radix-ui/react-accordion": "npm:^1.0.1"
     "@radix-ui/react-avatar": "npm:^1.0.1"
@@ -3294,7 +3294,7 @@ __metadata:
     i18next-browser-languagedetector: "npm:^7.0.1"
     i18next-http-backend: "npm:^2.2.1"
     md5: "npm:^2.3.0"
-    medusa-react: "npm:^9.0.10"
+    medusa-react: "npm:^9.0.11"
     mini-css-extract-plugin: "npm:^2.7.6"
     moment: "npm:^2.29.4"
     path-browserify: "npm:^1.0.1"
@@ -3338,15 +3338,15 @@ __metadata:
     webpack-dev-server: "npm:4.15.0"
     webpackbar: "npm:^5.0.2"
     zod: "npm:^3.22.2"
-  checksum: 2e25a6a1fb9a4ac691c6fc973dfbc6e4254e0f10b330ea9ada80783870e94c2fa620938ebd466f878e4a6613554a704a3eac9ad7cfcc7154541ded69470a997d
+  checksum: 1b3b57dd22d69a9b2799e3012530026c72a3b3d0a99ebb1d6067c94ea248dfb0b1092edf9106631139fddb184aa91a38bdd8d1254d67bd0ed7e1083fb9f5b7f4
   languageName: node
   linkType: hard
 
-"@medusajs/admin@npm:7.1.5":
-  version: 7.1.5
-  resolution: "@medusajs/admin@npm:7.1.5"
+"@medusajs/admin@npm:7.1.7":
+  version: 7.1.7
+  resolution: "@medusajs/admin@npm:7.1.7"
   dependencies:
-    "@medusajs/admin-ui": "npm:^2.1.5"
+    "@medusajs/admin-ui": "npm:^2.1.7"
     "@rollup/plugin-alias": "npm:5.0.0"
     "@rollup/plugin-commonjs": "npm:24.1.0"
     "@rollup/plugin-json": "npm:6.0.0"
@@ -3367,7 +3367,7 @@ __metadata:
     "@medusajs/medusa": ^1.14.0
   bin:
     medusa-admin: bin/medusa-admin.js
-  checksum: 17ae0b14da9ac011d98e1fe0ad6fc8bdc7dda90ba5397d5b21356900d96038600fe8a075c28d1a5e00bc58fb6494d1bff0935e50c57b7e7a96f7867c3d90b157
+  checksum: 35b8dccc0bd3b74cfb72aaeea169a6a9d32dea4a73208075422af66d81d3c1fd2317c436081025fcef53acaac7585734e6e4e5092e4b7ade327526837a5722a3
   languageName: node
   linkType: hard
 
@@ -3424,7 +3424,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/icons@npm:*, @medusajs/icons@npm:1.1.0":
+"@medusajs/icons@npm:^1.1.0":
   version: 1.1.0
   resolution: "@medusajs/icons@npm:1.1.0"
   peerDependencies:
@@ -3433,17 +3433,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/link-modules@npm:^0.2.1":
-  version: 0.2.2
-  resolution: "@medusajs/link-modules@npm:0.2.2"
+"@medusajs/link-modules@npm:^0.2.3":
+  version: 0.2.3
+  resolution: "@medusajs/link-modules@npm:0.2.3"
   dependencies:
-    "@medusajs/modules-sdk": "npm:^1.12.2"
-    "@medusajs/types": "npm:^1.11.5"
-    "@medusajs/utils": "npm:^1.10.4"
+    "@medusajs/modules-sdk": "npm:^1.12.3"
+    "@medusajs/types": "npm:^1.11.6"
+    "@medusajs/utils": "npm:^1.10.5"
     "@mikro-orm/core": "npm:5.7.12"
     "@mikro-orm/postgresql": "npm:5.7.12"
     awilix: "npm:^8.0.0"
-  checksum: b94a875b10e4216a09e3596af61cd104dea2fbb9e0fb1774275e74cdbbe9773279453646c1bc2d038f756dec44b18acaad5a5005b6fb00c74d23fb6566fa6a19
+  checksum: 4925514d09fdadba02bf309b09f5ed3262961b1f7824c456d7e4f84770d95327a1c46c1b06cd0c8e249f1492333c39411aa21a4b60f013d54b5349bf1c6315ce
   languageName: node
   linkType: hard
 
@@ -3500,16 +3500,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/medusa@npm:1.17.2":
-  version: 1.17.2
-  resolution: "@medusajs/medusa@npm:1.17.2"
+"@medusajs/medusa@npm:1.17.4":
+  version: 1.17.4
+  resolution: "@medusajs/medusa@npm:1.17.4"
   dependencies:
-    "@medusajs/link-modules": "npm:^0.2.1"
+    "@medusajs/link-modules": "npm:^0.2.3"
     "@medusajs/medusa-cli": "npm:^1.3.21"
-    "@medusajs/modules-sdk": "npm:^1.12.1"
-    "@medusajs/orchestration": "npm:^0.4.2"
-    "@medusajs/utils": "npm:^1.10.4"
-    "@medusajs/workflows": "npm:^0.2.4"
+    "@medusajs/modules-sdk": "npm:^1.12.3"
+    "@medusajs/orchestration": "npm:^0.4.4"
+    "@medusajs/utils": "npm:^1.10.5"
+    "@medusajs/workflows": "npm:^0.2.5"
     awilix: "npm:^8.0.0"
     body-parser: "npm:^1.19.0"
     boxen: "npm:^5.0.1"
@@ -3560,11 +3560,28 @@ __metadata:
     typeorm: ^0.3.16
   bin:
     medusa: cli.js
-  checksum: 9aa33aa8eb3b058171627dc76ee0d56cf511d0a6d063232cc27418220640b0bc0b6a0b0cd4015c68951f95aa34d984f0c9d0ae306e5c542349eec846949c80e4
+  checksum: ecb0eb3598ea0dedd8863a300bf51f1cbef5c10e01055b2b9b64b1b9cfc1711341a9a515b4918cf381bfdaff5acc2da286f5411c5a105d0437417bfeefd55f6d
   languageName: node
   linkType: hard
 
-"@medusajs/modules-sdk@npm:^1.12.1, @medusajs/modules-sdk@npm:^1.12.2, @medusajs/modules-sdk@npm:^1.8.8":
+"@medusajs/modules-sdk@npm:^1.12.3":
+  version: 1.12.3
+  resolution: "@medusajs/modules-sdk@npm:1.12.3"
+  dependencies:
+    "@graphql-tools/merge": "npm:^9.0.0"
+    "@graphql-tools/schema": "npm:^10.0.0"
+    "@medusajs/orchestration": "npm:^0.4.4"
+    "@medusajs/types": "npm:^1.11.6"
+    "@medusajs/utils": "npm:^1.10.5"
+    awilix: "npm:^8.0.0"
+    knex: "npm:2.4.2"
+    pg: "npm:^8.11.2"
+    resolve-cwd: "npm:^3.0.0"
+  checksum: a8105db9a2a58f752b4515bc2b9137d9d5d3f8b820dbb5eef8db9974607be38e25b72af5bbc9cdc4834c11cc230604cdb0e4d3bc8ca929ded4d1db212e0bcc66
+  languageName: node
+  linkType: hard
+
+"@medusajs/modules-sdk@npm:^1.8.8":
   version: 1.12.2
   resolution: "@medusajs/modules-sdk@npm:1.12.2"
   dependencies:
@@ -3581,7 +3598,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/orchestration@npm:^0.4.2, @medusajs/orchestration@npm:^0.4.3":
+"@medusajs/orchestration@npm:^0.4.3":
   version: 0.4.3
   resolution: "@medusajs/orchestration@npm:0.4.3"
   dependencies:
@@ -3593,14 +3610,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/types@npm:1.11.5, @medusajs/types@npm:^1.10.3, @medusajs/types@npm:^1.11.4, @medusajs/types@npm:^1.11.5":
+"@medusajs/orchestration@npm:^0.4.4":
+  version: 0.4.4
+  resolution: "@medusajs/orchestration@npm:0.4.4"
+  dependencies:
+    "@medusajs/types": "npm:^1.11.6"
+    "@medusajs/utils": "npm:^1.10.5"
+    awilix: "npm:^8.0.0"
+    graphql: "npm:^16.6.0"
+  checksum: 3573cd0321fa8b687146de3345b1f25b6937ad8d47cc2fa883480d0997b102ebaa0a54c17dddaf594f3cbe918ff27d55bcfdd50d43122fa7294d61673024f846
+  languageName: node
+  linkType: hard
+
+"@medusajs/types@npm:1.11.6, @medusajs/types@npm:^1.11.6":
+  version: 1.11.6
+  resolution: "@medusajs/types@npm:1.11.6"
+  checksum: d45e833c2b1ef8faa422b666ace5b1bd09b79bfbf6b093755b9c5868424a20588d76c3c8e95c72584327de84e315c5d3f586f47eb34ba6ff01e7a93acc7e5b3b
+  languageName: node
+  linkType: hard
+
+"@medusajs/types@npm:^1.10.3, @medusajs/types@npm:^1.11.4, @medusajs/types@npm:^1.11.5":
   version: 1.11.5
   resolution: "@medusajs/types@npm:1.11.5"
   checksum: 0c3160e217b6e347beff145b3b7272db521e38bfb444108caffeb381fb5a65fe7656edaeffc4b15663e67863d92c71456e643a6ec47f72de5116434fcb49f5e5
   languageName: node
   linkType: hard
 
-"@medusajs/ui-preset@npm:1.0.2":
+"@medusajs/ui-preset@npm:^1.0.2":
   version: 1.0.2
   resolution: "@medusajs/ui-preset@npm:1.0.2"
   dependencies:
@@ -3612,11 +3648,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/ui@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "@medusajs/ui@npm:2.2.0"
+"@medusajs/ui@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@medusajs/ui@npm:2.2.1"
   dependencies:
-    "@medusajs/icons": "npm:*"
+    "@medusajs/icons": "npm:^1.1.0"
     "@radix-ui/react-accordion": "npm:^1.1.2"
     "@radix-ui/react-alert-dialog": "npm:^1.0.4"
     "@radix-ui/react-avatar": "npm:^1.0.3"
@@ -3647,7 +3683,7 @@ __metadata:
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 7bfbdee3612ba163bc2b5a28f5e0383450c0db1f97e605ff3bfc80847b63eb85a86d4f03d9bd5475f269382d06e0a2828fc959efaf65f2470c27bf93efe65165
+  checksum: 7e0458a27c06e96b264361553115dd74ff822b97fcd8b405290e3c609a214fff7e77e8811552f31eb29074e99ef2010689ee2d81efe452de17f0ae30ba3df906
   languageName: node
   linkType: hard
 
@@ -3666,31 +3702,47 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@medusajs/workflows@npm:^0.2.4":
-  version: 0.2.4
-  resolution: "@medusajs/workflows@npm:0.2.4"
+"@medusajs/utils@npm:^1.10.5":
+  version: 1.10.5
+  resolution: "@medusajs/utils@npm:1.10.5"
   dependencies:
-    "@medusajs/modules-sdk": "npm:^1.12.1"
-    "@medusajs/orchestration": "npm:^0.4.2"
-    "@medusajs/utils": "npm:^1.10.4"
+    "@medusajs/types": "npm:^1.11.6"
+    "@mikro-orm/core": "npm:5.7.12"
+    "@mikro-orm/migrations": "npm:5.7.12"
+    "@mikro-orm/postgresql": "npm:5.7.12"
     awilix: "npm:^8.0.1"
+    knex: "npm:2.4.2"
     ulid: "npm:^2.3.0"
-  checksum: ef905980ccfc1eb82ee26b68fa72ad96d3df1e01ecffac882156db6dfb9cf7d458eb43ab73ee512e1e24263030a8baa4689cbe290a2a3a615a6e0892adc1c4e2
+  checksum: 181a8c145e412b4ad897e19d2a2e836780a9ac71f7a13d20ccaf18f5260ad2784d599208c3e57574c5d7bbaee4e7ed68cbdd5b07a3a6e55511bcae3d8548f0a4
   languageName: node
   linkType: hard
 
-"@melt-ui/svelte@npm:0.57.2":
-  version: 0.57.2
-  resolution: "@melt-ui/svelte@npm:0.57.2"
+"@medusajs/workflows@npm:^0.2.5":
+  version: 0.2.5
+  resolution: "@medusajs/workflows@npm:0.2.5"
+  dependencies:
+    "@medusajs/modules-sdk": "npm:^1.12.3"
+    "@medusajs/orchestration": "npm:^0.4.4"
+    "@medusajs/utils": "npm:^1.10.5"
+    awilix: "npm:^8.0.1"
+    ulid: "npm:^2.3.0"
+  checksum: df8e13510ea11398b1037417dd43c9f7bdc4b93852c7b4ba84b74f800061b2a04a9792b27c76857f3d8184a2803b1c63ebc56b988cbee69ce94f7365f15eb0c7
+  languageName: node
+  linkType: hard
+
+"@melt-ui/svelte@npm:0.61.1":
+  version: 0.61.1
+  resolution: "@melt-ui/svelte@npm:0.61.1"
   dependencies:
     "@floating-ui/core": "npm:^1.3.1"
     "@floating-ui/dom": "npm:^1.4.5"
+    "@internationalized/date": "npm:^3.5.0"
     dequal: "npm:^2.0.3"
     focus-trap: "npm:^7.5.2"
     nanoid: "npm:^4.0.2"
   peerDependencies:
     svelte: ">=3 <5"
-  checksum: 746201434ea2671c72b9f8dfec8ce194b19586c4dd47d896433046a3c5f3b7858ccb72c3028128a4db246d4dcfebeef95201c18a5398377eb2c903c44f01fd83
+  checksum: 5429b68aa5ad7ec8ce7051de56f527c064dbeb5c20be97c03d1518c105f198dbe73858608c89fd0f486df70d4284a7971400f43dcb5a3ba85db8ef69a9b0f995
   languageName: node
   linkType: hard
 
@@ -3910,13 +3962,13 @@ __metadata:
     "@babel/cli": "npm:7.14.3"
     "@babel/core": "npm:7.14.3"
     "@babel/preset-typescript": "npm:7.21.4"
-    "@medusajs/admin": "npm:7.1.5"
+    "@medusajs/admin": "npm:7.1.7"
     "@medusajs/cache-inmemory": "npm:1.8.8"
     "@medusajs/cache-redis": "npm:1.8.8"
     "@medusajs/event-bus-local": "npm:1.9.6"
     "@medusajs/event-bus-redis": "npm:1.8.9"
     "@medusajs/file-local": "npm:1.0.2"
-    "@medusajs/medusa": "npm:1.17.2"
+    "@medusajs/medusa": "npm:1.17.4"
     "@medusajs/medusa-cli": "npm:1.3.21"
     "@tanstack/react-query": "npm:4.22.0"
     "@types/express": "npm:4.17.13"
@@ -3949,12 +4001,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nostra/eslint-config-custom@workspace:packages/eslint-config-custom"
   dependencies:
-    "@typescript-eslint/eslint-plugin": "npm:6.9.1"
-    "@typescript-eslint/parser": "npm:6.9.1"
-    eslint: "npm:8.52.0"
+    "@typescript-eslint/eslint-plugin": "npm:6.10.0"
+    "@typescript-eslint/parser": "npm:6.10.0"
+    eslint: "npm:8.53.0"
     eslint-config-prettier: "npm:9.0.0"
-    eslint-plugin-svelte: "npm:2.34.0"
-    svelte: "npm:4.2.2"
+    eslint-plugin-svelte: "npm:2.35.0"
+    svelte: "npm:4.2.3"
     typescript: "npm:5.2.2"
   languageName: unknown
   linkType: soft
@@ -3964,9 +4016,9 @@ __metadata:
   resolution: "@nostra/prettier-config-custom@workspace:packages/prettier-config-custom"
   dependencies:
     prettier: "npm:3.0.3"
-    prettier-plugin-svelte: "npm:3.0.3"
-    prettier-plugin-tailwindcss: "npm:0.5.6"
-    svelte: "npm:4.2.2"
+    prettier-plugin-svelte: "npm:3.1.0"
+    prettier-plugin-tailwindcss: "npm:0.5.7"
+    svelte: "npm:4.2.3"
   languageName: unknown
   linkType: soft
 
@@ -3976,27 +4028,27 @@ __metadata:
   dependencies:
     "@nostra/eslint-config-custom": "workspace:*"
     "@nostra/prettier-config-custom": "workspace:*"
-    "@sveltejs/kit": "npm:1.27.2"
+    "@sveltejs/kit": "npm:1.27.5"
     "@tsconfig/svelte": "npm:5.0.2"
-    "@typescript-eslint/eslint-plugin": "npm:6.9.1"
-    "@typescript-eslint/parser": "npm:6.9.1"
+    "@typescript-eslint/eslint-plugin": "npm:6.10.0"
+    "@typescript-eslint/parser": "npm:6.10.0"
     autoprefixer: "npm:10.4.16"
-    bits-ui: "npm:^0.9.0"
+    bits-ui: "npm:0.9.4"
     clsx: "npm:2.0.0"
     cssnano: "npm:6.0.1"
-    eslint: "npm:8.52.0"
-    formsnap: "npm:0.4.0"
+    eslint: "npm:8.53.0"
+    formsnap: "npm:0.4.1"
     iconify-icon: "npm:1.0.8"
-    lucide-svelte: "npm:0.291.0"
+    lucide-svelte: "npm:0.292.0"
     postcss: "npm:8.4.31"
     postcss-import: "npm:15.1.0"
     postcss-load-config: "npm:4.0.1"
     prettier: "npm:3.0.3"
-    prettier-plugin-svelte: "npm:3.0.3"
-    prettier-plugin-tailwindcss: "npm:0.5.6"
-    svelte: "npm:4.2.2"
-    sveltekit-superforms: "npm:1.9.0"
-    swiper: "npm:11.0.3"
+    prettier-plugin-svelte: "npm:3.1.0"
+    prettier-plugin-tailwindcss: "npm:0.5.7"
+    svelte: "npm:4.2.3"
+    sveltekit-superforms: "npm:1.10.1"
+    swiper: "npm:11.0.4"
     tailwind-merge: "npm:2.0.0"
     tailwind-variants: "npm:0.1.18"
     tailwindcss: "npm:3.3.5"
@@ -4012,12 +4064,12 @@ __metadata:
   dependencies:
     "@nostra/eslint-config-custom": "workspace:*"
     "@nostra/prettier-config-custom": "workspace:*"
-    "@types/node": "npm:20.8.9"
-    eslint: "npm:8.52.0"
+    "@types/node": "npm:20.9.0"
+    eslint: "npm:8.53.0"
     prettier: "npm:3.0.3"
     typescript: "npm:5.2.2"
     zod: "npm:3.22.4"
-    zod-validation-error: "npm:2.0.0"
+    zod-validation-error: "npm:2.1.0"
   languageName: unknown
   linkType: soft
 
@@ -4029,34 +4081,34 @@ __metadata:
     "@fontsource-variable/jetbrains-mono": "npm:5.0.18"
     "@fontsource-variable/roboto-slab": "npm:5.0.17"
     "@fontsource-variable/sora": "npm:5.0.15"
-    "@medusajs/types": "npm:1.11.5"
+    "@medusajs/types": "npm:1.11.6"
     "@nostra/eslint-config-custom": "workspace:*"
     "@nostra/prettier-config-custom": "workspace:*"
     "@nostra/ui": "workspace:*"
     "@nostra/utils": "workspace:*"
     "@playwright/test": "npm:1.39.0"
-    "@supabase/auth-helpers-sveltekit": "npm:0.10.5"
+    "@supabase/auth-helpers-sveltekit": "npm:0.10.7"
     "@supabase/auth-ui-shared": "npm:0.1.8"
-    "@supabase/auth-ui-svelte": "npm:0.2.7"
+    "@supabase/auth-ui-svelte": "npm:0.2.8"
     "@supabase/supabase-js": "npm:2.38.4"
-    "@sveltejs/adapter-auto": "npm:2.1.0"
-    "@sveltejs/kit": "npm:1.27.2"
-    "@typescript-eslint/eslint-plugin": "npm:6.9.1"
-    "@typescript-eslint/parser": "npm:6.9.1"
+    "@sveltejs/adapter-auto": "npm:2.1.1"
+    "@sveltejs/kit": "npm:1.27.5"
+    "@typescript-eslint/eslint-plugin": "npm:6.10.0"
+    "@typescript-eslint/parser": "npm:6.10.0"
     autoprefixer: "npm:10.4.16"
     cssnano: "npm:6.0.1"
-    eslint: "npm:8.52.0"
-    eslint-plugin-svelte: "npm:2.34.0"
+    eslint: "npm:8.53.0"
+    eslint-plugin-svelte: "npm:2.35.0"
     postcss: "npm:8.4.31"
     postcss-load-config: "npm:4.0.1"
     postcss-nested: "npm:6.0.1"
     prettier: "npm:3.0.3"
-    prettier-plugin-svelte: "npm:3.0.3"
-    prettier-plugin-tailwindcss: "npm:0.5.6"
-    svelte: "npm:4.2.2"
-    svelte-check: "npm:3.5.2"
+    prettier-plugin-svelte: "npm:3.1.0"
+    prettier-plugin-tailwindcss: "npm:0.5.7"
+    svelte: "npm:4.2.3"
+    svelte-check: "npm:3.6.0"
     sveltekit-medusa-client: "npm:3.1.2"
-    sveltekit-superforms: "npm:1.9.0"
+    sveltekit-superforms: "npm:1.10.1"
     tailwindcss: "npm:3.3.5"
     tslib: "npm:2.6.2"
     typescript: "npm:5.2.2"
@@ -7052,26 +7104,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/auth-helpers-shared@npm:0.6.1":
-  version: 0.6.1
-  resolution: "@supabase/auth-helpers-shared@npm:0.6.1"
+"@supabase/auth-helpers-shared@npm:0.6.3":
+  version: 0.6.3
+  resolution: "@supabase/auth-helpers-shared@npm:0.6.3"
   dependencies:
     jose: "npm:^4.14.4"
   peerDependencies:
     "@supabase/supabase-js": ^2.19.0
-  checksum: e6641603e5fcb8656f6faab20ebfb9b4b41dd1114fff213663b1b588654bff31d6eb7c30d06248cd0f049de8a1755c242e48dc60e39c5647cc67e835f5b189f0
+  checksum: 8220ceba8e6418df9779464a43d4801bf1758764350335b3dc5d0ad88785e7b6b428b473a639b249a4f83f694e880fc2713b3b8d753df1cac9104dd7e5935f13
   languageName: node
   linkType: hard
 
-"@supabase/auth-helpers-sveltekit@npm:0.10.5":
-  version: 0.10.5
-  resolution: "@supabase/auth-helpers-sveltekit@npm:0.10.5"
+"@supabase/auth-helpers-sveltekit@npm:0.10.7":
+  version: 0.10.7
+  resolution: "@supabase/auth-helpers-sveltekit@npm:0.10.7"
   dependencies:
-    "@supabase/auth-helpers-shared": "npm:0.6.1"
+    "@supabase/auth-helpers-shared": "npm:0.6.3"
   peerDependencies:
     "@supabase/supabase-js": ^2.19.0
     "@sveltejs/kit": ^1.15.4
-  checksum: 54ef553502f6fe6d467f4e5a3dcf0e262d3700581630d8a9fb53f549f5deabfebec4e6d8c46ebac266e5c99c21b205c4e2acddb7f70913a86b1c3e103ee2998a
+  checksum: d28bf8ae1fa5dfaac420700afc285677e715528684ca2e53abf575d2fd544871fb9735070aaaf9f16e3e0b3518c7028898643d7399b7cb628dc2d09a059e315c
   languageName: node
   linkType: hard
 
@@ -7084,16 +7136,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/auth-ui-svelte@npm:0.2.7":
-  version: 0.2.7
-  resolution: "@supabase/auth-ui-svelte@npm:0.2.7"
+"@supabase/auth-ui-svelte@npm:0.2.8":
+  version: 0.2.8
+  resolution: "@supabase/auth-ui-svelte@npm:0.2.8"
   dependencies:
     "@stitches/core": "npm:^1.2.8"
     "@supabase/auth-ui-shared": "npm:0.1.8"
     svelte: "npm:^3.55.1"
   peerDependencies:
     "@supabase/supabase-js": ^2.21.0
-  checksum: fdf35b52fef8edbf5b87ac0df72a220ac2c595ef1fbb740349c899f30300df98c68137a6b207afe8127260cab354784655c24b817fb5759cf4ee7cb662f52a31
+  checksum: 4c6f4fda01116650a85a68fb4004dd926cee1b948681ef95167026abb100091f84848a0ba11f4fcdd27a4286db48dcab280d7521bf2cb2ca8b0f2bc2a78bd4f2
   languageName: node
   linkType: hard
 
@@ -7168,22 +7220,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-auto@npm:2.1.0":
-  version: 2.1.0
-  resolution: "@sveltejs/adapter-auto@npm:2.1.0"
+"@sveltejs/adapter-auto@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@sveltejs/adapter-auto@npm:2.1.1"
   dependencies:
-    import-meta-resolve: "npm:^3.0.0"
+    import-meta-resolve: "npm:^4.0.0"
   peerDependencies:
     "@sveltejs/kit": ^1.0.0
-  checksum: 9f71090b4d11e3c5d8882eb3940d587d9a8e241b906dc70c6737af0953d979997adc83a42a07b939c53e5861f57d8b45399e5bf7c17d2c2465d01dae66088ec9
+  checksum: cf3bf339732c2567a1cb183914ad5c7cce19c91b3d74fee3da70b24d63eb73eb858c25f9fffe150c2ea607f28d5097c6995e298e87d7b4b9482067dc7233713f
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:1.27.2":
-  version: 1.27.2
-  resolution: "@sveltejs/kit@npm:1.27.2"
+"@sveltejs/kit@npm:1.27.5":
+  version: 1.27.5
+  resolution: "@sveltejs/kit@npm:1.27.5"
   dependencies:
-    "@sveltejs/vite-plugin-svelte": "npm:^2.4.1"
+    "@sveltejs/vite-plugin-svelte": "npm:^2.5.0"
     "@types/cookie": "npm:^0.5.1"
     cookie: "npm:^0.5.0"
     devalue: "npm:^4.3.1"
@@ -7197,11 +7249,11 @@ __metadata:
     tiny-glob: "npm:^0.2.9"
     undici: "npm:~5.26.2"
   peerDependencies:
-    svelte: ^3.54.0 || ^4.0.0-next.0
+    svelte: ^3.54.0 || ^4.0.0-next.0 || ^5.0.0-next.0
     vite: ^4.0.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: c87c517899f6e200e8cd1ecffc87aed86ffdad19c42ba4cb07cb5444ea8bc9f7dea107068774de9615ee4d2f88ca5c4ea939ee715b7376f4839086918e25de92
+  checksum: 17cb6db2c36e7e40b459eabeb07f16993ca9157b2b9c5c737f25b7a095059eaa7bebc855455da2c1d0bf3f305f8592996cab427dee3a32c28c505e74b2ad9678
   languageName: node
   linkType: hard
 
@@ -7218,9 +7270,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/vite-plugin-svelte@npm:^2.4.1":
-  version: 2.4.6
-  resolution: "@sveltejs/vite-plugin-svelte@npm:2.4.6"
+"@sveltejs/vite-plugin-svelte@npm:^2.5.0":
+  version: 2.5.2
+  resolution: "@sveltejs/vite-plugin-svelte@npm:2.5.2"
   dependencies:
     "@sveltejs/vite-plugin-svelte-inspector": "npm:^1.0.4"
     debug: "npm:^4.3.4"
@@ -7230,9 +7282,9 @@ __metadata:
     svelte-hmr: "npm:^0.15.3"
     vitefu: "npm:^0.2.4"
   peerDependencies:
-    svelte: ^3.54.0 || ^4.0.0
+    svelte: ^3.54.0 || ^4.0.0 || ^5.0.0-next.0
     vite: ^4.0.0
-  checksum: de7d844bf5fc12aa4caf352f5825d58f6747eef68301a492128ea6756c3c193f1d1e1f75975abd4fdfb50f5a4ff45016a94f40c29e1b0121095c63f6bc10e219
+  checksum: 79c4a8a24e57aec113dc120c9a7912d3458f77c3ad4b55c2b380a1e21897de7e701efadf4f037a0ce3c33ebdbe21802cc3adfba51b26f107dbf425945013c991
   languageName: node
   linkType: hard
 
@@ -7898,7 +7950,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.8.9, @types/node@npm:>=8.1.0":
+"@types/node@npm:*, @types/node@npm:>=8.1.0":
   version: 20.8.9
   resolution: "@types/node@npm:20.8.9"
   dependencies:
@@ -7911,6 +7963,15 @@ __metadata:
   version: 17.0.8
   resolution: "@types/node@npm:17.0.8"
   checksum: f9a40fcfbd1efae8a77aaed269fd6fd7e28eae4c14d999b242676b621f244d83818b3734a4064e1aee4e841e2ae92abf34f9bf3b9fb7d83cc3884b4a25624141
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:20.9.0":
+  version: 20.9.0
+  resolution: "@types/node@npm:20.9.0"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 755d07de735eafda4e20af75ad9d03bdbfddef327d790e9a896142eac7493db5d8501591376e1c8227aa12eeb88e522bc727c6024504842ed40e539e8a466db9
   languageName: node
   linkType: hard
 
@@ -8119,15 +8180,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:6.9.1":
-  version: 6.9.1
-  resolution: "@typescript-eslint/eslint-plugin@npm:6.9.1"
+"@typescript-eslint/eslint-plugin@npm:6.10.0":
+  version: 6.10.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:6.10.0"
   dependencies:
     "@eslint-community/regexpp": "npm:^4.5.1"
-    "@typescript-eslint/scope-manager": "npm:6.9.1"
-    "@typescript-eslint/type-utils": "npm:6.9.1"
-    "@typescript-eslint/utils": "npm:6.9.1"
-    "@typescript-eslint/visitor-keys": "npm:6.9.1"
+    "@typescript-eslint/scope-manager": "npm:6.10.0"
+    "@typescript-eslint/type-utils": "npm:6.10.0"
+    "@typescript-eslint/utils": "npm:6.10.0"
+    "@typescript-eslint/visitor-keys": "npm:6.10.0"
     debug: "npm:^4.3.4"
     graphemer: "npm:^1.4.0"
     ignore: "npm:^5.2.4"
@@ -8140,44 +8201,44 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: f2455fe74f8c90d82df97801ee5e17bb3d81b1a59d23eedc7cad95b6eed30180339107bef0460578d5cc587033bb388fd112bae48b6b85f504fe4521f365ac69
+  checksum: f50b17cb753afbfc99549d38585eba8558949b977eb4661dd584e73ee946b3dbe944c9e3b12a233fa06b5e1c7d101730ac88a00c7a91b0a7f1e2c37a98e13c7a
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:6.9.1":
-  version: 6.9.1
-  resolution: "@typescript-eslint/parser@npm:6.9.1"
+"@typescript-eslint/parser@npm:6.10.0":
+  version: 6.10.0
+  resolution: "@typescript-eslint/parser@npm:6.10.0"
   dependencies:
-    "@typescript-eslint/scope-manager": "npm:6.9.1"
-    "@typescript-eslint/types": "npm:6.9.1"
-    "@typescript-eslint/typescript-estree": "npm:6.9.1"
-    "@typescript-eslint/visitor-keys": "npm:6.9.1"
+    "@typescript-eslint/scope-manager": "npm:6.10.0"
+    "@typescript-eslint/types": "npm:6.10.0"
+    "@typescript-eslint/typescript-estree": "npm:6.10.0"
+    "@typescript-eslint/visitor-keys": "npm:6.10.0"
     debug: "npm:^4.3.4"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: a6896655b2005a55e15dd3bb8b8239e1cb1bb0379037f6af2409e910c426cf9cda5490d45cd1857a3ca7fe2727acc8250d8196770147a4dc274e4c700ead9d9c
+  checksum: fd86c31dfdde03636393a3a9cf16716856bb506923069f34d87af14fac363a33578f47476a15d272e4d7a764de00fd905ee11361cc06b81b302a9fa8ebe4c23c
   languageName: node
   linkType: hard
 
-"@typescript-eslint/scope-manager@npm:6.9.1":
-  version: 6.9.1
-  resolution: "@typescript-eslint/scope-manager@npm:6.9.1"
+"@typescript-eslint/scope-manager@npm:6.10.0":
+  version: 6.10.0
+  resolution: "@typescript-eslint/scope-manager@npm:6.10.0"
   dependencies:
-    "@typescript-eslint/types": "npm:6.9.1"
-    "@typescript-eslint/visitor-keys": "npm:6.9.1"
-  checksum: 53fa7c3813d22b119e464f9b6d7d23407dfe103ee8ad2dcacf9ad6d656fda20e2bb3346df39e62b0e6b6ce71572ce5838071c5d2cca6daa4e0ce117ff22eafe5
+    "@typescript-eslint/types": "npm:6.10.0"
+    "@typescript-eslint/visitor-keys": "npm:6.10.0"
+  checksum: a5fbee770d763852a7f426b950d495529139f1629fdcb30136c93f787acd82236db4272f78dff1d05a3a10a6406472ae95ae94ab75cfb618a06d75b8cc536cbf
   languageName: node
   linkType: hard
 
-"@typescript-eslint/type-utils@npm:6.9.1":
-  version: 6.9.1
-  resolution: "@typescript-eslint/type-utils@npm:6.9.1"
+"@typescript-eslint/type-utils@npm:6.10.0":
+  version: 6.10.0
+  resolution: "@typescript-eslint/type-utils@npm:6.10.0"
   dependencies:
-    "@typescript-eslint/typescript-estree": "npm:6.9.1"
-    "@typescript-eslint/utils": "npm:6.9.1"
+    "@typescript-eslint/typescript-estree": "npm:6.10.0"
+    "@typescript-eslint/utils": "npm:6.10.0"
     debug: "npm:^4.3.4"
     ts-api-utils: "npm:^1.0.1"
   peerDependencies:
@@ -8185,23 +8246,23 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 9373c32c9bce736527e01baabc1dbee4b7f43774ebdcbbe20ee9cf61d1b01e7faab3d5df1ebbe75241308c52eabbc9500dd7826701f95caee4054ca659420304
+  checksum: f7c425d4da4d53d78b3d6630216dc1f2809f8dcaed62dc3cf12252102a53103a2aa39a160b310ca1cedebf87b8c339013be0c2360710c7c836b775374730c10e
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:6.9.1":
-  version: 6.9.1
-  resolution: "@typescript-eslint/types@npm:6.9.1"
-  checksum: 4ba21ba18e256da210a4caedfbc5d4927cf8cb4f2c4d74f8ccc865576f3659b974e79119d3c94db2b68a4cec9cd687e43971d355450b7082d6d1736a5dd6db85
+"@typescript-eslint/types@npm:6.10.0":
+  version: 6.10.0
+  resolution: "@typescript-eslint/types@npm:6.10.0"
+  checksum: 30f47de625405b3729db6d26a0376d98628bd966c70ca01fab1adcef91bba810d27ce643d844e42d1cc77bb2c6277e62efe278a090da63ba748dfe5710c4757b
   languageName: node
   linkType: hard
 
-"@typescript-eslint/typescript-estree@npm:6.9.1":
-  version: 6.9.1
-  resolution: "@typescript-eslint/typescript-estree@npm:6.9.1"
+"@typescript-eslint/typescript-estree@npm:6.10.0":
+  version: 6.10.0
+  resolution: "@typescript-eslint/typescript-estree@npm:6.10.0"
   dependencies:
-    "@typescript-eslint/types": "npm:6.9.1"
-    "@typescript-eslint/visitor-keys": "npm:6.9.1"
+    "@typescript-eslint/types": "npm:6.10.0"
+    "@typescript-eslint/visitor-keys": "npm:6.10.0"
     debug: "npm:^4.3.4"
     globby: "npm:^11.1.0"
     is-glob: "npm:^4.0.3"
@@ -8210,34 +8271,34 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 850b1865a90107879186c3f2969968a2c08fc6fcc56d146483c297cf5be376e33d505ac81533ba8e8103ca4d2edfea7d21b178de9e52217f7ee2922f51a445fa
+  checksum: ca28ca5a55e2d431c649ad093e4a4302f2b37c430bbeebbe622b05c727fd14dab136aead5a96848499d3ff4d187889733f8871b8dd5205d19bed4a260ad74544
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:6.9.1":
-  version: 6.9.1
-  resolution: "@typescript-eslint/utils@npm:6.9.1"
+"@typescript-eslint/utils@npm:6.10.0":
+  version: 6.10.0
+  resolution: "@typescript-eslint/utils@npm:6.10.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.4.0"
     "@types/json-schema": "npm:^7.0.12"
     "@types/semver": "npm:^7.5.0"
-    "@typescript-eslint/scope-manager": "npm:6.9.1"
-    "@typescript-eslint/types": "npm:6.9.1"
-    "@typescript-eslint/typescript-estree": "npm:6.9.1"
+    "@typescript-eslint/scope-manager": "npm:6.10.0"
+    "@typescript-eslint/types": "npm:6.10.0"
+    "@typescript-eslint/typescript-estree": "npm:6.10.0"
     semver: "npm:^7.5.4"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
-  checksum: 3d329d54c3d155ed29e2b456a602aef76bda1b88dfcf847145849362e4ddefabe5c95de236de750d08d5da9bedcfb2131bdfd784ce4eb87cf82728f0b6662033
+  checksum: 809a1d08b154f76ed7a99edddf872369f6ed93987cea19a18cb9f12b8390bddcff9138d9d94955545da54488d59e0001054bec13baf6d858a1761b059480b887
   languageName: node
   linkType: hard
 
-"@typescript-eslint/visitor-keys@npm:6.9.1":
-  version: 6.9.1
-  resolution: "@typescript-eslint/visitor-keys@npm:6.9.1"
+"@typescript-eslint/visitor-keys@npm:6.10.0":
+  version: 6.10.0
+  resolution: "@typescript-eslint/visitor-keys@npm:6.10.0"
   dependencies:
-    "@typescript-eslint/types": "npm:6.9.1"
+    "@typescript-eslint/types": "npm:6.10.0"
     eslint-visitor-keys: "npm:^3.4.1"
-  checksum: ac5f375a177add30489e5b63cafa8d82a196b33624bb36418422ebe0d7973b3ba550dc7e0dda36ea75a94cf9b200b4fb5f5fb4d77c027fd801201c1a269d343b
+  checksum: f9223c148655ce00bb17db8aa92ee964e62c75d15095893e0b4d653c60a4033f456329b06de3eab4b404d8df359904f0dd6e3c8c842885c6d130e28ccd95ce03
   languageName: node
   linkType: hard
 
@@ -9261,15 +9322,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bits-ui@npm:^0.9.0":
-  version: 0.9.0
-  resolution: "bits-ui@npm:0.9.0"
+"bits-ui@npm:0.9.4":
+  version: 0.9.4
+  resolution: "bits-ui@npm:0.9.4"
   dependencies:
-    "@melt-ui/svelte": "npm:0.57.2"
-    nanoid: "npm:^5.0.2"
+    "@melt-ui/svelte": "npm:0.61.1"
+    nanoid: "npm:^5.0.3"
   peerDependencies:
     svelte: ^4.0.0
-  checksum: 2c7eab890274fc63ea6439fdcd5935b4d5b5ca460bccfd8c593625fbcedcfca359b91a8811fd8b0152e8c22764a3045d0c6d30733d737ce001892ce85b2021e3
+  checksum: 97eb82fef91fe3891349c317c302d7c93e702b94b4a1d3899d37934837f445625457b705e3536ff7eaac73b930bd8b5a3933c2d426f2ec308b8c354d078af5db
   languageName: node
   linkType: hard
 
@@ -11963,6 +12024,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-compat-utils@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "eslint-compat-utils@npm:0.1.2"
+  peerDependencies:
+    eslint: ">=6.0.0"
+  checksum: 023fe1422eb5dfebe71e118fe144836f28c06b1f4d55ef4c1c42ec2dbfa3e09f19287b0092881aad307429cf247fec9ade603e050392033106d26bc981d82ee5
+  languageName: node
+  linkType: hard
+
 "eslint-config-prettier@npm:9.0.0":
   version: 9.0.0
   resolution: "eslint-config-prettier@npm:9.0.0"
@@ -11985,15 +12055,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-svelte@npm:2.34.0":
-  version: 2.34.0
-  resolution: "eslint-plugin-svelte@npm:2.34.0"
+"eslint-plugin-svelte@npm:2.35.0":
+  version: 2.35.0
+  resolution: "eslint-plugin-svelte@npm:2.35.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.2.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
     debug: "npm:^4.3.1"
+    eslint-compat-utils: "npm:^0.1.2"
     esutils: "npm:^2.0.3"
-    known-css-properties: "npm:^0.28.0"
+    known-css-properties: "npm:^0.29.0"
     postcss: "npm:^8.4.5"
     postcss-load-config: "npm:^3.1.4"
     postcss-safe-parser: "npm:^6.0.0"
@@ -12006,7 +12077,7 @@ __metadata:
   peerDependenciesMeta:
     svelte:
       optional: true
-  checksum: 9c4dfbd7dd43cb593820000a292628a6234dedacbc5da2cdef62b77ccde274b33e2ad074510acb9117bfe9cd1311007620d6d55eef984b7fe95c519706b880c6
+  checksum: 8ee8e2f68ba6c7246241a7710b8b55da3333d81f8665e80a11a56448258c0483a1acf7d4577b2e37f60974afb12386d1946cd2945a31a3ac0af84cac5f088391
   languageName: node
   linkType: hard
 
@@ -12111,14 +12182,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.52.0":
-  version: 8.52.0
-  resolution: "eslint@npm:8.52.0"
+"eslint@npm:8.53.0":
+  version: 8.53.0
+  resolution: "eslint@npm:8.53.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.2.0"
     "@eslint-community/regexpp": "npm:^4.6.1"
-    "@eslint/eslintrc": "npm:^2.1.2"
-    "@eslint/js": "npm:8.52.0"
+    "@eslint/eslintrc": "npm:^2.1.3"
+    "@eslint/js": "npm:8.53.0"
     "@humanwhocodes/config-array": "npm:^0.11.13"
     "@humanwhocodes/module-importer": "npm:^1.0.1"
     "@nodelib/fs.walk": "npm:^1.2.8"
@@ -12155,7 +12226,7 @@ __metadata:
     text-table: "npm:^0.2.0"
   bin:
     eslint: bin/eslint.js
-  checksum: 9269b32ccf6e9947d994f871888d5b541da4a8539160ee19d80ecac0c70c51a7d3a7c111a58cf1adf81f093a7c1b5564edefa5c6dbe29b1df9c9f3e30700af30
+  checksum: c5cd0049488c0463dab7d97466767ca5a1d0b3b59d0a223122683dc8039ecea30b27867fb9e38906b4c1ab9d09ece8a802a6c540d8905016f1cc4b4bb27329af
   languageName: node
   linkType: hard
 
@@ -12846,14 +12917,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"formsnap@npm:0.4.0":
-  version: 0.4.0
-  resolution: "formsnap@npm:0.4.0"
+"formsnap@npm:0.4.1":
+  version: 0.4.1
+  resolution: "formsnap@npm:0.4.1"
   peerDependencies:
     svelte: ^4.0.0
     sveltekit-superforms: ^1.7.1
     zod: ^3.22.2
-  checksum: fa427a9602f1209b65008d0963895e20c538cad72ada31ed56fb20f86fcfd6f878a7dc225d95738558e166be130bca040c51aba76fd8fc75ec02458dfd836a1b
+  checksum: 2fe6563ea4edceb81a6e7e4391455eaac9bd57b19a011eb9471c393574bb6ce2d69aa2aaa9ff85293bc6abc593d09487e6253ad8614d39aca91431dc9b429b7f
   languageName: node
   linkType: hard
 
@@ -13874,10 +13945,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"import-meta-resolve@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "import-meta-resolve@npm:3.0.0"
-  checksum: fd1810e01576216f080e55fec345e6c451e4f012d0089e96abf53e9466ac3ece05aaef2402dea50f2b9b859486773bebbd5b08221e1bf347e942969a084bb685
+"import-meta-resolve@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "import-meta-resolve@npm:4.0.0"
+  checksum: 709375e01f8c3a87b7870991ca29c630d71bb7e22b7bb0f622613173d87b41b4043b4a983800e6d38ab3867496a46f82d30df0cbc2e55792c91c23193eea67a1
   languageName: node
   linkType: hard
 
@@ -15404,10 +15475,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"known-css-properties@npm:^0.28.0":
-  version: 0.28.0
-  resolution: "known-css-properties@npm:0.28.0"
-  checksum: e4fc0bec5749a84a47d1367f04a15c2f520965ad055ba9f4c1f6800b61338b10270c060ee2b4da4ee60099d114cc932d595bc19ea4b7a47d680a0ceb30f849cc
+"known-css-properties@npm:^0.29.0":
+  version: 0.29.0
+  resolution: "known-css-properties@npm:0.29.0"
+  checksum: f66e9992097b8f54e97dbe729943d4a11b8d3ba15f68dbb3deb8bb0122cb89c22c90c9221ecb1e3f2e236838fe3c0faae319b43908c81b6e254ac43cafde2906
   languageName: node
   linkType: hard
 
@@ -15733,12 +15804,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-svelte@npm:0.291.0":
-  version: 0.291.0
-  resolution: "lucide-svelte@npm:0.291.0"
+"lucide-svelte@npm:0.292.0":
+  version: 0.292.0
+  resolution: "lucide-svelte@npm:0.292.0"
   peerDependencies:
     svelte: ">=3 <5"
-  checksum: 1ffd8362de76f3c3b0c3924a9ddb136cc0f5516f4a08c19a99c1b4590516ea0ee1acd9ce7cc7be5978b2a901678f6da3654f763e231f48bb18519bd0fe941c02
+  checksum: 3ab31a923872023c40571861be967d71b4daf2be45f793c86caa843ba8f8cd15c4b39e5b3e39ff584a079f79ec01bdc4d260a4e0aab1cacb7eee92bc82e46b6f
   languageName: node
   linkType: hard
 
@@ -15962,9 +16033,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"medusa-react@npm:^9.0.10":
-  version: 9.0.10
-  resolution: "medusa-react@npm:9.0.10"
+"medusa-react@npm:^9.0.11":
+  version: 9.0.11
+  resolution: "medusa-react@npm:9.0.11"
   dependencies:
     "@medusajs/medusa-js": "npm:*"
   peerDependencies:
@@ -15972,7 +16043,7 @@ __metadata:
     "@tanstack/react-query": ^4.22.0
     react: ^16.8 || ^17.0 || ^18.0
     react-dom: ^16.8 || ^17.0 || ^18.0
-  checksum: 28a8cc865a124ca2e372abee812c5f948d57a76e59eb4ee3e144f8661313f2f717b2b2027dacf34665b00613849ee985e45b34197c513a6d9bf95b363bebfbe6
+  checksum: 7b0c1fedc4739d9069dc30bb1ee551bc4fcf4e0b735773e93aef6ebbab5504c3b59202bcd4894385729c74c853ae6500fdc057e83fcc3af729d320c5ad453f27
   languageName: node
   linkType: hard
 
@@ -16539,6 +16610,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "nanoid@npm:5.0.3"
+  bin:
+    nanoid: bin/nanoid.js
+  checksum: 903c5ff1fbc1fb5c2799d5febfed38d1b8dc7b42e4b76131daba9011cb5eca2e455a3f70ccd7da60aee4fe3e8269d1ba4e8960f57c01fb3b8975c896f70c3e2d
+  languageName: node
+  linkType: hard
+
 "nanomatch@npm:^1.2.9":
   version: 1.2.13
   resolution: "nanomatch@npm:1.2.13"
@@ -16771,7 +16851,7 @@ __metadata:
     "@nostra/prettier-config-custom": "workspace:*"
     del-cli: "npm:5.1.0"
     dotenv-cli: "npm:latest"
-    eslint: "npm:8.52.0"
+    eslint: "npm:8.53.0"
     eslint-config-turbo: "npm:latest"
     prettier: "npm:3.0.3"
     turbo: "npm:latest"
@@ -18486,19 +18566,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-svelte@npm:3.0.3":
-  version: 3.0.3
-  resolution: "prettier-plugin-svelte@npm:3.0.3"
+"prettier-plugin-svelte@npm:3.1.0":
+  version: 3.1.0
+  resolution: "prettier-plugin-svelte@npm:3.1.0"
   peerDependencies:
     prettier: ^3.0.0
-    svelte: ^3.2.0 || ^4.0.0-next.0
-  checksum: a0876d8faaa885739efce3c8181e32aaccadd8933b6724bca8a07d2ac15c4443872d3b6553af2a9ae82cfcff6409283964a5d2fe83a8b235d4a739d6c6ce7689
+    svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
+  checksum: 64be41b8f0570e8635ad74c7ec18a0d9b3ce655f9dc08a483a2f964a70b47b6fa42293ce405ff6acb98d71648da88a71ffc2c407b437fee9dd12f5d748f09643
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:0.5.6":
-  version: 0.5.6
-  resolution: "prettier-plugin-tailwindcss@npm:0.5.6"
+"prettier-plugin-tailwindcss@npm:0.5.7":
+  version: 0.5.7
+  resolution: "prettier-plugin-tailwindcss@npm:0.5.7"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-pug": "*"
@@ -18545,7 +18625,7 @@ __metadata:
       optional: true
     prettier-plugin-twig-melody:
       optional: true
-  checksum: bfdfebc92408bd279b1125e3cc9b2d33e6ff5a79f02edde44e55301a825cb2141d416b283eb2f6f134fee31019f90d4aab01e8f94bbfaa80311e977066025131
+  checksum: 581820b6b7c9a3dee623b8ad720f1e0b3be36d97e5bb5d51d8734edd31271d763a33e285205f397633ff03a27c82e48aed40103c7d326bce44f47fdf94958deb
   languageName: node
   linkType: hard
 
@@ -21050,9 +21130,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte-check@npm:3.5.2":
-  version: 3.5.2
-  resolution: "svelte-check@npm:3.5.2"
+"svelte-check@npm:3.6.0":
+  version: 3.6.0
+  resolution: "svelte-check@npm:3.6.0"
   dependencies:
     "@jridgewell/trace-mapping": "npm:^0.3.17"
     chokidar: "npm:^3.4.1"
@@ -21060,13 +21140,13 @@ __metadata:
     import-fresh: "npm:^3.2.1"
     picocolors: "npm:^1.0.0"
     sade: "npm:^1.7.4"
-    svelte-preprocess: "npm:^5.0.4"
+    svelte-preprocess: "npm:^5.1.0"
     typescript: "npm:^5.0.3"
   peerDependencies:
-    svelte: ^3.55.0 || ^4.0.0-next.0 || ^4.0.0
+    svelte: ^3.55.0 || ^4.0.0-next.0 || ^4.0.0 || ^5.0.0-next.0
   bin:
     svelte-check: bin/svelte-check
-  checksum: a07f0f036918351b60dc991a860c746ab20cbeb4cef71be62918fd80d7f81d562a85d6e783ab3d2a19c31c180a4cf9af68a33ffae80ccce185596381876d405d
+  checksum: 3aca0b80d99f28945d8880cbc784b66c7a34120c58ac2acd8e3c7c4c9c10b9fba64236a263d8ccf901e809d03d931a9310bcaaa4e4059bd6742be904418d28b8
   languageName: node
   linkType: hard
 
@@ -21097,9 +21177,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte-preprocess@npm:^5.0.4":
-  version: 5.0.4
-  resolution: "svelte-preprocess@npm:5.0.4"
+"svelte-preprocess@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "svelte-preprocess@npm:5.1.0"
   dependencies:
     "@types/pug": "npm:^2.0.6"
     detect-indent: "npm:^6.1.0"
@@ -21116,7 +21196,7 @@ __metadata:
     sass: ^1.26.8
     stylus: ^0.55.0
     sugarss: ^2.0.0 || ^3.0.0 || ^4.0.0
-    svelte: ^3.23.0 || ^4.0.0-next.0 || ^4.0.0
+    svelte: ^3.23.0 || ^4.0.0-next.0 || ^4.0.0 || ^5.0.0-next.0
     typescript: ">=3.9.5 || ^4.0.0 || ^5.0.0"
   peerDependenciesMeta:
     "@babel/core":
@@ -21139,13 +21219,13 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 1ed64b96a91327a47992df0b82df708b5cda92e1da211edbedaf411e633a0be5a8425d19f996abc8dcef52dadd26b5474924dd9eeb30a7b409bf60c33b689d6c
+  checksum: fb40153aa282edadad68221fcf82db1b7c67a208941b136c529fd843d1e8b595d79e9d39e5f252672e11a8b62c621ccf2078de4a57e5adbb89e13046998ae597
   languageName: node
   linkType: hard
 
-"svelte@npm:4.2.2":
-  version: 4.2.2
-  resolution: "svelte@npm:4.2.2"
+"svelte@npm:4.2.3":
+  version: 4.2.3
+  resolution: "svelte@npm:4.2.3"
   dependencies:
     "@ampproject/remapping": "npm:^2.2.1"
     "@jridgewell/sourcemap-codec": "npm:^1.4.15"
@@ -21160,7 +21240,7 @@ __metadata:
     locate-character: "npm:^3.0.0"
     magic-string: "npm:^0.30.4"
     periscopic: "npm:^3.1.0"
-  checksum: 2fec1033c139b5802d1142c57621d579c429d40a1c3ba8c101b6cef6e2e2277286f050d76f4995fb6355e49bc0299309f621570f9f80e1806caf40c62b73b182
+  checksum: 61be05f65ede95151625981ad083bcc8f15baac0073b330c1a260e2dd6e199c087d6b4861a7711961e1de0618b972a15850e0fb245e9a845d94aef874f6e40bb
   languageName: node
   linkType: hard
 
@@ -21195,14 +21275,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sveltekit-superforms@npm:1.9.0":
-  version: 1.9.0
-  resolution: "sveltekit-superforms@npm:1.9.0"
+"sveltekit-superforms@npm:1.10.1":
+  version: 1.10.1
+  resolution: "sveltekit-superforms@npm:1.10.1"
   peerDependencies:
     "@sveltejs/kit": 1.x
     svelte: 3.x || 4.x
     zod: 3.x
-  checksum: cd27e8a3768e92221ca4075bf82e9c2e2301b4b9749a3e6ee6ef4823b50ac6ee8858af154f4f775e1788adde61e86285ec8a0e5e93173a497b874c353f976b70
+  checksum: 56e19e63eca8681114b2da90a619cb081bcab589c28da77aac9b9882bae71cd7e6738e691746fc731d76021ff4e468a9579fa53b591baf0746d84572c59b5b05
   languageName: node
   linkType: hard
 
@@ -21249,10 +21329,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:11.0.3":
-  version: 11.0.3
-  resolution: "swiper@npm:11.0.3"
-  checksum: b3ae364424feb189764fb46bf046f1d102808e1f34ce79cf587bcec1f4aacbd9d35addc55e84b87a006bc7ad682eb85de85974535ebd27b9b50fa9a1767f5b1e
+"swiper@npm:11.0.4":
+  version: 11.0.4
+  resolution: "swiper@npm:11.0.4"
+  checksum: 1d9fd48353ae704d042aa951e5380f9473614bc85cfe216d329d61fe1bcd3585ed29c49a3d1617e7829ad4bfb37cb60dcb65b4181c7f428a2102e88e4ed0d871
   languageName: node
   linkType: hard
 
@@ -23325,12 +23405,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod-validation-error@npm:2.0.0":
-  version: 2.0.0
-  resolution: "zod-validation-error@npm:2.0.0"
+"zod-validation-error@npm:2.1.0":
+  version: 2.1.0
+  resolution: "zod-validation-error@npm:2.1.0"
   peerDependencies:
     zod: ^3.18.0
-  checksum: 0a78c0d2bb00102ba547cb8f73f5d8abe4d888def7037c361821caa1b08217939b6f6a2bd3031dddf3868210391ee037127f8a5897b3699f8aa74dc07c8c9251
+  checksum: e8e8a0af64092dfb3388d759bf10fb7cf5358bc1bdb365771b8ac1944b1fb014ccbc8e60fbd69627961ea5873c5694e5c3fe730341c9842312fbb91661a1f451
   languageName: node
   linkType: hard
 
