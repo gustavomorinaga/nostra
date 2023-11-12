@@ -12,12 +12,12 @@
 	const hasPrice = currencyCode && amount;
 </script>
 
-<Card.Root class="overflow-hidden rounded-none border-none shadow-none">
+<Card.Root class="group overflow-hidden rounded-none border-none shadow-none">
 	<AspectRatio
 		ratio={1 / 1}
 		class="relative flex items-center justify-center overflow-hidden rounded-sm"
 	>
-		<img src={thumbnail} alt={handle} />
+		<img class="transition-transform group-hover:scale-105" src={thumbnail} alt={handle} />
 
 		{#if discountable}
 			<Badge class="absolute left-4 top-4 rounded-sm" variant="destructive">SALE</Badge>

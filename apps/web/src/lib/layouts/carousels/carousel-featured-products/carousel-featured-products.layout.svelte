@@ -49,7 +49,7 @@
 		]
 	};
 
-	// $: console.log(products);
+	$: console.log(products);
 </script>
 
 {#if hasProducts}
@@ -59,7 +59,7 @@
 		</header>
 
 		<Carousel.Root class="h-fit overflow-visible" {options}>
-			{#each [...products, ...products] as product}
+			{#each products as product (product.id)}
 				<Carousel.Slide class="mb-12">
 					<a href="/browse/{product.handle}">
 						<CardProduct {product} />

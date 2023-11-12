@@ -1,5 +1,6 @@
 <script lang="ts" context="module">
-	import { Button, Icon, Input, Label } from '@nostra/ui/components';
+	import { Button, Icon } from '@nostra/ui/components';
+	import { InputWithIcon } from '$lib/components';
 
 	const images = {
 		logo: 'images/svgs/logo-min.svg'
@@ -78,10 +79,12 @@
 		</div>
 
 		<div class="navbar-end">
-			<Label for="searchTerm">
-				<Icon icon="ph:magnifying-glass" />
-			</Label>
-			<Input id="searchTerm" type="text" placeholder="Search" class="bg-input" />
+			<InputWithIcon
+				class="bg-card"
+				type="text"
+				icon="ph:magnifying-glass"
+				placeholder="Search..."
+			/>
 
 			<Button size="icon" variant="outline" class="px-4" href="/cart" title="Cart">
 				<Icon icon="ph:shopping-cart" />

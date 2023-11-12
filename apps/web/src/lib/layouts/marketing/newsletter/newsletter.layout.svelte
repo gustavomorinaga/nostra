@@ -10,8 +10,7 @@
 	</header>
 
 	<form class="subscription">
-		<InputWithIcon icon="ph:envelope" />
-
+		<InputWithIcon type="email" icon="ph:envelope" placeholder="Enter your email..." />
 		<Button type="submit">Subscribe</Button>
 	</form>
 
