@@ -26,7 +26,7 @@
 		cover: 'images/jpgs/cover.jpg'
 	};
 
-	const profileInitials = () => {
+	const getProfileInitials = () => {
 		const [firstName, lastName] = profile.name.split(' ');
 		return [firstName[0], lastName[0]].join('');
 	};
@@ -43,7 +43,7 @@
 		<div class="avatar">
 			<Avatar.Root class="ring-card h-40 w-40 ring-4">
 				<Avatar.Image src={profile.avatar} alt={profile.name} />
-				<Avatar.Fallback>{profileInitials}</Avatar.Fallback>
+				<Avatar.Fallback class="text-3xl">{getProfileInitials()}</Avatar.Fallback>
 			</Avatar.Root>
 
 			<Button size="icon" variant="outline" class="absolute right-0 top-0">
