@@ -5,7 +5,7 @@
 
 <script lang="ts">
 	export let image: ProductImageDTO;
-	const { id, url } = image;
+	$: ({ id, url } = image);
 </script>
 
 <AspectRatio

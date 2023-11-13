@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	import { Separator } from '@nostra/ui/components';
+	import { Label, RadioGroup, Separator } from '@nostra/ui/components';
 	import { currencyFormat, currencyTemplates } from '@nostra/utils';
 	import { CarouselGallery } from '$lib/layouts';
 	import type { MoneyAmountDTO, ProductDTO, ProductVariantDTO } from '@medusajs/types';
@@ -7,11 +7,11 @@
 
 <script lang="ts">
 	export let product: ProductDTO;
-	const { title, images, variants, discountable } = product;
-	const [variant] = variants as (ProductVariantDTO & { prices: MoneyAmountDTO[] })[];
-	const [{ currency_code, amount }] = variant.prices;
-	const currencyCode = (currency_code as string).toUpperCase() as keyof typeof currencyTemplates;
-	const hasPrice = currencyCode && amount;
+	$: ({ title, images, variants, options } = product);
+	$: [variant] = variants as (ProductVariantDTO & { prices: MoneyAmountDTO[] })[];
+	$: [{ currency_code, amount }] = variant.prices;
+	$: currencyCode = (currency_code as string).toUpperCase() as keyof typeof currencyTemplates;
+	$: hasPrice = currencyCode && amount;
 </script>
 
 <article class="product-detail">
@@ -22,11 +22,30 @@
 
 		{#if hasPrice}
 			<span class="price">
-				{currencyFormat({ value: amount, preset: currencyCode })}
+				{currencyFormat({ value: amount || 0, preset: currencyCode })}
 			</span>
 		{/if}
 
 		<Separator class="my-4" />
+
+		<div class="options">
+			{#each options as option (option.id)}
+				<div class="option">
+					<span>{option.title}</span>
+
+					<RadioGroup.Root class="grid-flow-col">
+						{#each option.values as value (value.id)}
+							<Label
+								class="[&:has([data-state=checked])]:bg-primary [&:has([data-state=checked])]:text-primary-foreground hover:bg-secondary/80 flex h-10 w-fit cursor-pointer items-center justify-center rounded-md px-4 py-2"
+							>
+								<RadioGroup.Item class="sr-only" value={value.id} />
+								<span>{value.value}</span>
+							</Label>
+						{/each}
+					</RadioGroup.Root>
+				</div>
+			{/each}
+		</div>
 	</article>
 </article>
 
@@ -44,12 +63,24 @@
 			}
 
 			& > span.price {
-				@apply font-heading text-primary block text-3xl font-bold tabular-nums;
+				@apply font-heading text-primary block text-2xl font-bold tabular-nums;
 			}
 
 			/* & > span.original-price {
 				@apply font-heading align-top text-sm font-semibold text-gray-500 line-through;
 			} */
+
+			& > div.options {
+				@apply flex flex-row flex-wrap gap-4;
+
+				& > div.option {
+					@apply flex flex-col gap-2;
+
+					& > span {
+						@apply font-heading text-muted-foreground text-sm font-semibold;
+					}
+				}
+			}
 		}
 	}
 </style>

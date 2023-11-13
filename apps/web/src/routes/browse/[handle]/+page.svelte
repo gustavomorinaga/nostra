@@ -1,10 +1,16 @@
 <script lang="ts" context="module">
-	import { ContentProductDetail } from '$lib/layouts';
+	import { ContentProductDetail, CarouselFeaturedProducts } from '$lib/layouts';
 </script>
 
 <script lang="ts">
 	export let data;
-	const { product } = data;
+	$: ({ product, relatedProducts } = data);
 </script>
 
+<svelte:head>
+	<title>{product.title} | Nostra</title>
+	<meta name="description" content={product.subtitle} />
+</svelte:head>
+
 <ContentProductDetail {product} />
+<CarouselFeaturedProducts products={relatedProducts} />

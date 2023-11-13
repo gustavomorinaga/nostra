@@ -11,10 +11,10 @@
 			controller: { control: '#thumbs' },
 			injectStyles: [
 				`.swiper-button-prev, .swiper-button-next {
-					--swiper-navigation-size: 1rem;
+					--swiper-navigation-size: 0.75rem;
 					--swiper-navigation-color: hsl(var(--secondary-foreground) / 1);
 					background-color: hsl(var(--secondary) / 1);
-					padding: 0.5rem 0.75rem;
+					padding: 0.75rem 0.9rem;
 					border: 1px solid hsl(var(--secondary-foreground) / 0.1);
 					border-radius: 0.5rem;
 				}`
@@ -39,7 +39,7 @@
 	export let images: Array<ProductImageDTO> = [];
 </script>
 
-<section {...$$restProps} class="gallery">
+<section class="gallery">
 	<Carousel.Root id="viewer" class="mb-4" options={viewerOptions}>
 		{#each images as image}
 			<Carousel.Slide>

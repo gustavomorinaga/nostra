@@ -2,7 +2,7 @@
 	import { Separator } from '@nostra/ui/components';
 
 	const images = {
-		logo: 'images/svgs/logo-min.svg'
+		logo: '/images/svgs/logo-min.svg'
 	};
 
 	const routes = [

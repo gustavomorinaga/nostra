@@ -3,7 +3,7 @@
 	import { InputWithIcon } from '$lib/components';
 
 	const images = {
-		logo: 'images/svgs/logo-min.svg'
+		logo: '/images/svgs/logo-min.svg'
 	};
 
 	// const routes = [
