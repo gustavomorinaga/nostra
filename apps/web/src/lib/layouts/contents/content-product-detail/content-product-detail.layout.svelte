@@ -1,7 +1,8 @@
 <script lang="ts" context="module">
-	import { Label, RadioGroup, Separator } from '@nostra/ui/components';
+	import { RadioGroup, Separator } from '@nostra/ui/components';
 	import { currencyFormat, currencyTemplates } from '@nostra/utils';
 	import { CarouselGallery } from '$lib/layouts';
+	import { RadioCard } from '$lib/components';
 	import type { MoneyAmountDTO, ProductDTO, ProductVariantDTO } from '@medusajs/types';
 </script>
 
@@ -12,6 +13,7 @@
 	$: [{ currency_code, amount }] = variant.prices;
 	$: currencyCode = (currency_code as string).toUpperCase() as keyof typeof currencyTemplates;
 	$: hasPrice = currencyCode && amount;
+	$: hasOptions = options && options.length > 0;
 </script>
 
 <article class="product-detail">
@@ -28,24 +30,26 @@
 
 		<Separator class="my-4" />
 
-		<div class="options">
-			{#each options as option (option.id)}
-				<div class="option">
-					<span>{option.title}</span>
+		{#if hasOptions}
+			<div class="options">
+				{#each options as option (option.id)}
+					<div class="option">
+						<span>{option.title}</span>
 
-					<RadioGroup.Root class="grid-flow-col">
-						{#each option.values as value (value.id)}
-							<Label
-								class="[&:has([data-state=checked])]:bg-primary [&:has([data-state=checked])]:text-primary-foreground hover:bg-secondary/80 flex h-10 w-fit cursor-pointer items-center justify-center rounded-md px-4 py-2"
-							>
-								<RadioGroup.Item class="sr-only" value={value.id} />
-								<span>{value.value}</span>
-							</Label>
-						{/each}
-					</RadioGroup.Root>
-				</div>
-			{/each}
-		</div>
+						<RadioGroup.Root class="grid-flow-col">
+							{#each option.values as value (value.id)}
+								<RadioCard
+									class="[&:has([data-state=checked])]:bg-primary [&:has([data-state=checked])]:text-primary-foreground hover:bg-secondary/80 focus-within:ring-ring ring-offset-background border-input rounded-md border focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2"
+									value={value.id}
+								>
+									<span>{value.value}</span>
+								</RadioCard>
+							{/each}
+						</RadioGroup.Root>
+					</div>
+				{/each}
+			</div>
+		{/if}
 	</article>
 </article>
 

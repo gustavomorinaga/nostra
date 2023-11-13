@@ -15,7 +15,7 @@
 					--swiper-navigation-color: hsl(var(--secondary-foreground) / 1);
 					background-color: hsl(var(--secondary) / 1);
 					padding: 0.75rem 0.9rem;
-					border: 1px solid hsl(var(--secondary-foreground) / 0.1);
+					border: 1px solid hsl(var(--input) / 1);
 					border-radius: 0.5rem;
 				}`
 			]
@@ -26,6 +26,7 @@
 			spaceBetween: 16,
 			slideToClickedSlide: true,
 			controller: { control: '#viewer' },
+			watchSlidesProgress: true,
 			injectStyles: [
 				`.swiper-wrapper {
 					margin-left: calc(-38.5%);
@@ -49,7 +50,7 @@
 	</Carousel.Root>
 
 	<Carousel.Root id="thumbs" observe options={thumbsOptions}>
-		{#each images as image}
+		{#each [...images, ...images] as image}
 			<Carousel.Slide class="cursor-pointer">
 				<CardThumb {image} />
 			</Carousel.Slide>
