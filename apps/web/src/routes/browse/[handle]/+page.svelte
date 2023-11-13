@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	import { ContentProductDetail, CarouselFeaturedProducts } from '$lib/layouts';
+	import { ContentProductDetail, CarouselRelatedProducts } from '$lib/layouts';
 </script>
 
 <script lang="ts">
@@ -13,4 +13,4 @@
 </svelte:head>
 
 <ContentProductDetail {product} />
-<CarouselFeaturedProducts products={relatedProducts} />
+<CarouselRelatedProducts products={relatedProducts} />
