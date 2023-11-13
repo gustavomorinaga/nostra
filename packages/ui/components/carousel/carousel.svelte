@@ -5,13 +5,24 @@
 	import type { HTMLAttributes } from 'svelte/elements';
 	import type { CarouselOptions, CarouselEvents } from '.';
 
-	type $$Props = HTMLAttributes<SwiperContainer> & { options: CarouselOptions };
+	type $$Props = HTMLAttributes<SwiperContainer> & { options: CarouselOptions; observe?: boolean };
 	type $$Events = CarouselEvents;
 
 	let ref: SwiperContainer;
 	let className: $$Props['class'] = undefined;
 	export let options: $$Props['options'] = {};
+	export let observe: $$Props['observe'] = false;
 	export { className as class };
+
+	options = {
+		...options,
+		...(observe && {
+			observer: true,
+			observeParents: true,
+			observeSlideChildren: true,
+			on: { observerUpdate: (swiper) => swiper.update() }
+		})
+	};
 
 	onMount(() => {
 		register();

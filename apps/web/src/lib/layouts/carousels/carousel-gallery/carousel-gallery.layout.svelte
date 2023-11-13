@@ -40,7 +40,7 @@
 </script>
 
 <section class="gallery">
-	<Carousel.Root id="viewer" class="mb-4" options={viewerOptions}>
+	<Carousel.Root id="viewer" class="mb-4" observe options={viewerOptions}>
 		{#each images as image}
 			<Carousel.Slide>
 				<CardViewer {image} />
@@ -48,7 +48,7 @@
 		{/each}
 	</Carousel.Root>
 
-	<Carousel.Root id="thumbs" options={thumbsOptions}>
+	<Carousel.Root id="thumbs" observe options={thumbsOptions}>
 		{#each images as image}
 			<Carousel.Slide class="cursor-pointer">
 				<CardThumb {image} />
