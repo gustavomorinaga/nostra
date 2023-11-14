@@ -8,28 +8,33 @@
 
 <script lang="ts">
 	export let product: ProductDTO;
+	export let reviews: Array<object>;
 
 	type TProductTabs = {
 		name: string;
 		value: string;
 		content: Promise<ComponentType>;
+		props?: Record<string, unknown>;
 	};
 
 	const productTabs = [
 		{
 			name: 'The Details',
 			value: 'details',
-			content: import('$lib/layouts').then((m) => m.TabProductDetails)
+			content: import('$lib/layouts').then((m) => m.TabProductDetails),
+			props: { product }
 		},
 		{
 			name: 'Ratings & Reviews',
-			value: 'ratings',
-			content: import('$lib/layouts').then((m) => m.TabProductRatings)
+			value: 'reviews',
+			content: import('$lib/layouts').then((m) => m.TabProductReviews),
+			props: { reviews }
 		},
 		{
 			name: 'Discussions',
 			value: 'discussions',
-			content: import('$lib/layouts').then((m) => m.TabProductDiscussions)
+			content: import('$lib/layouts').then((m) => m.TabProductDiscussions),
+			props: {}
 		}
 	] as Array<TProductTabs>;
 
@@ -52,7 +57,7 @@
 			{#await Promise.all([productTab.content])}
 				<Skeleton class="h-56 w-full rounded" />
 			{:then [tab]}
-				<svelte:component this={tab} {product} />
+				<svelte:component this={tab} {...productTab.props} />
 			{/await}
 		</Tabs.Content>
 	{/each}

@@ -6,7 +6,7 @@
 
 <script lang="ts">
 	export let data;
-	$: ({ product, relatedProducts } = data);
+	$: ({ product, reviews, relatedProducts } = data);
 	$: ({ collection, type } = product as ProductDTO & { type: ProductTypeDTO });
 </script>
 
@@ -25,5 +25,5 @@
 </Breadcrumb.Root>
 
 <ContentProductView {product} />
-<ContentProductInfo {product} />
+<ContentProductInfo {product} {reviews} />
 <CarouselRelatedProducts products={relatedProducts} />
