@@ -6,13 +6,18 @@
 	const options: CarouselOptions = {
 		centeredSlides: false,
 		loop: false,
-		slidesPerView: 4,
+		slidesPerView: 1,
 		spaceBetween: 24,
 		autoHeight: false,
 		grabCursor: false,
-		allowTouchMove: false,
+		allowTouchMove: true,
 		navigation: { enabled: true },
 		scrollbar: { enabled: true, draggable: true },
+		breakpoints: {
+			480: { slidesPerView: 2 },
+			768: { slidesPerView: 3 },
+			1024: { slidesPerView: 4 }
+		},
 		injectStyles: [
 			`.swiper {
 				overflow-x: clip;
@@ -78,7 +83,7 @@
 			@apply mb-8 flex justify-between;
 
 			& > h2 {
-				@apply max-w-xs p-0 text-3xl font-bold;
+				@apply max-w-xs p-0 text-3xl font-bold lg:block;
 			}
 		}
 	}

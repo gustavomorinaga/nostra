@@ -6,13 +6,17 @@
 	const options: CarouselOptions = {
 		centeredSlides: false,
 		loop: false,
-		slidesPerView: 3,
+		slidesPerView: 1,
 		spaceBetween: 24,
 		autoHeight: false,
 		grabCursor: false,
-		allowTouchMove: false,
+		allowTouchMove: true,
 		navigation: { enabled: true },
 		scrollbar: { enabled: true, draggable: true },
+		breakpoints: {
+			768: { slidesPerView: 2 },
+			1024: { slidesPerView: 3 }
+		},
 		injectStyles: [
 			`.swiper {
 				overflow-x: clip;
