@@ -56,7 +56,7 @@
 
 	let currentTab = $page.url.searchParams.get('tab') ?? 'account';
 
-	const handleTabChange = (tab: TAccountTabs['value']) => goto(`?tab=${tab}`);
+	const handleTabChange = (tab: TAccountTabs['value']) => goto(`?tab=${tab}`, { noScroll: true });
 </script>
 
 <svelte:head>

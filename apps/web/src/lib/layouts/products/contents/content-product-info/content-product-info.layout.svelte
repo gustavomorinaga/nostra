@@ -40,7 +40,7 @@
 
 	let currentTab = $page.url.searchParams.get('tab') ?? 'details';
 
-	const handleTabChange = (tab: TProductTabs['value']) => goto(`?tab=${tab}`);
+	const handleTabChange = (tab: TProductTabs['value']) => goto(`?tab=${tab}`, { noScroll: true });
 </script>
 
 <Tabs.Root class="mb-8" value={currentTab}>
