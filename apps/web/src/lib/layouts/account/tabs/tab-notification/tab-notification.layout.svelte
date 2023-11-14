@@ -1,14 +1,13 @@
 <script lang="ts" context="module">
 	import { Card, Form } from '@nostra/ui/components';
-</script>
-
-<script lang="ts">
 	import {
 		notificationValidationSchema as schema,
 		type TNotificationValidationSchema
 	} from '$lib/validations';
 	import type { SuperValidated } from 'sveltekit-superforms';
+</script>
 
+<script lang="ts">
 	export let form: SuperValidated<TNotificationValidationSchema>;
 </script>
 

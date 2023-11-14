@@ -1,14 +1,13 @@
 <script lang="ts" context="module">
 	import { Card, Form } from '@nostra/ui/components';
-</script>
-
-<script lang="ts">
 	import {
 		orderHistoryValidationSchema as schema,
 		type TOrderHistoryValidationSchema
 	} from '$lib/validations';
 	import type { SuperValidated } from 'sveltekit-superforms';
+</script>
 
+<script lang="ts">
 	export let form: SuperValidated<TOrderHistoryValidationSchema>;
 </script>
 
