@@ -1,1 +1,2 @@
-export * from './content-product-detail';
+export * from './content-product-view';
+export * from './content-product-info';

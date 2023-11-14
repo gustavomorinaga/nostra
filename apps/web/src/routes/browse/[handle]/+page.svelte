@@ -1,6 +1,6 @@
 <script lang="ts" context="module">
 	import { Breadcrumb } from '@nostra/ui/components';
-	import { ContentProductDetail, CarouselRelatedProducts } from '$lib/layouts';
+	import { ContentProductView, ContentProductInfo, CarouselRelatedProducts } from '$lib/layouts';
 	import type { ProductDTO, ProductTypeDTO } from '@medusajs/types';
 </script>
 
@@ -24,5 +24,6 @@
 	</Breadcrumb.Item>
 </Breadcrumb.Root>
 
-<ContentProductDetail {product} />
+<ContentProductView {product} />
+<ContentProductInfo {product} />
 <CarouselRelatedProducts products={relatedProducts} />

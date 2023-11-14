@@ -1,0 +1,59 @@
+<script lang="ts" context="module">
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+	import { Skeleton, Tabs } from '@nostra/ui/components';
+	import type { ComponentType } from 'svelte';
+	import type { ProductDTO } from '@medusajs/types';
+</script>
+
+<script lang="ts">
+	export let product: ProductDTO;
+
+	type TProductTabs = {
+		name: string;
+		value: string;
+		content: Promise<ComponentType>;
+	};
+
+	const productTabs = [
+		{
+			name: 'The Details',
+			value: 'details',
+			content: import('$lib/layouts').then((m) => m.TabProductDetails)
+		},
+		{
+			name: 'Ratings & Reviews',
+			value: 'ratings',
+			content: import('$lib/layouts').then((m) => m.TabProductRatings)
+		},
+		{
+			name: 'Discussions',
+			value: 'discussions',
+			content: import('$lib/layouts').then((m) => m.TabProductDiscussions)
+		}
+	] as Array<TProductTabs>;
+
+	let currentTab = $page.url.searchParams.get('tab') ?? 'details';
+
+	const handleTabChange = (tab: TProductTabs['value']) => goto(`?tab=${tab}`);
+</script>
+
+<Tabs.Root class="mb-8" value={currentTab}>
+	<Tabs.List class="flex h-fit justify-start overflow-x-auto overflow-y-hidden">
+		{#each productTabs as { name, value }}
+			<Tabs.Trigger class="flex-1" {value} on:click={() => handleTabChange(value)}>
+				{name}
+			</Tabs.Trigger>
+		{/each}
+	</Tabs.List>
+
+	{#each productTabs as productTab}
+		<Tabs.Content value={productTab.value}>
+			{#await Promise.all([productTab.content])}
+				<Skeleton class="h-56 w-full rounded" />
+			{:then [tab]}
+				<svelte:component this={tab} {product} />
+			{/await}
+		</Tabs.Content>
+	{/each}
+</Tabs.Root>
