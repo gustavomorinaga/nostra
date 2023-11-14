@@ -19,7 +19,7 @@
 <article class="product-detail">
 	<CarouselGallery {images} />
 
-	<article>
+	<div>
 		<h1>{title}</h1>
 
 		{#if hasPrice}
@@ -52,7 +52,7 @@
 		{/if}
 
 		<Separator class="my-4" />
-	</article>
+	</div>
 </article>
 
 <style lang="postcss">
@@ -63,7 +63,7 @@
 			@apply col-span-1;
 		}
 
-		& > article {
+		& > div {
 			& > h1 {
 				@apply mb-4 text-3xl;
 			}
