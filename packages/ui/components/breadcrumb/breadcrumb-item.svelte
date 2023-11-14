@@ -3,10 +3,11 @@
 	import { cn } from '$ui/utils';
 	import type { HTMLLiAttributes } from 'svelte/elements';
 
-	type $$Props = HTMLLiAttributes & { isCurrent?: boolean; isLastChild?: boolean };
+	type $$Props = HTMLLiAttributes & { href?: string; isCurrent?: boolean; isLastChild?: boolean };
 
 	let ref: HTMLLIElement;
 	let className: $$Props['class'] = undefined;
+	export let href: $$Props['href'] = undefined;
 	export let isCurrent: $$Props['isCurrent'] = false;
 	export let isLastChild: $$Props['isLastChild'] = false;
 	export { className as class };
@@ -19,11 +20,17 @@
 
 <li
 	bind:this={ref}
-	class={cn('inline-flex items-center', className)}
+	class={cn('group inline-flex items-center', className)}
 	aria-current={isCurrent ? 'page' : undefined}
 	{...$$restProps}
 >
-	<slot />
+	<svelte:element
+		this={href ? 'a' : 'span'}
+		class={href ? 'group-hover:underline' : undefined}
+		{href}
+	>
+		<slot />
+	</svelte:element>
 </li>
 
 {#if !isLastChild}

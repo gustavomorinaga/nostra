@@ -16,9 +16,12 @@
 </svelte:head>
 
 <Breadcrumb.Root class="text-muted-foreground mb-4">
-	<Breadcrumb.Item>Browser Products</Breadcrumb.Item>
+	<Breadcrumb.Item>Browse Products</Breadcrumb.Item>
 	<Breadcrumb.Item>{collection.title}</Breadcrumb.Item>
-	<Breadcrumb.Item isCurrent class="font-semibold">{type.value}</Breadcrumb.Item>
+	<Breadcrumb.Item>{type.value}</Breadcrumb.Item>
+	<Breadcrumb.Item isCurrent class="font-semibold" href="/browse/{product.handle}">
+		{product.title}
+	</Breadcrumb.Item>
 </Breadcrumb.Root>
 
 <ContentProductDetail {product} />
