@@ -10,7 +10,7 @@
 
 <AspectRatio
 	class="flex items-center justify-center overflow-hidden rounded-md shadow"
-	ratio={1 / 1}
+	ratio={85 / 64}
 >
 	<img class="h-full w-full object-cover" src={url} alt={id} />
 </AspectRatio>

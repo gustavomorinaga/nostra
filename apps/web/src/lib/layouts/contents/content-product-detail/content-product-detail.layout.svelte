@@ -36,7 +36,7 @@
 					<div class="option">
 						<span>{option.title}</span>
 
-						<RadioGroup.Root class="grid-flow-col">
+						<RadioGroup.Root class="auto-cols-min grid-flow-col">
 							{#each option.values as value (value.id)}
 								<RadioCard
 									class="[&:has([data-state=checked])]:bg-primary [&:has([data-state=checked])]:text-primary-foreground hover:bg-secondary/80 focus-within:ring-ring ring-offset-background border-input rounded-md border focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2"
@@ -50,6 +50,8 @@
 				{/each}
 			</div>
 		{/if}
+
+		<Separator class="my-4" />
 	</article>
 </article>
 
@@ -75,13 +77,13 @@
 			} */
 
 			& > div.options {
-				@apply flex flex-row flex-wrap gap-4;
+				@apply flex flex-row flex-wrap gap-x-8 gap-y-4;
 
 				& > div.option {
-					@apply flex flex-col gap-2;
+					@apply block flex-1;
 
 					& > span {
-						@apply font-heading text-muted-foreground text-sm font-semibold;
+						@apply font-heading text-muted-foreground mb-2 block text-sm font-semibold;
 					}
 				}
 			}

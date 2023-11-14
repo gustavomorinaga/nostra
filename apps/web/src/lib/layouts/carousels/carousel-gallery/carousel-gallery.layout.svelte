@@ -50,7 +50,7 @@
 	</Carousel.Root>
 
 	<Carousel.Root id="thumbs" observe options={thumbsOptions}>
-		{#each [...images, ...images] as image}
+		{#each images as image}
 			<Carousel.Slide class="cursor-pointer">
 				<CardThumb {image} />
 			</Carousel.Slide>
