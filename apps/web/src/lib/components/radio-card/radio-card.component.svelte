@@ -13,8 +13,11 @@
 </script>
 
 <Label
-	class={cn('flex h-10 w-fit cursor-pointer items-center justify-center px-4 py-2', className)}
+	class={cn(
+		'flex h-10 cursor-pointer items-center justify-center whitespace-nowrap px-4 py-2',
+		className
+	)}
 >
-	<RadioGroup.Item class="sr-only" {value} {...$$restProps} />
+	<RadioGroup.Item class="sr-only aspect-auto h-auto w-auto" {value} {...$$restProps} />
 	<slot />
 </Label>
