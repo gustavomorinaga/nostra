@@ -1,4 +1,5 @@
 <script lang="ts" context="module">
+	import { page } from '$app/stores';
 	import { Button, Icon, Tooltip } from '@nostra/ui/components';
 	import { InputWithIcon } from '$lib/components';
 
@@ -40,8 +41,6 @@
 </script>
 
 <script lang="ts">
-	import { page } from '$app/stores';
-
 	$: ({ session } = $page.data);
 </script>
 

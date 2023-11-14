@@ -23,6 +23,7 @@
 	<Card.Content>
 		<Form.Root
 			id="managePasswordForm"
+			class="md:w-1/2"
 			method="POST"
 			action="?/manage-password-update"
 			{form}

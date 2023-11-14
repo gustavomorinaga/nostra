@@ -19,7 +19,15 @@
 	</Card.Header>
 
 	<Card.Content>
-		<Form.Root id="accountForm" method="POST" action="?/account-update" {form} {schema} let:config>
+		<Form.Root
+			id="accountForm"
+			class="md:w-1/2"
+			method="POST"
+			action="?/account-update"
+			{form}
+			{schema}
+			let:config
+		>
 			<Form.Field {config} name="email">
 				<Form.Item>
 					<Form.Label>Email</Form.Label>

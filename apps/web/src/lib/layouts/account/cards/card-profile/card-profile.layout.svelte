@@ -1,5 +1,16 @@
 <script lang="ts" context="module">
 	import { invalidateAll } from '$app/navigation';
+	import { page } from '$app/stores';
+	import {
+		AspectRatio,
+		Avatar,
+		Button,
+		Card,
+		DropdownMenu,
+		Icon,
+		Tooltip
+	} from '@nostra/ui/components';
+	import type { Session } from '@supabase/supabase-js';
 
 	const COVER_RATIO = 270 / 60;
 
@@ -10,10 +21,6 @@
 </script>
 
 <script lang="ts">
-	import { page } from '$app/stores';
-	import { AspectRatio, Avatar, Button, Card, DropdownMenu, Icon } from '@nostra/ui/components';
-	import type { Session } from '@supabase/supabase-js';
-
 	const {
 		user: { email, phone }
 	} = $page.data.session as Session;
@@ -53,11 +60,30 @@
 
 		<Card.Title class="font-heading text-xl">{profile.name}</Card.Title>
 
+		<!-- <Tooltip.Root>
+			<Tooltip.Trigger asChild let:builder>
+				<Button builders={[builder]} size="icon" variant="outline" href="/cart">
+					<Icon icon="ph:shopping-cart" />
+				</Button>
+			</Tooltip.Trigger>
+			<Tooltip.Content>
+				<span>Cart</span>
+			</Tooltip.Content>
+		</Tooltip.Root> -->
+
 		<DropdownMenu.Root>
 			<DropdownMenu.Trigger asChild let:builder>
-				<Button builders={[builder]} variant="outline" size="icon">
-					<Icon icon="ph:dots-three-outline-vertical-fill" />
-				</Button>
+				<Tooltip.Root positioning={{ placement: 'bottom' }}>
+					<Tooltip.Trigger>
+						<Button builders={[builder]} variant="outline" size="icon">
+							<Icon icon="ph:dots-three-outline-vertical-fill" />
+						</Button>
+					</Tooltip.Trigger>
+
+					<Tooltip.Content>
+						<span>Options</span>
+					</Tooltip.Content>
+				</Tooltip.Root>
 			</DropdownMenu.Trigger>
 
 			<DropdownMenu.Content>
