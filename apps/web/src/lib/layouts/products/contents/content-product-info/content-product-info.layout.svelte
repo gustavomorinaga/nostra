@@ -17,7 +17,7 @@
 		props?: Record<string, unknown>;
 	};
 
-	const productTabs = [
+	$: productTabs = [
 		{
 			name: 'The Details',
 			value: 'details',
