@@ -8,7 +8,7 @@
 
 <script lang="ts">
 	export let product: ProductDTO;
-	$: ({ title, images, variants, options } = product);
+	$: ({ title, subtitle, images, variants, options } = product);
 	$: [variant] = variants as (ProductVariantDTO & { prices: MoneyAmountDTO[] })[];
 	$: [{ currency_code, amount }] = variant.prices;
 	$: currencyCode = (currency_code as string).toUpperCase() as keyof typeof currencyTemplates;
@@ -22,15 +22,19 @@
 	<div>
 		<h1>{title}</h1>
 
+		{#if subtitle}
+			<p>{subtitle}</p>
+		{/if}
+
 		{#if hasPrice}
 			<span class="price">
 				{currencyFormat({ value: amount || 0, preset: currencyCode })}
 			</span>
 		{/if}
 
-		<Separator class="my-4" />
-
 		{#if hasOptions}
+			<Separator class="my-4" />
+
 			<div class="options">
 				{#each options as option (option.id)}
 					<div class="option">
@@ -65,7 +69,11 @@
 
 		& > div {
 			& > h1 {
-				@apply mb-4 text-3xl;
+				@apply text-3xl;
+			}
+
+			& > p {
+				@apply text-muted-foreground mb-4 mt-2;
 			}
 
 			& > span.price {
