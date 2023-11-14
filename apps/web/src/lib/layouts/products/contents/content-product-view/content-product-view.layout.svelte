@@ -77,7 +77,7 @@
 			}
 
 			& > span.price {
-				@apply font-heading text-primary block text-2xl font-bold tabular-nums;
+				@apply text-primary mt-2 block text-2xl font-bold tabular-nums;
 			}
 
 			/* & > span.original-price {
