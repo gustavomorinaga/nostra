@@ -62,8 +62,6 @@
 
 <style lang="postcss">
 	section.discussions {
-		@apply mt-8;
-
 		& > h2 {
 			@apply text-2xl;
 		}

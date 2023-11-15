@@ -1,5 +1,4 @@
 <script lang="ts" context="module">
-	import { Card } from '@nostra/ui/components';
 	import type { ProductDTO } from '@medusajs/types';
 </script>
 
@@ -8,16 +7,24 @@
 	$: ({ description } = product);
 </script>
 
-<Card.Root>
-	<Card.Header>
-		<Card.Title>The Details</Card.Title>
-	</Card.Header>
+<section class="details">
+	<h2>Details</h2>
 
-	<Card.Content>
-		{#if description}
-			<p>{description}</p>
-		{:else}
-			<p class="text-muted-foreground">No description</p>
-		{/if}
-	</Card.Content>
-</Card.Root>
+	{#if description}
+		<p>{description}</p>
+	{:else}
+		<p class="text-muted-foreground">No description</p>
+	{/if}
+</section>
+
+<style lang="postcss">
+	section.details {
+		& > h2 {
+			@apply text-2xl;
+		}
+
+		& > p {
+			@apply mt-2;
+		}
+	}
+</style>

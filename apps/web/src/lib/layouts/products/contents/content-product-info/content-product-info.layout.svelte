@@ -43,7 +43,7 @@
 	const handleTabChange = (tab: TProductTabs['value']) => goto(`?tab=${tab}`, { noScroll: true });
 </script>
 
-<Tabs.Root class="mb-8" value={currentTab}>
+<Tabs.Root class="mb-16" value={currentTab}>
 	<Tabs.List class="flex h-fit justify-start overflow-x-auto overflow-y-hidden">
 		{#each productTabs as { name, value }}
 			<Tabs.Trigger class="flex-1" {value} on:click={() => handleTabChange(value)}>
@@ -53,7 +53,7 @@
 	</Tabs.List>
 
 	{#each productTabs as productTab}
-		<Tabs.Content value={productTab.value}>
+		<Tabs.Content class="mt-8" value={productTab.value}>
 			{#await Promise.all([productTab.content])}
 				<Skeleton class="h-56 w-full rounded" />
 			{:then [tab]}
