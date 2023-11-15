@@ -1,20 +1,20 @@
 <script lang="ts">
-	import type { HTMLAttributes } from 'svelte/elements';
 	import { cn } from '$ui/utils';
-	import type { CardHeadingLevel } from '.';
+	import type { HTMLAttributes } from 'svelte/elements';
+	import type { HeadingLevel } from '.';
 
 	type $$Props = HTMLAttributes<HTMLHeadingElement> & {
-		tag?: CardHeadingLevel;
+		level?: HeadingLevel;
 	};
 
 	let className: $$Props['class'] = undefined;
-	export let tag: $$Props['tag'] = 'h3';
+	export let level: $$Props['level'] = 'h5';
 	export { className as class };
 </script>
 
 <svelte:element
-	this={tag}
-	class={cn('text-lg font-semibold leading-none tracking-tight', className)}
+	this={level}
+	class={cn('mb-1 font-medium leading-none tracking-tight', className)}
 	{...$$restProps}
 >
 	<slot />
