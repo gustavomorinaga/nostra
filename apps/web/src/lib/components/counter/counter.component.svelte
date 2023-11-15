@@ -52,7 +52,7 @@
 	<Input
 		type="text"
 		inputmode="numeric"
-		class="w-12 border-none text-center tabular-nums outline-none"
+		class="w-20 border-none text-center tabular-nums outline-none"
 		{disabled}
 		bind:value
 		on:keypress={handleOnlyNumber}
@@ -71,6 +71,6 @@
 
 <style lang="postcss">
 	div.counter {
-		@apply border-input inline-flex h-10 items-center rounded-md border px-px;
+		@apply border-input inline-flex h-10 w-fit items-center rounded-md border px-px;
 	}
 </style>

@@ -80,7 +80,12 @@
 			</div>
 
 			<div>
-				<Counter bind:value={quantity} min={1} max={10} disabled={!hasSelectedOptions} />
+				<Counter
+					bind:value={quantity}
+					min={1}
+					max={variant.inventory_quantity}
+					disabled={!hasSelectedOptions}
+				/>
 				<Button disabled={!hasSelectedOptions}>Add to cart</Button>
 			</div>
 		</div>
