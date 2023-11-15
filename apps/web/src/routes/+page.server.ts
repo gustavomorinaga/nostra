@@ -1,6 +1,5 @@
-import { medusa } from '$lib/servers';
 import type { ProductDTO } from '@medusajs/types';
 
-export const load = async () => {
-	return { products: medusa.getProducts() as Promise<ProductDTO[]> };
+export const load = async ({ locals }) => {
+	return { products: locals.medusa.getProducts() as Promise<ProductDTO[]> };
 };

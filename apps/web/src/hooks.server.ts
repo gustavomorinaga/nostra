@@ -3,6 +3,7 @@ import { medusa, supabaseServer } from '$lib/servers';
 export const handle = async ({ event, resolve }) => {
 	event = await medusa.handleRequest(event);
 	event.locals.supabase = supabaseServer({ event });
+	event.locals.medusa = medusa;
 	event.locals.getSession = async () => {
 		const {
 			data: { session }
