@@ -11,13 +11,22 @@
 
 	export let product: ProductDTO;
 	$: ({ title, subtitle, images, variants, options } = product);
-	$: [variant] = variants as (ProductVariantDTO & { prices: MoneyAmountDTO[] })[];
+	$: [variant] = variants as Array<ProductVariantDTO & { prices: MoneyAmountDTO[] }>;
 	$: [{ currency_code, amount }] = variant.prices;
 	$: currencyCode = (currency_code as string).toUpperCase() as keyof typeof currencyTemplates;
 	$: hasPrice = currencyCode && amount;
 	$: hasOptions = options && options.length > 0;
 
+	let selectedOptions: Record<string, string> = {};
 	let quantity = 1;
+
+	$: if (product) handleReset();
+	$: hasSelectedOptions = Object.keys(selectedOptions).length === options.length;
+
+	const handleReset = () => {
+		selectedOptions = {};
+		quantity = 1;
+	};
 </script>
 
 <article class="product-detail">
@@ -44,7 +53,10 @@
 					<div class="option">
 						<span>{option.title}</span>
 
-						<RadioGroup.Root class="auto-cols-min grid-flow-col">
+						<RadioGroup.Root
+							class="auto-cols-min grid-flow-col"
+							bind:value={selectedOptions[option.title]}
+						>
 							{#each option.values as value (value.id)}
 								<RadioCard
 									class="[&:has([data-state=checked])]:bg-primary [&:has([data-state=checked])]:text-primary-foreground hover:bg-secondary/80 focus-within:ring-ring ring-offset-background border-input rounded-md border focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2"
@@ -68,8 +80,8 @@
 			</div>
 
 			<div>
-				<Counter bind:value={quantity} min={1} max={10} />
-				<Button>Add to cart</Button>
+				<Counter bind:value={quantity} min={1} max={10} disabled={!hasSelectedOptions} />
+				<Button disabled={!hasSelectedOptions}>Add to cart</Button>
 			</div>
 		</div>
 	</div>
@@ -77,7 +89,7 @@
 
 <style lang="postcss">
 	article.product-detail {
-		@apply mb-8 grid grid-cols-2 gap-8;
+		@apply mb-8 grid grid-cols-1 gap-8 lg:grid-cols-2;
 
 		& > * {
 			@apply col-span-1;
