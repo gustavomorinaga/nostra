@@ -1,4 +1,5 @@
 <script lang="ts" context="module">
+	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { Skeleton, Tabs } from '@nostra/ui/components';
@@ -39,7 +40,9 @@
 	] as Array<TProductTabs>;
 
 	$: currentTab = $page.url.searchParams.get('tab') ?? 'details';
-	$: if (productTabs) handleTabChange('details');
+	$: if (browser) {
+		if (productTabs) handleTabChange('details');
+	}
 
 	const handleTabChange = (tab: TProductTabs['value']) => goto(`?tab=${tab}`, { noScroll: true });
 </script>
