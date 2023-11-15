@@ -7,6 +7,8 @@
 </script>
 
 <script lang="ts">
+	import { Button } from '@nostra/ui/components';
+
 	export let product: ProductDTO;
 	$: ({ title, subtitle, images, variants, options } = product);
 	$: [variant] = variants as (ProductVariantDTO & { prices: MoneyAmountDTO[] })[];
@@ -59,7 +61,17 @@
 
 		<Separator class="my-4" />
 
-		<Counter bind:value={quantity} min={1} max={10} />
+		<div class="cart-action">
+			<div>
+				<strong>Last {variant.inventory_quantity} left</strong>
+				<span>&ndash; make it yours!</span>
+			</div>
+
+			<div>
+				<Counter bind:value={quantity} min={1} max={10} />
+				<Button>Add to cart</Button>
+			</div>
+		</div>
 	</div>
 </article>
 
@@ -97,6 +109,12 @@
 					& > span {
 						@apply font-heading text-muted-foreground mb-2 block text-sm font-semibold;
 					}
+				}
+			}
+
+			& > div.cart-action {
+				& > div {
+					@apply mb-4 flex gap-2;
 				}
 			}
 		}

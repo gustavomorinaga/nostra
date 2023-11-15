@@ -34,7 +34,13 @@
 </script>
 
 <div class="counter">
-	<Button size="icon" variant="ghost" on:click={handleDecrement} disabled={minReached}>
+	<Button
+		size="icon"
+		variant="ghost"
+		class="h-9 w-9"
+		on:click={handleDecrement}
+		disabled={minReached}
+	>
 		<Icon icon="ph:minus" />
 	</Button>
 
@@ -46,13 +52,19 @@
 		on:keypress={handleOnlyNumber}
 	/>
 
-	<Button size="icon" variant="ghost" on:click={handleIncrement} disabled={maxReached}>
+	<Button
+		size="icon"
+		variant="ghost"
+		class="h-9 w-9"
+		on:click={handleIncrement}
+		disabled={maxReached}
+	>
 		<Icon icon="ph:plus" />
 	</Button>
 </div>
 
 <style lang="postcss">
 	div.counter {
-		@apply border-input inline-flex rounded-md border;
+		@apply border-input inline-flex h-10 items-center rounded-md border px-px;
 	}
 </style>
