@@ -38,7 +38,8 @@
 		}
 	] as Array<TProductTabs>;
 
-	let currentTab = $page.url.searchParams.get('tab') ?? 'details';
+	$: currentTab = $page.url.searchParams.get('tab') ?? 'details';
+	$: if (productTabs) handleTabChange('details');
 
 	const handleTabChange = (tab: TProductTabs['value']) => goto(`?tab=${tab}`, { noScroll: true });
 </script>

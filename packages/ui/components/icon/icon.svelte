@@ -1,9 +1,12 @@
 <script lang="ts">
 	import 'iconify-icon';
 	import { cn } from '$ui/utils';
+	import type { IconifyIconProperties } from 'iconify-icon';
 
-	let className: string | null | undefined = undefined;
-	export let icon: `${string}:${string}`;
+	type $$Props = IconifyIconProperties & { class?: string | null };
+
+	let className: $$Props['class'] = undefined;
+	export let icon: $$Props['icon'];
 	export { className as class };
 </script>
 
