@@ -2,7 +2,7 @@
 	import { RadioGroup, Separator } from '@nostra/ui/components';
 	import { currencyFormat, currencyTemplates } from '@nostra/utils';
 	import { CarouselGallery } from '$lib/layouts';
-	import { RadioCard } from '$lib/components';
+	import { Counter, RadioCard } from '$lib/components';
 	import type { MoneyAmountDTO, ProductDTO, ProductVariantDTO } from '@medusajs/types';
 </script>
 
@@ -14,6 +14,8 @@
 	$: currencyCode = (currency_code as string).toUpperCase() as keyof typeof currencyTemplates;
 	$: hasPrice = currencyCode && amount;
 	$: hasOptions = options && options.length > 0;
+
+	let quantity = 1;
 </script>
 
 <article class="product-detail">
@@ -56,6 +58,8 @@
 		{/if}
 
 		<Separator class="my-4" />
+
+		<Counter bind:value={quantity} min={1} max={10} />
 	</div>
 </article>
 
