@@ -15,13 +15,15 @@
 	$: maxReached = max !== undefined && value >= max;
 
 	const handleDecrement = () => {
-		if (min !== undefined && value <= min) return;
-		value -= step || 1;
+		const parsedValue = Number(value);
+		if (min !== undefined && parsedValue <= min) return;
+		value = parsedValue - (step || 1);
 	};
 
 	const handleIncrement = () => {
-		if (max !== undefined && value >= max) return;
-		value += step || 1;
+		const parsedValue = Number(value);
+		if (max !== undefined && parsedValue >= max) return;
+		value = parsedValue + (step || 1);
 	};
 
 	const handleOnlyNumber = (event: KeyboardEvent) => {
@@ -29,6 +31,8 @@
 
 		const parsedValue = Number(`${value}${event.key}`);
 		const maxValue = max || Infinity;
+
+		console.log(parsedValue);
 
 		if (parsedValue > maxValue) event.preventDefault();
 	};
