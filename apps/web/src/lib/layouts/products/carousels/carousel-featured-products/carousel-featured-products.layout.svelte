@@ -59,7 +59,7 @@
 {#if hasProducts}
 	<section class="featured-products">
 		<header>
-			<h2>Featured Products</h2>
+			<h3>Featured Products</h3>
 		</header>
 
 		<Carousel.Root class="h-fit overflow-visible" {options}>
@@ -81,7 +81,7 @@
 		& header {
 			@apply mb-8 flex justify-between;
 
-			& > h2 {
+			& > h3 {
 				@apply max-w-xs p-0 text-3xl font-bold;
 			}
 		}
