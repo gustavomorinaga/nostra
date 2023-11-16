@@ -66,7 +66,7 @@
 			@apply font-semibold;
 		}
 
-		& > span {
+		& > span.price {
 			@apply text-xl font-bold;
 		}
 	}
