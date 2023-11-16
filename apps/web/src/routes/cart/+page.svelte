@@ -12,11 +12,11 @@
 
 <section class="cart">
 	<ContentCart class="col-span-2" {cart} />
-	<CardSummary class="col-span-1" {cart} />
+	<CardSummary class="sticky top-20 col-span-1 block self-start" {cart} />
 </section>
 
 <style lang="postcss">
 	section.cart {
-		@apply grid grid-cols-3 gap-4;
+		@apply relative grid h-full grow auto-rows-max grid-cols-3 items-start gap-4;
 	}
 </style>
