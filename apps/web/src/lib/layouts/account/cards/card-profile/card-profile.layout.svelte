@@ -22,14 +22,14 @@
 
 <script lang="ts">
 	const {
-		user: { email, phone }
+		user: { email, phone, user_metadata }
 	} = $page.data.session as Session;
 
 	const profile = {
-		name: 'Gustavo Morinaga',
+		name: user_metadata.full_name,
 		email,
 		phone,
-		avatar: 'https://avatars.githubusercontent.com/u/47375774?v=4',
+		avatar: user_metadata.avatar_url,
 		cover: 'images/jpgs/cover.jpg'
 	};
 
@@ -59,17 +59,6 @@
 		</div>
 
 		<Card.Title class="font-heading text-xl">{profile.name}</Card.Title>
-
-		<!-- <Tooltip.Root>
-			<Tooltip.Trigger asChild let:builder>
-				<Button builders={[builder]} size="icon" variant="outline" href="/cart">
-					<Icon icon="ph:shopping-cart" />
-				</Button>
-			</Tooltip.Trigger>
-			<Tooltip.Content>
-				<span>Cart</span>
-			</Tooltip.Content>
-		</Tooltip.Root> -->
 
 		<DropdownMenu.Root>
 			<DropdownMenu.Trigger asChild let:builder>
