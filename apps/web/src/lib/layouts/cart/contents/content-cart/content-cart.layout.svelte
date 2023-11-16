@@ -30,6 +30,10 @@
 	div.cart-list {
 		& > header {
 			@apply flex items-center justify-between;
+
+			& > h1 {
+				@apply text-2xl;
+			}
 		}
 	}
 </style>

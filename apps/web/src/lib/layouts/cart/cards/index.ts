@@ -1,1 +1,1 @@
-export * from './card-checkout';
+export * from './card-summary';

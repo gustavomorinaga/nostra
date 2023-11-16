@@ -17,21 +17,27 @@
 	<Card.Content class="p-6">
 		<div class="items">
 			<div class="subtotal">
-				<strong>Subtotal</strong>
-				<span>{currencyFormat({ value: cart?.subtotal || 0, preset: 'EUR' })}</span>
+				<span class="step">Subtotal</span>
+				<span class="price">
+					{currencyFormat({ value: cart?.subtotal || 0, preset: 'EUR' })}
+				</span>
 			</div>
 
 			<div class="discount">
-				<strong>Discount</strong>
-				<span>{currencyFormat({ value: cart?.discount_total || 0, preset: 'EUR' })}</span>
+				<span class="step">Discount</span>
+				<span class="price">
+					{currencyFormat({ value: cart?.discount_total || 0, preset: 'EUR' })}
+				</span>
 			</div>
 		</div>
 
-		<Separator class="my-4" />
+		<Separator decorative class="my-4" />
 
 		<div class="total">
-			<strong>Grand total</strong>
-			<span>{currencyFormat({ value: cart?.total || 0, preset: 'EUR' })}</span>
+			<span class="step">Grand total</span>
+			<span class="price">
+				{currencyFormat({ value: cart?.total || 0, preset: 'EUR' })}
+			</span>
 		</div>
 	</Card.Content>
 
@@ -49,14 +55,14 @@
 		@apply space-y-2;
 
 		& > div:where(.subtotal, .discount) {
-			& > strong {
-				@apply text-muted-foreground font-medium;
+			& > span.step {
+				@apply text-muted-foreground font-normal;
 			}
 		}
 	}
 
 	div.total {
-		& > strong {
+		& > span.step {
 			@apply font-semibold;
 		}
 

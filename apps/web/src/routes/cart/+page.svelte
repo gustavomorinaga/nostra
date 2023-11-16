@@ -1,13 +1,18 @@
 <script lang="ts">
-	import { CardCheckout, ContentCart } from '$lib/layouts';
+	import { CardSummary, ContentCart } from '$lib/layouts';
 
 	export let data;
 	$: ({ cart } = data);
 </script>
 
+<svelte:head>
+	<title>Cart | Nostra</title>
+	<meta name="description" content="Manage your cart and checkout your products." />
+</svelte:head>
+
 <section class="cart">
 	<ContentCart class="col-span-2" {cart} />
-	<CardCheckout class="col-span-1" {cart} />
+	<CardSummary class="col-span-1" {cart} />
 </section>
 
 <style lang="postcss">
