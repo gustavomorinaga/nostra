@@ -1,14 +1,19 @@
 <script lang="ts" context="module">
 	import { Button, Card, Separator } from '@nostra/ui/components';
 	import { currencyFormat } from '@nostra/utils';
+	import type { HTMLAttributes } from 'svelte/elements';
 	import type { CartDTO } from '@medusajs/types';
 </script>
 
 <script lang="ts">
-	export let cart: CartDTO;
+	type $$Props = HTMLAttributes<HTMLDivElement> & { cart: CartDTO };
+
+	let className: $$Props['class'] = undefined;
+	export let cart: $$Props['cart'];
+	export { className as class };
 </script>
 
-<Card.Root>
+<Card.Root class={className}>
 	<Card.Content class="p-6">
 		<div class="items">
 			<div class="subtotal">

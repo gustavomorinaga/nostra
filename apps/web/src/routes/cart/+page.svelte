@@ -3,11 +3,15 @@
 
 	export let data;
 	$: ({ cart } = data);
-
-	$: console.log(cart);
 </script>
 
 <section class="cart">
-	<ContentCart />
-	<CardCheckout {cart} />
+	<ContentCart class="col-span-2" {cart} />
+	<CardCheckout class="col-span-1" {cart} />
 </section>
+
+<style lang="postcss">
+	section.cart {
+		@apply grid grid-cols-3 gap-4;
+	}
+</style>
