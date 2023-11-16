@@ -50,7 +50,7 @@
 </script>
 
 {#if hasBanners}
-	<Carousel.Root class="mb-16 h-[30vh] rounded-md shadow-md" {options}>
+	<Carousel.Root class="mb-16 h-[30vh] rounded-md shadow-md lg:h-[40vh]" {options}>
 		{#each banners as banner}
 			<Carousel.Slide>
 				<CardBanner {banner} />

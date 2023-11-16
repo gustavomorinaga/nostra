@@ -1,5 +1,11 @@
 <script lang="ts" context="module">
-	import { CarouselBanner, CarouselFeaturedProducts, Newsletter, USP } from '$lib/layouts';
+	import {
+		AnnouncementSignUp,
+		CarouselBanner,
+		CarouselFeaturedProducts,
+		Newsletter,
+		USP
+	} from '$lib/layouts';
 
 	const images = {
 		couple: 'images/jpgs/banner-couple.jpg',
@@ -33,6 +39,7 @@
 	/>
 </svelte:head>
 
+<AnnouncementSignUp />
 <CarouselBanner {banners} />
 <USP />
 <CarouselFeaturedProducts {products} />

@@ -1,4 +1,4 @@
-export const load = (async ({ parent }) => {
+export const load = async ({ parent }) => {
 	const { cart } = await parent();
-  return { cart };
-});
+	return { cart };
+};
