@@ -32,9 +32,12 @@
 		const parsedValue = Number(`${value}${event.key}`);
 		const maxValue = max || Infinity;
 
-		console.log(parsedValue);
-
 		if (parsedValue > maxValue) event.preventDefault();
+	};
+
+	const handleHasQuantity = (event: FocusEvent) => {
+		const targetValue = (event.target as HTMLInputElement).value;
+		if (!Number(targetValue)) value = min || 0;
 	};
 </script>
 
@@ -56,6 +59,7 @@
 		{disabled}
 		bind:value
 		on:keypress={handleOnlyNumber}
+		on:blur={handleHasQuantity}
 	/>
 
 	<Button
