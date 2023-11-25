@@ -51,8 +51,8 @@
 
 	<Carousel.Root id="thumbs" observe options={thumbsOptions}>
 		{#each images as image}
-			<Carousel.Slide class="cursor-pointer">
-				<CardThumb {image} />
+			<Carousel.Slide class="cursor-pointer" lazy>
+				<CardThumb {image} lazy />
 			</Carousel.Slide>
 		{/each}
 	</Carousel.Root>

@@ -4,7 +4,10 @@
 </script>
 
 <script lang="ts">
-	export let image: ProductImageDTO;
+	type $$Props = { image: ProductImageDTO; lazy?: boolean };
+
+	export let image: $$Props['image'];
+	export let lazy: $$Props['lazy'] = false;
 	$: ({ id, url } = image);
 </script>
 
@@ -12,5 +15,5 @@
 	class="flex items-center justify-center overflow-hidden rounded-md shadow"
 	ratio={1 / 1}
 >
-	<img class="h-full w-full object-cover" src={url} alt={id} />
+	<img class="h-full w-full object-cover" src={url} alt={id} loading={lazy ? 'lazy' : 'eager'} />
 </AspectRatio>
