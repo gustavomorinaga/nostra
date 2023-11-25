@@ -1,6 +1,8 @@
 <script lang="ts" context="module">
 	import { AspectRatio } from '@nostra/ui/components';
 	import type { ProductImageDTO } from '@medusajs/types';
+
+	const THUMB_RATIO = 1 / 1;
 </script>
 
 <script lang="ts">
@@ -13,7 +15,7 @@
 
 <AspectRatio
 	class="flex items-center justify-center overflow-hidden rounded-md shadow"
-	ratio={1 / 1}
+	ratio={THUMB_RATIO}
 >
 	<img class="h-full w-full object-cover" src={url} alt={id} loading={lazy ? 'lazy' : 'eager'} />
 </AspectRatio>

@@ -11,6 +11,8 @@
 	import { currencyFormat, currencyTemplates } from '@nostra/utils';
 	import type { ProductDTO, MoneyAmountDTO, ProductVariantDTO } from '@medusajs/types';
 
+	const PRODUCT_RATIO = 1 / 1;
+
 	const handleAddToCart = (event: ButtonEvents['click']) => {
 		event.preventDefault();
 		event.stopPropagation();
@@ -29,7 +31,7 @@
 
 <Card.Root class="group overflow-hidden rounded-none border-none shadow-none">
 	<AspectRatio
-		ratio={1 / 1}
+		ratio={PRODUCT_RATIO}
 		class="relative flex items-center justify-center overflow-hidden rounded-sm"
 	>
 		<img

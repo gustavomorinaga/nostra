@@ -12,8 +12,6 @@
 	} from '@nostra/ui/components';
 	import type { Session } from '@supabase/supabase-js';
 
-	const COVER_RATIO = 270 / 60;
-
 	const handleSignOut = async () => {
 		await fetch('?/account-signout', { method: 'POST', body: new FormData() });
 		invalidateAll();
@@ -30,7 +28,11 @@
 		email,
 		phone,
 		avatar: user_metadata.avatar_url,
-		cover: 'images/jpgs/cover.jpg'
+		cover: {
+			src: '/images/jpgs/cover.jpg',
+			alt: `${user_metadata.full_name}'s' cover`,
+			ratio: 270 / 60
+		}
 	};
 
 	const getProfileInitials = () => {
@@ -40,9 +42,9 @@
 </script>
 
 <Card.Root class="mb-2">
-	<AspectRatio ratio={COVER_RATIO} class="m-2 overflow-hidden rounded">
+	<AspectRatio ratio={profile.cover.ratio} class="m-2 overflow-hidden rounded">
 		<figure class="flex h-full w-full items-center justify-center">
-			<img src={profile.cover} alt="{profile.name}'s cover" />
+			<img src={profile.cover.src} alt={profile.cover.alt} />
 		</figure>
 	</AspectRatio>
 

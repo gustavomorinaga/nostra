@@ -1,6 +1,7 @@
 <script lang="ts" context="module">
 	import { Carousel, type CarouselOptions } from '@nostra/ui/components';
 	import { CardBanner } from '$lib/layouts';
+	import type { ComponentProps } from 'svelte';
 
 	const options: CarouselOptions = {
 		centeredSlides: true,
@@ -42,9 +43,7 @@
 </script>
 
 <script lang="ts">
-	type TBanner = { title: string; image: string; link: string };
-
-	export let banners: Array<TBanner> = [];
+	export let banners: Array<ComponentProps<CardBanner>['banner']> = [];
 
 	const hasBanners = Boolean(banners.length);
 </script>

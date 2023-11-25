@@ -8,8 +8,14 @@
 	} from '$lib/layouts';
 
 	const images = {
-		couple: 'images/jpgs/banner-couple.jpg',
-		winter: 'images/jpgs/banner-winter.jpg'
+		couple: {
+			src: '/images/jpgs/banner-couple.jpg',
+			alt: 'Banner Couple'
+		},
+		winter: {
+			src: '/images/jpgs/banner-winter.jpg',
+			alt: 'Banner Winter'
+		}
 	};
 
 	const banners = [
