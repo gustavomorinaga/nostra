@@ -11,8 +11,6 @@
 	let className: $$Props['class'] = undefined;
 	export let cart: $$Props['cart'];
 	export { className as class };
-
-	$: console.log(cart);
 </script>
 
 <div class={cn('cart-list', className)}>
