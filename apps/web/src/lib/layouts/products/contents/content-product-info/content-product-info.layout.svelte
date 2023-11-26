@@ -5,11 +5,6 @@
 	import { Skeleton, Tabs } from '@nostra/ui/components';
 	import type { ComponentType } from 'svelte';
 	import type { ProductDTO } from '@medusajs/types';
-</script>
-
-<script lang="ts">
-	export let product: ProductDTO;
-	export let reviews: Array<object>;
 
 	type TProductTabs = {
 		name: string;
@@ -17,6 +12,11 @@
 		content: Promise<ComponentType>;
 		props?: Record<string, unknown>;
 	};
+</script>
+
+<script lang="ts">
+	export let product: ProductDTO;
+	export let reviews: Array<object>;
 
 	$: productTabs = [
 		{
@@ -39,9 +39,10 @@
 		}
 	] as Array<TProductTabs>;
 
-	$: currentTab = $page.url.searchParams.get('tab') ?? 'details';
+	let currentTab = $page.url.searchParams.get('tab') ?? 'details';
+
 	$: if (browser) {
-		if (productTabs) goto(`?tab=details`, { noScroll: false });
+		if (productTabs) goto(`?tab=${currentTab}`, { noScroll: false });
 	}
 </script>
 
