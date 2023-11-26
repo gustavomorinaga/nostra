@@ -1,12 +1,14 @@
 <script lang="ts" context="module">
 	import {
 		AnnouncementSignUp,
+		CardOffer,
 		CarouselBanner,
 		CarouselCuratedPicks,
 		CarouselFeaturedProducts,
 		Newsletter,
 		USP,
 		type TBanner,
+		type TOffer,
 		type TPick
 	} from '$lib/layouts';
 
@@ -76,6 +78,19 @@
 			link: '/shop/casual'
 		}
 	];
+
+	const offer: TOffer = {
+		title: 'Limited Offer',
+		description: '35% off only this Friday and get special gift',
+		link: {
+			title: 'Grab it now',
+			href: '/shop/offer'
+		},
+		image: {
+			src: '/images/jpgs/offer.jpg',
+			alt: 'Offer'
+		}
+	};
 </script>
 
 <script lang="ts">
@@ -96,4 +111,5 @@
 <USP />
 <CarouselCuratedPicks {picks} />
 <CarouselFeaturedProducts {products} />
+<CardOffer {offer} />
 <Newsletter />
