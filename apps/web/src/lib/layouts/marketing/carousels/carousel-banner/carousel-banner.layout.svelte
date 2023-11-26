@@ -1,7 +1,6 @@
 <script lang="ts" context="module">
 	import { Carousel, type CarouselOptions } from '@nostra/ui/components';
-	import { CardBanner } from '$lib/layouts';
-	import type { ComponentProps } from 'svelte';
+	import { CardBanner, type TBanner } from '$lib/layouts';
 
 	const options: CarouselOptions = {
 		centeredSlides: true,
@@ -11,7 +10,7 @@
 		effect: 'fade',
 		navigation: { enabled: true },
 		pagination: { clickable: true },
-		// autoplay: { delay: 5000 },
+		autoplay: { delay: 5000 },
 		injectStyles: [
 			`.swiper-button-prev, .swiper-button-next {
 				--swiper-navigation-size: 1rem;
@@ -43,13 +42,13 @@
 </script>
 
 <script lang="ts">
-	export let banners: Array<ComponentProps<CardBanner>['banner']> = [];
+	export let banners: Array<TBanner> = [];
 
 	const hasBanners = Boolean(banners.length);
 </script>
 
 {#if hasBanners}
-	<Carousel.Root class="mb-16 h-[30vh] rounded-md shadow-md lg:h-[40vh]" {options}>
+	<Carousel.Root class="mb-16 rounded-md shadow-md md:h-[30vh] lg:h-[40vh]" {options}>
 		{#each banners as banner}
 			<Carousel.Slide>
 				<CardBanner {banner} />

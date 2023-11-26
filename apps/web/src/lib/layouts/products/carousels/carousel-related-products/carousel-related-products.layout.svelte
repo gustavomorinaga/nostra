@@ -52,7 +52,7 @@
 </script>
 
 <script lang="ts">
-	export let products: ProductDTO[] = [];
+	export let products: Array<ProductDTO> = [];
 
 	const hasProducts = Boolean(products.length);
 </script>

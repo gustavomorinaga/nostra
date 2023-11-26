@@ -22,7 +22,7 @@
 <script lang="ts">
 	export let product: ProductDTO;
 	const { handle, title, thumbnail, variants, discountable } = product;
-	const [variant] = variants as (ProductVariantDTO & { prices: MoneyAmountDTO[] })[];
+	const [variant] = variants as Array<ProductVariantDTO & { prices: Array<MoneyAmountDTO> }>;
 	const [{ currency_code, amount }] = variant.prices;
 	const currencyCode = (currency_code as string).toUpperCase() as keyof typeof currencyTemplates;
 

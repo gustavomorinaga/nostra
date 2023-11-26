@@ -1,7 +1,6 @@
 <script lang="ts" context="module">
 	import { Carousel, type CarouselOptions } from '@nostra/ui/components';
-	import { CardProduct } from '$lib/layouts';
-	import type { ProductDTO } from '@medusajs/types';
+	import { CardCuratedPick, type TPick } from '$lib/layouts';
 
 	const options: CarouselOptions = {
 		centeredSlides: false,
@@ -14,8 +13,8 @@
 		navigation: { enabled: true },
 		scrollbar: { enabled: true, draggable: true },
 		breakpoints: {
-			768: { slidesPerView: 2 },
-			1024: { slidesPerView: 3 }
+			768: { slidesPerView: 3 },
+			1024: { slidesPerView: 4 }
 		},
 		injectStyles: [
 			`.swiper {
@@ -51,23 +50,21 @@
 </script>
 
 <script lang="ts">
-	export let products: Array<ProductDTO> = [];
+	export let picks: Array<TPick> = [];
 
-	const hasProducts = Boolean(products.length);
+	const hasPicks = Boolean(picks.length);
 </script>
 
-{#if hasProducts}
-	<section class="featured-products">
+{#if hasPicks}
+	<section class="curated-picks">
 		<header>
-			<h3>Featured Products</h3>
+			<h3>Curated Picks</h3>
 		</header>
 
 		<Carousel.Root class="h-fit overflow-visible" {options}>
-			{#each products as product (product.id)}
+			{#each picks as pick (pick.handle)}
 				<Carousel.Slide class="mb-12">
-					<a href="/browse/{product.handle}">
-						<CardProduct {product} />
-					</a>
+					<CardCuratedPick {pick} />
 				</Carousel.Slide>
 			{/each}
 		</Carousel.Root>
@@ -75,7 +72,7 @@
 {/if}
 
 <style lang="postcss">
-	section.featured-products {
+	section.curated-picks {
 		@apply mb-16 block;
 
 		& header {

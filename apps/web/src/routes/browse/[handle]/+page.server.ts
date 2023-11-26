@@ -5,8 +5,8 @@ export const load = async ({ locals, params: { handle } }) => {
 
 	return {
 		product,
-		relatedProducts: locals.medusa.getProducts() as Promise<ProductDTO[]>,
-		reviews: locals.medusa.getReviews(product.id) as Promise<object[]>,
+		relatedProducts: locals.medusa.getProducts() as Promise<Array<ProductDTO>>,
+		reviews: locals.medusa.getReviews(product.id) as Promise<Array<object>>,
 		discussions: []
 	};
 };

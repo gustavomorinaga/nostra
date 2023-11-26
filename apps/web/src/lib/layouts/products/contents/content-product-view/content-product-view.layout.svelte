@@ -11,7 +11,7 @@
 
 	export let product: ProductDTO;
 	$: ({ title, subtitle, images, variants, options } = product);
-	$: [variant] = variants as Array<ProductVariantDTO & { prices: MoneyAmountDTO[] }>;
+	$: [variant] = variants as Array<ProductVariantDTO & { prices: Array<MoneyAmountDTO> }>;
 	$: [{ currency_code, amount }] = variant.prices;
 	$: currencyCode = (currency_code as string).toUpperCase() as keyof typeof currencyTemplates;
 	$: hasPrice = currencyCode && amount;

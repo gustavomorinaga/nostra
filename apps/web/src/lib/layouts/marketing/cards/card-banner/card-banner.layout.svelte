@@ -1,7 +1,6 @@
 <script lang="ts" context="module">
 	import { AspectRatio, Button, Card, Icon } from '@nostra/ui/components';
-
-	type TBanner = { title: string; link?: string; image: Pick<HTMLImageElement, 'src' | 'alt'> };
+	import type { TBanner } from '.';
 
 	const BANNER_RATIO = 16 / 9;
 </script>
