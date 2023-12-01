@@ -35,61 +35,30 @@
 
 ### Apps
 
-<details>
- <summary>API</summary>
+#### API
 
- The API is built with [Medusa](https://medusajs.com/), an open-source headless commerce engine. Contains the Store API and the Admin API.
-</details>
+The API is built with [Medusa](https://medusajs.com/), an open-source headless commerce engine. Contains the Store API and the Admin API.
 
-<details>
- <summary>Web</summary>
+#### Web
 
-#### Build Tools
-
-- [Vite](https://vitejs.dev/): A build tool that provides a faster development experience for modern web projects. Used for development, building, and previewing the project.
-
-#### CSS
-
-- [PostCSS](https://postcss.org): A tool for transforming CSS with JavaScript. Used for CSS processing.
-- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework. Used for styling.
-
-#### Data Validation
-
-- [Zod](https://zod.dev/): A TypeScript-first schema declaration and validation library. Used for data validation.
-
-#### E-commerce
-
-- [Medusa](https://medusajs.com/): An open-source headless commerce engine. Used for e-commerce functionalities.
-
-#### Form Handling
-
-- [Superforms](https://superforms.rocks/): A SvelteKit library for form handling. Used for form management.
-
-#### JavaScript/TypeScript Tools
-
-- [ESLint](https://eslint.org/): A tool for identifying and reporting on patterns in ECMAScript/JavaScript code. Used in conjunction with Prettier for linting the code.
-- [Prettier](https://prettier.io/): An opinionated code formatter. Used for checking and formatting the code.
-- [TypeScript](https://www.typescriptlang.org/): A typed superset of JavaScript that compiles to plain JavaScript. Used as the main programming language.
-
-#### Testing
-
-- [Playwright](https://playwright.dev/): A Node.js library to automate Chromium, Firefox, and WebKit browsers. Used for integration testing.
-- [Vitest](https://vitest.dev/): A test runner for Vite. Used for unit testing.
-
-#### UI Components
-
-- [shadcn-svelte](https://www.shadcn-svelte.com/): Accessible and customizable components that you can copy and paste into your apps. Used for UI components.
-- [Iconify](https://iconify.design/): A modern open source icon framework. Used for icons.
-
-#### Web Frameworks
-
-- [SvelteKit](https://kit.svelte.dev/): A framework for building high-performance web apps. Used for checking and syncing the project.
-
-#### Web Services
-
-- [Supabase](https://supabase.io/): An open source Firebase alternative. Used for authentication and database management.
-
-</details>
+| Tool/Service                                    | Category                    | Description                                                                                          |
+| ----------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| [Vite](https://vitejs.dev/)                     | Build Tools                 | A build tool that provides a faster development experience for modern web projects.                  |
+| [PostCSS](https://postcss.org)                  | CSS                         | A tool for transforming CSS with JavaScript.                                                         |
+| [Tailwind CSS](https://tailwindcss.com/)        | CSS                         | A utility-first CSS framework.                                                                       |
+| [Zod](https://zod.dev/)                         | Data Validation             | A TypeScript-first schema declaration and validation library.                                        |
+| [Medusa](https://medusajs.com/)                 | E-commerce                  | An open-source headless commerce engine.                                                             |
+| [Superforms](https://superforms.rocks/)         | Form Handling               | A SvelteKit library for form handling.                                                               |
+| [ESLint](https://eslint.org/)                   | JavaScript/TypeScript Tools | A tool for identifying and reporting on patterns in ECMAScript/JavaScript code.                      |
+| [Prettier](https://prettier.io/)                | JavaScript/TypeScript Tools | An opinionated code formatter.                                                                       |
+| [TypeScript](https://www.typescriptlang.org/)   | JavaScript/TypeScript Tools | A typed superset of JavaScript that compiles to plain JavaScript.                                    |
+| [Playwright](https://playwright.dev/)           | Testing                     | A Node.js library to automate Chromium, Firefox, and WebKit browsers.                                |
+| [Vitest](https://vitest.dev/)                   | Testing                     | A test runner for Vite.                                                                              |
+| [Iconify](https://iconify.design/)              | UI Components               | A modern open source icon framework.                                                                 |
+| [shadcn-svelte](https://www.shadcn-svelte.com/) | UI Components               | Accessible and customizable components that you can copy and paste into your apps.                   |
+| [Swiper](https://swiperjs.com/)                 | UI Components               | A modern free mobile touch slider with hardware accelerated transitions and amazing native behavior. |
+| [SvelteKit](https://kit.svelte.dev/)            | Web Frameworks              | A framework for building high-performance web apps.                                                  |
+| [Supabase](https://supabase.io/)                | Web Services                | An open source Firebase alternative.                                                                 |
 
 ## 📜 License
 
