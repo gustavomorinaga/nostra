@@ -22,7 +22,7 @@
 
 <style lang="postcss">
 	section.newsletter {
-		@apply grid place-items-center gap-y-6 text-center;
+		@apply mb-16 grid place-items-center gap-y-6 text-center;
 
 		& > header {
 			& > h2 {
