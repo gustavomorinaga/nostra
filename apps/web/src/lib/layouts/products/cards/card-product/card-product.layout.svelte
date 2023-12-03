@@ -20,7 +20,10 @@
 </script>
 
 <script lang="ts">
-	export let product: ProductDTO;
+	type $$Props = { product: ProductDTO; lazy?: boolean };
+
+	export let product: $$Props['product'];
+	export let lazy: $$Props['lazy'] = false;
 	const { handle, title, thumbnail, variants, discountable } = product;
 	const [variant] = variants as Array<ProductVariantDTO & { prices: Array<MoneyAmountDTO> }>;
 	const [{ currency_code, amount }] = variant.prices;
@@ -38,6 +41,7 @@
 			class="transition-transform duration-300 ease-in-out group-hover:scale-105"
 			src={thumbnail}
 			alt={handle}
+			loading={lazy ? 'lazy' : 'eager'}
 		/>
 
 		{#if discountable}

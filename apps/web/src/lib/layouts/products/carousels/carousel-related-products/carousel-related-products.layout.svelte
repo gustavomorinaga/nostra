@@ -20,6 +20,7 @@
 		},
 		injectStyles: [
 			`.swiper {
+				--swiper-preloader-color: hsl(var(--primary) / 1);
 				overflow-x: clip;
 				overflow-y: initial;
 			}`,
@@ -65,9 +66,9 @@
 
 		<Carousel.Root class="h-fit overflow-visible" {options}>
 			{#each products as product (product.id)}
-				<Carousel.Slide class="mb-12">
+				<Carousel.Slide class="mb-12" lazy>
 					<a href="/browse/{product.handle}">
-						<CardProduct {product} />
+						<CardProduct {product} lazy />
 					</a>
 				</Carousel.Slide>
 			{/each}

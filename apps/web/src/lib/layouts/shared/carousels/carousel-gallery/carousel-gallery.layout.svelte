@@ -28,6 +28,9 @@
 			controller: { control: '#viewer' },
 			watchSlidesProgress: true,
 			injectStyles: [
+				`.swiper {
+					--swiper-preloader-color: hsl(var(--primary) / 1);
+				}`,
 				`.swiper-wrapper {
 					margin-left: calc(-38.5%);
 				}`
