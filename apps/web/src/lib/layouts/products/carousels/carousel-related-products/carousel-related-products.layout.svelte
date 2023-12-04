@@ -67,7 +67,7 @@
 		<Carousel.Root class="h-fit overflow-visible" {options}>
 			{#each products as product (product.id)}
 				<Carousel.Slide class="mb-12" lazy>
-					<a href="/browse/{product.handle}">
+					<a href="/browse/{product.handle}?tab=details">
 						<CardProduct {product} lazy />
 					</a>
 				</Carousel.Slide>

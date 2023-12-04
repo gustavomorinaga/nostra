@@ -39,21 +39,20 @@
 		}
 	] as Array<TProductTabs>;
 
-	let currentTab = $page.url.searchParams.get('tab') ?? 'details';
+	let initialTab = $page.url.searchParams.get('tab') ?? 'details';
 
+	$: currentTab = $page.url.searchParams.get('tab') ?? initialTab;
 	$: if (browser) {
-		if (productTabs) goto(`?tab=${currentTab}`, { noScroll: false });
+		if (productTabs) goto(`?tab=details`, { noScroll: false });
 	}
+
+	const handleTabChange = (tab: string) => goto(`?tab=${tab}`, { noScroll: true });
 </script>
 
 <Tabs.Root class="mb-16" value={currentTab}>
 	<Tabs.List class="flex h-fit justify-start overflow-x-auto overflow-y-hidden">
 		{#each productTabs as { name, value }}
-			<Tabs.Trigger
-				class="flex-1"
-				{value}
-				on:click={() => goto(`?tab=${value}`, { noScroll: true })}
-			>
+			<Tabs.Trigger class="flex-1" {value} on:click={() => handleTabChange(value)}>
 				{name}
 			</Tabs.Trigger>
 		{/each}
