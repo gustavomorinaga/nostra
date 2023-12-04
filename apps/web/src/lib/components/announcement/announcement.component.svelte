@@ -11,7 +11,7 @@
 </script>
 
 <section class={cn(`bg-primary px-4 py-2`, className)} {...$$restProps}>
-	<div class="container mx-auto flex items-center">
+	<div class="container mx-auto flex items-center justify-between px-4 md:px-6 lg:px-8">
 		<slot />
 	</div>
 </section>
