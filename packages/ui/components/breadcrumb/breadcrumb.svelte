@@ -8,8 +8,12 @@
 	export { className as class };
 </script>
 
-<nav class={cn('relative break-words', className)} aria-label="breadcrumb" {...$$restProps}>
-	<ol class="flex items-center">
+<nav
+	class={cn('relative whitespace-nowrap break-words', className)}
+	aria-label="breadcrumb"
+	{...$$restProps}
+>
+	<ol class="flex flex-wrap items-center">
 		<slot />
 	</ol>
 </nav>
