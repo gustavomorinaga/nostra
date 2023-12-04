@@ -10,7 +10,7 @@
 		effect: 'fade',
 		navigation: { enabled: true },
 		pagination: { clickable: true },
-		autoplay: { delay: 5000 },
+		// autoplay: { delay: 5000 },
 		injectStyles: [
 			`.swiper-button-prev, .swiper-button-next {
 				--swiper-navigation-size: 1rem;

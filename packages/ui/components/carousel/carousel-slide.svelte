@@ -15,3 +15,9 @@
 		<slot />
 	</div>
 </swiper-slide>
+
+<style lang="postcss">
+	div.swiper-slide-wrapper {
+		@apply h-full w-full;
+	}
+</style>
