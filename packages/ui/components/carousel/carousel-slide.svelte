@@ -10,6 +10,8 @@
 	export { className as class };
 </script>
 
-<swiper-slide class={cn('pointer-events-auto', className)} {lazy} {...$$restProps}>
-	<slot />
+<swiper-slide class={cn('pointer-events-auto', className)} {...$$restProps} {lazy}>
+	<div class="swiper-slide-wrapper">
+		<slot />
+	</div>
 </swiper-slide>

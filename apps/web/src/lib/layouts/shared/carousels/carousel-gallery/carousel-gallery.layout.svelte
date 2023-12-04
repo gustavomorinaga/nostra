@@ -2,6 +2,12 @@
 	import { Carousel, type CarouselOptions } from '@nostra/ui/components';
 	import { CardThumb, CardViewer } from '$lib/layouts';
 	import type { ProductImageDTO } from '@medusajs/types';
+</script>
+
+<script lang="ts">
+	type $$Props = { images: Array<ProductImageDTO> };
+
+	export let images: $$Props['images'] = [];
 
 	const [viewerOptions, thumbsOptions]: Array<CarouselOptions> = [
 		{
@@ -9,7 +15,11 @@
 			effect: 'fade',
 			navigation: { enabled: true },
 			controller: { control: '#thumbs' },
+			zoom: true,
 			injectStyles: [
+				`.swiper-wrapper {
+					background-color: hsl(var(--muted) / 1);
+				}`,
 				`.swiper-button-prev, .swiper-button-next {
 					--swiper-navigation-size: 0.75rem;
 					--swiper-navigation-color: hsl(var(--secondary-foreground) / 1);
@@ -39,22 +49,18 @@
 	];
 </script>
 
-<script lang="ts">
-	export let images: Array<ProductImageDTO> = [];
-</script>
-
 <section class="gallery">
-	<Carousel.Root id="viewer" class="mb-4" observe options={viewerOptions}>
-		{#each images as image}
+	<Carousel.Root id="viewer" class="mb-4 rounded-md" observe zoom options={viewerOptions}>
+		{#each images as image (image.id)}
 			<Carousel.Slide>
 				<CardViewer {image} />
 			</Carousel.Slide>
 		{/each}
 	</Carousel.Root>
 
-	<Carousel.Root id="thumbs" observe options={thumbsOptions}>
-		{#each images as image}
-			<Carousel.Slide class="cursor-pointer" lazy>
+	<Carousel.Root id="thumbs" class="-mb-2" observe options={thumbsOptions}>
+		{#each images as image (image.id)}
+			<Carousel.Slide class="mb-2 cursor-pointer overflow-hidden rounded-md" lazy>
 				<CardThumb {image} lazy />
 			</Carousel.Slide>
 		{/each}

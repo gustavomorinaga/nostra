@@ -13,9 +13,6 @@
 	$: ({ id, url } = image);
 </script>
 
-<AspectRatio
-	class="flex items-center justify-center overflow-hidden rounded-md shadow"
-	ratio={THUMB_RATIO}
->
+<AspectRatio class="flex items-center justify-center" ratio={THUMB_RATIO}>
 	<img class="h-full w-full object-cover" src={url} alt={id} loading={lazy ? 'lazy' : 'eager'} />
 </AspectRatio>
