@@ -30,8 +30,12 @@
 
 ### Root
 
-- [Turborepo](https://turbo.build/): A tool for managing multiple repositories. Used for managing the monorepo.
-- [Yarn](https://yarnpkg.com/): A package manager for JavaScript. Used for installing and managing dependencies.
+### Development Tools
+
+| Tool/Service | Category        | Description                                                                      |
+| ------------ | --------------- | -------------------------------------------------------------------------------- |
+| Turborepo    | Build System    | A tool for managing multiple repositories. Used for managing the monorepo.       |
+| Yarn         | Package Manager | A package manager for JavaScript. Used for installing and managing dependencies. |
 
 ### Apps
 
