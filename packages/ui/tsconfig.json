@@ -8,6 +8,7 @@
 		"checkJs": false,
 		"isolatedModules": true,
 		"resolveJsonModule": true,
+		"strict": true,
 		"target": "esnext",
 		"module": "esnext",
 		"moduleResolution": "node",
