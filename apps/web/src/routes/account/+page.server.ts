@@ -16,7 +16,7 @@ import {
 
 export const load = async ({ locals: { supabase, getSession } }) => {
 	const session = await getSession();
-	if (!session) throw redirect(303, '/');
+	if (!session) redirect(303, '/');
 
 	const { data: profile } = await accountRepository.getProfile({ id: session.user.id, supabase });
 
@@ -99,7 +99,7 @@ export const actions = {
 		if (!session) return;
 
 		await accountRepository.signOut({ supabase });
-		throw redirect(303, '/');
+		redirect(303, '/');
 	},
 
 	'manage-password-update': async (event) => {
