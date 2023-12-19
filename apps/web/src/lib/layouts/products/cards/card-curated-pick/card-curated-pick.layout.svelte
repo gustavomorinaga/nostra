@@ -15,7 +15,7 @@
 
 <Card.Root class="relative border-none">
 	<AspectRatio
-		class="after:from-primary flex items-center justify-center overflow-hidden rounded-md shadow after:absolute after:inset-0 after:bg-gradient-to-t"
+		class="flex items-center justify-center overflow-hidden rounded-md shadow after:absolute after:inset-0 after:bg-gradient-to-t after:from-primary"
 		ratio={PICK_RATIO}
 	>
 		<img

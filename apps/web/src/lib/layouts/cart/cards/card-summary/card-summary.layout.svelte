@@ -56,7 +56,7 @@
 
 		& > div:where(.subtotal, .discount) {
 			& > span.step {
-				@apply text-muted-foreground font-normal;
+				@apply font-normal text-muted-foreground;
 			}
 		}
 	}

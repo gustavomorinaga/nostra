@@ -30,9 +30,5 @@
 		& > h2 {
 			@apply text-2xl;
 		}
-
-		& > p {
-			@apply mt-2;
-		}
 	}
 </style>

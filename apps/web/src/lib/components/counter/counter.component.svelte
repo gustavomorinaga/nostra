@@ -75,6 +75,6 @@
 
 <style lang="postcss">
 	div.counter {
-		@apply border-input inline-flex h-10 w-fit items-center rounded-md border px-px;
+		@apply inline-flex h-10 w-fit items-center rounded-md border border-input px-px;
 	}
 </style>

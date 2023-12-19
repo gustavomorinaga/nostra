@@ -1,5 +1,7 @@
 import type { CartDTO } from '@medusajs/types';
 
 export const load = async ({ locals, cookies }) => {
-	return { session: locals.getSession(), cart: locals.medusa.getCart(locals, cookies) as CartDTO };
+	const [session, cart] = await Promise.all([locals.getSession(), locals.medusa.getCart(locals, cookies) as Promise<CartDTO>]);
+
+	return { session, cart };
 };

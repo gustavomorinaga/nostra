@@ -15,14 +15,14 @@
 <Card.Root class="relative flex h-full w-full items-center justify-center rounded-none border-none">
 	<AspectRatio
 		ratio={BANNER_RATIO}
-		class="after:bg-secondary-foreground relative flex items-center justify-center overflow-hidden rounded-sm after:absolute after:inset-0 after:block after:opacity-50"
+		class="relative flex items-center justify-center overflow-hidden rounded-sm after:absolute after:inset-0 after:block after:bg-secondary-foreground after:opacity-50"
 	>
 		<img class="transition-transform group-hover:scale-105" src={image.src} alt={image.alt} />
 	</AspectRatio>
 
 	<Card.Content class="absolute inset-0 flex flex-col items-center justify-center">
 		<Card.Header>
-			<Card.Title class="text-primary-foreground text-3xl drop-shadow">{title}</Card.Title>
+			<Card.Title class="text-3xl text-primary-foreground drop-shadow">{title}</Card.Title>
 		</Card.Header>
 
 		{#if link}

@@ -117,7 +117,7 @@
 
 <style lang="postcss">
 	header.navbar-container {
-		@apply bg-card supports-[backdrop-filter]:bg-card/60 sticky top-0 z-50 border-b backdrop-blur;
+		@apply sticky top-0 z-50 border-b bg-card backdrop-blur supports-[backdrop-filter]:bg-card/60;
 
 		& > nav {
 			@apply container flex h-14 items-center justify-between;
