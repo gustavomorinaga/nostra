@@ -34,8 +34,8 @@
 
 | Tool/Service                           | Category        | Description                                                                      |
 | -------------------------------------- | --------------- | -------------------------------------------------------------------------------- |
-| [https://turbo.build/repo/](Turborepo) | Build System    | A tool for managing multiple repositories. Used for managing the monorepo.       |
-| [https://yarnpkg.com/](Yarn)           | Package Manager | A package manager for JavaScript. Used for installing and managing dependencies. |
+| [Turborepo](https://turbo.build/repo/) | Build System    | A tool for managing multiple repositories. Used for managing the monorepo.       |
+| [Yarn](https://yarnpkg.com/)           | Package Manager | A package manager for JavaScript. Used for installing and managing dependencies. |
 
 ### Apps
 
