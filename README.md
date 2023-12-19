@@ -32,10 +32,10 @@
 
 ### Development Tools
 
-| Tool/Service | Category        | Description                                                                      |
-| ------------ | --------------- | -------------------------------------------------------------------------------- |
-| Turborepo    | Build System    | A tool for managing multiple repositories. Used for managing the monorepo.       |
-| Yarn         | Package Manager | A package manager for JavaScript. Used for installing and managing dependencies. |
+| Tool/Service                           | Category        | Description                                                                      |
+| -------------------------------------- | --------------- | -------------------------------------------------------------------------------- |
+| [https://turbo.build/repo/](Turborepo) | Build System    | A tool for managing multiple repositories. Used for managing the monorepo.       |
+| [https://yarnpkg.com/](Yarn)           | Package Manager | A package manager for JavaScript. Used for installing and managing dependencies. |
 
 ### Apps
 
