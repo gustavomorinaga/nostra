@@ -1,12 +1,8 @@
-import type { ProductDTO } from '@medusajs/types';
-
 export const load = async ({ locals, params: { handle } }) => {
-	const product = (await locals.medusa.getProduct(handle)) as ProductDTO;
+	const product = await locals.medusa.getProduct(handle);
+	const relatedProducts = await locals.medusa.getProducts();
+	const reviews: Array<object> = product ? await locals.medusa.getReviews(product.id) : [];
+	const discussions: Array<object> = [];
 
-	return {
-		product,
-		relatedProducts: locals.medusa.getProducts() as Promise<Array<ProductDTO>>,
-		reviews: locals.medusa.getReviews(product.id) as Promise<Array<object>>,
-		discussions: []
-	};
+	return { product, relatedProducts, reviews, discussions };
 };

@@ -124,7 +124,7 @@
 
 <style lang="postcss">
 	footer {
-		@apply bg-muted text-muted-foreground p-10;
+		@apply bg-muted p-10 text-muted-foreground;
 
 		& > div.wrapper {
 			@apply container;

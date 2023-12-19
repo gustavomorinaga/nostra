@@ -59,7 +59,7 @@
 						>
 							{#each option.values as value (value.id)}
 								<RadioCard
-									class="[&:has([data-state=checked])]:bg-primary [&:has([data-state=checked])]:text-primary-foreground hover:bg-secondary/80 focus-within:ring-ring ring-offset-background border-input rounded-md border focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2"
+									class="rounded-md border border-input ring-offset-background focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 hover:bg-secondary/80 [&:has([data-state=checked])]:bg-primary [&:has([data-state=checked])]:text-primary-foreground"
 									value={value.id}
 								>
 									<span>{value.value}</span>
@@ -106,11 +106,11 @@
 			}
 
 			& > p {
-				@apply text-muted-foreground mb-4 mt-2;
+				@apply mb-4 mt-2 text-muted-foreground;
 			}
 
 			& > span.price {
-				@apply text-primary mt-2 block text-2xl font-bold tabular-nums;
+				@apply mt-2 block text-2xl font-bold tabular-nums text-primary;
 			}
 
 			/* & > span.original-price {
@@ -124,7 +124,7 @@
 					@apply block flex-1;
 
 					& > span {
-						@apply font-heading text-muted-foreground mb-2 block text-sm font-semibold;
+						@apply mb-2 block font-heading text-sm font-semibold text-muted-foreground;
 					}
 				}
 			}

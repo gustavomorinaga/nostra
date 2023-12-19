@@ -39,7 +39,7 @@
 		}
 
 		& > footer {
-			@apply text-muted-foreground flex flex-col gap-1;
+			@apply flex flex-col gap-1 text-muted-foreground;
 
 			& > small {
 				@apply font-light;

@@ -5,5 +5,5 @@ export const GET = async ({ locals, url }) => {
 
 	if (code) await locals.supabase.auth.exchangeCodeForSession(code);
 
-	throw redirect(303, '/account');
+	redirect(303, '/account');
 };

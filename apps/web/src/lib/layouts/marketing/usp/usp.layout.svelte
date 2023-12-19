@@ -37,7 +37,7 @@
 	<ul>
 		{#each benefits as benefit}
 			<li>
-				<Icon class="bg-muted rounded p-2 text-4xl" icon={benefit.icon} />
+				<Icon class="rounded bg-muted p-2 text-4xl" icon={benefit.icon} />
 				<h3>{benefit.title}</h3>
 				<p>{benefit.description}</p>
 			</li>
@@ -57,7 +57,7 @@
 			}
 
 			& > blockquote {
-				@apply border-primary my-auto block w-72 border-l-2 p-4 lg:w-fit;
+				@apply my-auto block w-72 border-l-2 border-primary p-4 lg:w-fit;
 			}
 		}
 

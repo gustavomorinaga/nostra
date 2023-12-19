@@ -1,8 +1,8 @@
 {
 	"editor.codeActionsOnSave": {
-		"source.addMissingImports": true,
-		"source.fixAll.eslint": true,
-		"source.organizeImports": false
+		"source.addMissingImports": "explicit",
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "never"
 	},
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 	"eslint.format.enable": true,
