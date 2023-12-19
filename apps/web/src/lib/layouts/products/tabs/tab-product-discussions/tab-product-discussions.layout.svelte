@@ -49,6 +49,12 @@
 		</div>
 	</header>
 
+	<div>
+		{#each discussions as discussion}
+			<span>{discussion}</span>
+		{/each}
+	</div>
+
 	<Card.Root>
 		<Card.Content class="p-6">
 			<Textarea placeholder="Question/topic" />
