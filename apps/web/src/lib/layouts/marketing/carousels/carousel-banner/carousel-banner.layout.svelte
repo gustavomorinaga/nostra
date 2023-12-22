@@ -1,6 +1,7 @@
 <script lang="ts" context="module">
 	import { Carousel, type CarouselOptions } from '@nostra/ui/components';
 	import { CardBanner, type TBanner } from '$lib/layouts';
+	import { getBannerState } from '$lib/stores';
 
 	const options: CarouselOptions = {
 		centeredSlides: true,
@@ -42,9 +43,9 @@
 </script>
 
 <script lang="ts">
-	export let banners: Array<TBanner> = [];
-
-	const hasBanners = Boolean(banners.length);
+	const bannerState = getBannerState();
+	$: ({ banners } = $bannerState);
+	$: hasBanners = Boolean(banners.length);
 </script>
 
 {#if hasBanners}

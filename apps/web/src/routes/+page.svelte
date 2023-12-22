@@ -1,4 +1,5 @@
 <script lang="ts" context="module">
+	import { setBannerState, setOfferState, setPickState, setProductState } from '$lib/stores';
 	import {
 		AnnouncementSignUp,
 		CardOffer,
@@ -12,7 +13,7 @@
 		type TPick
 	} from '$lib/layouts';
 
-	const images = {
+	const images: Record<string, Pick<HTMLImageElement, 'src' | 'alt'>> = {
 		couple: {
 			src: '/images/jpgs/banner-couple.jpg',
 			alt: 'Banner Couple'
@@ -79,23 +80,29 @@
 		}
 	];
 
-	const offer: TOffer = {
-		title: 'Limited Offer',
-		description: '35% off only this Friday and get special gift',
-		link: {
-			title: 'Grab it now',
-			href: '/shop/offer'
-		},
-		image: {
-			src: '/images/jpgs/offer.jpg',
-			alt: 'Offer'
+	const offers: Array<TOffer> = [
+		{
+			title: 'Limited Offer',
+			description: '35% off only this Friday and get special gift',
+			link: {
+				title: 'Grab it now',
+				href: '/shop/offer'
+			},
+			image: {
+				src: '/images/jpgs/offer.jpg',
+				alt: 'Offer'
+			}
 		}
-	};
+	];
 </script>
 
 <script lang="ts">
 	export let data;
-	const { products } = data;
+
+	setBannerState({ banners });
+	setOfferState({ offers });
+	setPickState({ picks });
+	setProductState({ products: data.products });
 </script>
 
 <svelte:head>
@@ -107,9 +114,9 @@
 </svelte:head>
 
 <AnnouncementSignUp />
-<CarouselBanner {banners} />
+<CarouselBanner />
 <USP />
-<CarouselCuratedPicks {picks} />
-<CarouselFeaturedProducts {products} />
-<CardOffer {offer} />
+<CarouselCuratedPicks />
+<CarouselFeaturedProducts />
+<CardOffer />
 <Newsletter />

@@ -1,6 +1,7 @@
 <script lang="ts" context="module">
 	import { Carousel, type CarouselOptions } from '@nostra/ui/components';
-	import { CardCuratedPick, type TPick } from '$lib/layouts';
+	import { CardCuratedPick } from '$lib/layouts';
+	import { getPickState } from '$lib/stores';
 
 	const options: CarouselOptions = {
 		centeredSlides: false,
@@ -50,9 +51,9 @@
 </script>
 
 <script lang="ts">
-	export let picks: Array<TPick> = [];
-
-	const hasPicks = Boolean(picks.length);
+	const pickState = getPickState();
+	$: ({ picks } = $pickState);
+	$: hasPicks = Boolean(picks.length);
 </script>
 
 {#if hasPicks}

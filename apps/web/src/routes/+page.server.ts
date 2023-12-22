@@ -1,5 +1,5 @@
 export const load = async ({ locals }) => {
-	const products = await locals.medusa.getProducts();
+	const products = (await locals.medusa.getProducts()) ?? [];
 
-	return { products: products ?? [] };
+	return { products };
 };
