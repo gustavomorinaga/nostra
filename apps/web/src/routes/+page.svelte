@@ -1,5 +1,6 @@
 <script lang="ts" context="module">
 	import { setBannerState, setOfferState, setPickState, setProductState } from '$lib/stores';
+	import { executeParallel } from '$lib/utils';
 	import {
 		AnnouncementSignUp,
 		CardOffer,
@@ -99,10 +100,12 @@
 <script lang="ts">
 	export let data;
 
-	setBannerState({ banners });
-	setOfferState({ offers });
-	setPickState({ picks });
-	setProductState({ products: data.products });
+	executeParallel([
+		setBannerState({ banners }),
+		setOfferState({ offers }),
+		setPickState({ picks }),
+		setProductState({ products: data.products })
+	]);
 </script>
 
 <svelte:head>

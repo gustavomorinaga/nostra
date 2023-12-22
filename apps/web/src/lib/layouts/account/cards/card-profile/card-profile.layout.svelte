@@ -50,7 +50,7 @@
 
 	<Card.Header class="relative flex-row items-center justify-between pb-2">
 		<div class="avatar">
-			<Avatar.Root class="ring-card h-40 w-40 ring-4">
+			<Avatar.Root class="h-40 w-40 ring-4 ring-card">
 				<Avatar.Image src={profile.avatar} alt={profile.name} />
 				<Avatar.Fallback class="text-3xl">{getProfileInitials()}</Avatar.Fallback>
 			</Avatar.Root>

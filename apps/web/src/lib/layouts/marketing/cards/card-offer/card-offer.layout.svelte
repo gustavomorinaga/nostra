@@ -9,18 +9,18 @@
 	$: ({ title, description, link, image } = offer);
 </script>
 
-<Card.Root class="bg-primary mb-16 grid grid-cols-5 overflow-hidden">
+<Card.Root class="mb-16 grid grid-cols-5 overflow-hidden bg-primary">
 	<figure class="hidden max-h-56 items-center justify-center overflow-hidden md:col-span-2 md:flex">
 		<img src={image.src} alt={image.alt} />
 	</figure>
 
 	<Card.Content class="col-span-full my-auto p-0 md:col-span-3">
 		<Card.Header>
-			<Card.Title tag="h5" class="text-muted-foreground text-sm uppercase">
+			<Card.Title tag="h5" class="text-sm uppercase text-muted-foreground">
 				{title}
 			</Card.Title>
 			<Card.Description
-				class="text-primary-foreground text-3xl font-medium"
+				class="text-3xl font-medium text-primary-foreground"
 				style="text-wrap: balance;"
 			>
 				{description}
