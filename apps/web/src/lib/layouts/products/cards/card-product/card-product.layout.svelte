@@ -63,13 +63,14 @@
 			</Card.Description>
 		</Card.Header>
 
-		<Tooltip.Root positioning={{ placement: 'bottom' }}>
+		<Tooltip.Root>
 			<Tooltip.Trigger asChild let:builder>
 				<Button builders={[builder]} size="icon" on:click={handleAddToCart}>
 					<Icon icon="ph:shopping-cart" />
 				</Button>
 			</Tooltip.Trigger>
-			<Tooltip.Content>
+
+			<Tooltip.Content side="bottom">
 				<span>Add to cart</span>
 			</Tooltip.Content>
 		</Tooltip.Root>

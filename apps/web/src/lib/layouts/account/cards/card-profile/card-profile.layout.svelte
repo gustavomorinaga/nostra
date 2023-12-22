@@ -50,7 +50,7 @@
 
 	<Card.Header class="relative flex-row items-center justify-between pb-2">
 		<div class="avatar">
-			<Avatar.Root class="h-40 w-40 ring-4 ring-card">
+			<Avatar.Root class="ring-card h-40 w-40 ring-4">
 				<Avatar.Image src={profile.avatar} alt={profile.name} />
 				<Avatar.Fallback class="text-3xl">{getProfileInitials()}</Avatar.Fallback>
 			</Avatar.Root>
@@ -64,14 +64,14 @@
 
 		<DropdownMenu.Root>
 			<DropdownMenu.Trigger asChild let:builder>
-				<Tooltip.Root positioning={{ placement: 'bottom' }}>
+				<Tooltip.Root>
 					<Tooltip.Trigger>
 						<Button builders={[builder]} variant="outline" size="icon">
 							<Icon icon="ph:dots-three-outline-vertical-fill" />
 						</Button>
 					</Tooltip.Trigger>
 
-					<Tooltip.Content>
+					<Tooltip.Content side="bottom">
 						<span>Options</span>
 					</Tooltip.Content>
 				</Tooltip.Root>
